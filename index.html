@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Crusher Talons vs Gil</title>
+<title>Crusher Talons vs Chaos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -76,6 +76,21 @@ ul{margin:8px 0;padding-left:20px;max-width:74ch} li{margin:4px 0}
 .pri{counter-reset:p;list-style:none;padding:0}
 .pri li{counter-increment:p;display:grid;grid-template-columns:28px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
 .pri li::before{content:counter(p);font:700 15px/1.5 var(--mono);color:var(--ty)}
+.g1{grid-template-columns:1fr}
+.map{width:100%;height:auto;display:block;margin:8px 0}
+.map .board{fill:none;stroke:var(--muted)}
+.map .zone{stroke:var(--muted);stroke-dasharray:5 4}
+.map .zone.you{fill:var(--ty-soft)} .map .zone.them{fill:var(--ch-soft)}
+.map .ruin{fill:var(--line);stroke:var(--muted);stroke-width:1}
+.map .obj{fill:var(--warn);stroke:var(--panel);stroke-width:1.5}
+.map .lb{fill:var(--muted);font:500 12px var(--body)}
+.map .mk{fill:var(--ty)} .map .mkt{fill:var(--panel);font:700 13px var(--head);text-anchor:middle}
+.map .arrow{stroke-width:2;stroke-dasharray:6 4;fill:none}
+.map .arrow.go{stroke:var(--ty)} .map .arrow.thr{stroke:var(--ch)}
+.keyl{list-style:none;padding:0;margin:6px 0 4px}
+.keyl li{margin:5px 0}
+.keyl .oc{font:500 12px var(--mono);color:var(--muted);padding-left:6px}
+.card.dep h3{font-size:20px}
 footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 @media (max-width:560px){.bar{grid-template-columns:100px 1fr auto}}
 @media (prefers-reduced-motion:no-preference){.fl{transition:width .5s ease}}
@@ -84,12 +99,12 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 <div class="wrap">
 <header class="top">
   <div class="kicker">Warhammer 40,000 · 11th Edition · 2,000 pts · Mathhammer briefing</div>
-  <h1><span class="a">Crusher Talons</span><span class="v">vs</span><span class="b">Gil</span></h1>
+  <h1><span class="a">Crusher Talons</span><span class="v">vs</span><span class="b">Chaos</span></h1>
   <p class="sub">Tyranids (Crusher Stampede + Talons of the Norn Queen) against Chaos Space Marines. Expected-value dice math on your two lists, with the detachment rules, Stratagems, Dark Pacts and Cover included where they could be modelled.</p>
 </header>
 
 <nav aria-label="Sections">
-  <a href="#summary">Summary</a><a href="#lists">Lists</a><a href="#race">Damage race</a><a href="#you">Your guns</a><a href="#them">Their guns</a><a href="#tempo">Range &amp; tempo</a><a href="#rules">Rules &amp; Stratagems</a><a href="#plan">Game plan</a><a href="#limits">Limits</a>
+  <a href="#summary">Summary</a><a href="#lists">Lists</a><a href="#race">Damage race</a><a href="#you">Your guns</a><a href="#them">Their guns</a><a href="#tempo">Range &amp; tempo</a><a href="#rules">Rules &amp; Stratagems</a><a href="#deploy">Deployment</a><a href="#plan">Game plan</a><a href="#limits">Limits</a>
 </nav>
 
 <section id="summary">
@@ -129,7 +144,7 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
       <p class="note">An earlier read of the PDF counted 2 Exocrines and 1 Maleceptor. The HTML export shows 3 and 2, which also makes the total exactly 2,000.</p>
     </div>
     <div class="card">
-      <h3><span class="tag ch">Chaos</span> Gil</h3>
+      <h3><span class="tag ch">Chaos</span> Chaos Space Marines</h3>
       <dl class="kv">
         <dt>Characters</dt><dd>Vashtorr (220), Daemon Prince, Warlord, Slaanesh (175), Sorcerer in Terminator Armour (100), Fabius Bile (110)</dd>
         <dt>Infantry</dt><dd>Terminators (370, likely 10), Chosen (280, likely 10), Legionaries ×5 (95), Cultists ×10 (50)</dd>
@@ -231,6 +246,149 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
   </ul>
 </section>
 
+<section id="deploy">
+  <h2>Deployment and objectives</h2>
+  <p class="lede">Three deployment maps, all with you in the red zone and the mission set to Unstoppable Force. Distances are measured from the map images and are within about 1 to 2 inches. OC numbers include the Enraged Behemoths +2 for monsters at full strength, so they fall as monsters take damage.</p>
+  <div class="card" style="margin:12px 0">
+    <h3>Unstoppable Force scoring (Purge the Foe)</h3>
+    <ul>
+      <li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li>
+      <li><b>Round 2 onward, end of your Command phase:</b> 4 VP for each objective you control, excluding your home. Your own home does not count, but the Chaos home does for you.</li>
+      <li><b>End of your turn, round 2 onward:</b> 3 VP if you control an objective you did not control at the start of the turn (not your home).</li>
+      <li><b>End of the battle:</b> 5 VP for holding the central objective.</li>
+      <li>Primaries are capped at 15 VP per round and 45 VP per game. Three held objectives plus a kill already reach 15 VP.</li>
+    </ul>
+    <p class="note">You chose Tactical secondaries: two are drawn each Command phase and you can discard for 1 CP. Cards that suit this list are No Prisoners, Overwhelming Force, Burden of Trust and Secure No Man's Land. Bring It Down helps Chaos against you, because ten of your models have 10 or more Wounds.</p>
+  </div>
+  <h3>Comparison</h3>
+  <div class="tw"><table id="tblDeploy"><thead><tr><th>Deployment</th><th>Centre from your / their zone</th><th>Your expansion from your / their zone</th><th>Your home from the Chaos zone</th><th class="txt">What to do</th></tr></thead><tbody>
+<tr><td>A: staggered</td><td>3" / 3"</td><td>2" / about 20"</td><td>about 24"</td><td class="txt">Win the centre on turn 1. Strong wings on both flanks.</td></tr>
+<tr><td>B: diagonal</td><td>7" / 9"</td><td>14" / 16"</td><td>about 28"</td><td class="txt">Everything moves north-west and to the centre. Beat Chaos fast units to your expansion.</td></tr>
+<tr><td>C: long zones</td><td>12" / 12"</td><td>0.7" / 23"</td><td>about 28"</td><td class="txt">Shoot for two rounds. Hide behind the wall and keep the home guard strong.</td></tr>
+</tbody></table></div>
+  <h3>Plans</h3>
+  <p class="note">Amber dots are objectives and numbered circles are your groups. Violet dashed arrows are your moves and the rust arrow is the route Chaos fast units take.</p>
+  <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The Chaos zone is the mirror image along the top.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
+<defs><marker id="ahA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect class="board" x="40" y="20" width="600" height="440"/>
+<polygon class="zone you" points="40,320 340,320 340,380 640,380 640,460 40,460"/>
+<polygon class="zone them" points="40,20 640,20 640,160 340,160 340,100 40,100"/>
+<rect class="ruin" x="89" y="119" width="116" height="71" rx="2"/>
+<rect class="ruin" x="464" y="70" width="117" height="71" rx="2"/>
+<rect class="ruin" x="281" y="190" width="116" height="100" rx="2"/>
+<rect class="ruin" x="100" y="339" width="116" height="70" rx="2"/>
+<rect class="ruin" x="474" y="291" width="116" height="70" rx="2"/>
+<rect class="ruin" x="286" y="94" width="60" height="12" rx="2" transform="rotate(40 316.0 100.0)"/>
+<rect class="ruin" x="377" y="112" width="40" height="10" rx="2" transform="rotate(-40 397.0 117.0)"/>
+<rect class="ruin" x="210" y="54" width="8" height="60" rx="2"/>
+<rect class="ruin" x="455" y="209" width="40" height="12" rx="2" transform="rotate(55 475.0 215.0)"/>
+<rect class="ruin" x="504" y="219" width="40" height="10" rx="2" transform="rotate(-40 524.0 224.0)"/>
+<rect class="ruin" x="135" y="250" width="40" height="10" rx="2" transform="rotate(-40 155.0 255.0)"/>
+<rect class="ruin" x="183" y="259" width="40" height="12" rx="2" transform="rotate(50 203.0 265.0)"/>
+<rect class="ruin" x="264" y="359" width="40" height="12" rx="2" transform="rotate(-45 284.0 365.0)"/>
+<rect class="ruin" x="331" y="378" width="70" height="12" rx="2" transform="rotate(45 366.0 384.0)"/>
+<rect class="ruin" x="460" y="360" width="8" height="60" rx="2"/>
+<circle class="obj" cx="145" cy="337" r="7"/>
+<circle class="obj" cx="534" cy="142" r="7"/>
+<circle class="obj" cx="323" cy="240" r="7"/>
+<circle class="obj" cx="543" cy="362" r="7"/>
+<circle class="obj" cx="135" cy="117" r="7"/>
+<text class="lb" x="145" y="327" text-anchor="middle">your home</text>
+<text class="lb" x="333" y="244" text-anchor="start">centre</text>
+<text class="lb" x="543" y="348" text-anchor="middle">expansion</text>
+<text class="lb" x="534" y="128" text-anchor="middle">Chaos home</text>
+<text class="lb" x="135" y="140" text-anchor="middle">Chaos expansion</text>
+<text class="lb" x="48" y="38" text-anchor="start">Chaos zone</text>
+<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
+<line class="arrow go" x1="195" y1="419" x2="142" y2="152" marker-end="url(#ahA)"/>
+<line class="arrow go" x1="322" y1="324" x2="323" y2="254" marker-end="url(#ahA)"/>
+<circle class="mk" cx="145" cy="360" r="11"/><text class="mkt" x="145" y="365">1</text>
+<circle class="mk" cx="200" cy="430" r="11"/><text class="mkt" x="200" y="435">2</text>
+<circle class="mk" cx="322" cy="336" r="11"/><text class="mkt" x="322" y="341">3</text>
+<circle class="mk" cx="550" cy="400" r="11"/><text class="mkt" x="550" y="405">4</text>
+</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Hammer:</b> Assimilator + Emissary, up the left lane to the Chaos expansion <span class="oc">OC 14</span></li><li><b>3 Centre:</b> 3 Exocrines, 1 Maleceptor, Hive Tyrant + Guard, behind the central ruin <span class="oc">OC 32</span></li><li><b>4 Expansion:</b> Rupture Tyrannofex + 1 Maleceptor, on the right <span class="oc">OC 13</span></li></ol><ul><li>The centre ruin is about 3" from both zones, so the first turn decides it. Put the gun line at the zone corner and be ready to step on.</li><li>Your expansion is about 2" outside your zone. Hold it with the Rupture Tyrannofex, which also covers the right lane to the Chaos home.</li><li>Your home is about 24" from the Chaos zone. Bikers reach it on their second turn.</li><li>Your army splits across both flanks here, so the two wings need to be strong enough to stand alone.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, Chaos the upper-right. The nearest corners are about 12.7" apart.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
+<defs><marker id="ahB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect class="board" x="40" y="20" width="600" height="440"/>
+<polygon class="zone you" points="40,240 250,240 258,274 276,304 304,323 340,330 340,460 40,460"/>
+<polygon class="zone them" points="340,20 640,20 640,240 430,240 422,206 404,176 376,157 340,150"/>
+<rect class="ruin" x="110" y="59" width="71" height="116" rx="2"/>
+<rect class="ruin" x="475" y="70" width="115" height="71" rx="2"/>
+<rect class="ruin" x="282" y="190" width="116" height="99" rx="2"/>
+<rect class="ruin" x="90" y="340" width="116" height="70" rx="2"/>
+<rect class="ruin" x="500" y="304" width="70" height="115" rx="2"/>
+<rect class="ruin" x="340" y="60" width="40" height="60" rx="2"/>
+<rect class="ruin" x="373" y="120" width="77" height="20" rx="2"/>
+<rect class="ruin" x="450" y="180" width="40" height="60" rx="2"/>
+<rect class="ruin" x="490" y="240" width="60" height="20" rx="2"/>
+<rect class="ruin" x="130" y="220" width="60" height="20" rx="2"/>
+<rect class="ruin" x="190" y="240" width="40" height="60" rx="2"/>
+<rect class="ruin" x="240" y="340" width="60" height="20" rx="2"/>
+<rect class="ruin" x="300" y="360" width="40" height="60" rx="2"/>
+<rect class="ruin" x="226" y="104" width="90" height="22" rx="2" transform="rotate(50 271.0 115.0)"/>
+<rect class="ruin" x="362" y="353" width="90" height="22" rx="2" transform="rotate(50 407.0 364.0)"/>
+<circle class="obj" cx="136" cy="338" r="7"/>
+<circle class="obj" cx="544" cy="142" r="7"/>
+<circle class="obj" cx="323" cy="240" r="7"/>
+<circle class="obj" cx="182" cy="104" r="7"/>
+<circle class="obj" cx="497" cy="373" r="7"/>
+<text class="lb" x="136" y="327" text-anchor="middle">your home</text>
+<text class="lb" x="333" y="244" text-anchor="start">centre</text>
+<text class="lb" x="172" y="100" text-anchor="end">expansion</text>
+<text class="lb" x="544" y="128" text-anchor="middle">Chaos home</text>
+<text class="lb" x="535" y="366" text-anchor="middle">Chaos</text>
+<text class="lb" x="535" y="381" text-anchor="middle">expansion</text>
+<text class="lb" x="580" y="38" text-anchor="start">Chaos zone</text>
+<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
+<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahB)"/>
+<line class="arrow go" x1="262" y1="293" x2="318" y2="248" marker-end="url(#ahB)"/>
+<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahB)"/>
+<circle class="mk" cx="136" cy="362" r="11"/><text class="mkt" x="136" y="367">1</text>
+<circle class="mk" cx="70" cy="265" r="11"/><text class="mkt" x="70" y="270">2</text>
+<circle class="mk" cx="252" cy="302" r="11"/><text class="mkt" x="252" y="307">3</text>
+<circle class="mk" cx="150" cy="272" r="11"/><text class="mkt" x="150" y="277">4</text>
+</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Assimilator + Emissary, to your expansion <span class="oc">OC 14</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, at the zone edge <span class="oc">OC 38</span></li><li><b>4 Support:</b> Rupture Tyrannofex, in the north-west <span class="oc">OC 7</span></li></ol><ul><li>The centre is about 7" from your zone and about 9" from theirs. That favours you, and your 8" movers reach it on turn 1.</li><li>Your expansion is the top-left one, about 14" from your zone and 16" from Chaos. Fast Chaos units can take it on their first turn, so the Norns must get there first.</li><li>Nothing of yours is on the right-hand side, so the whole army moves north-west and into the centre.</li><li>Your home is about 28" from the Chaos zone, one turn further than in A.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, Chaos the right 18", with 24" of open ground between. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
+<defs><marker id="ahC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect class="board" x="40" y="20" width="600" height="440"/>
+<polygon class="zone you" points="40,20 220,20 220,460 40,460"/>
+<polygon class="zone them" points="460,20 640,20 640,460 460,460"/>
+<rect class="ruin" x="229" y="41" width="70" height="116" rx="2"/>
+<rect class="ruin" x="291" y="183" width="99" height="115" rx="2"/>
+<rect class="ruin" x="381" y="324" width="70" height="116" rx="2"/>
+<rect class="ruin" x="500" y="70" width="70" height="116" rx="2"/>
+<rect class="ruin" x="109" y="295" width="71" height="115" rx="2"/>
+<rect class="ruin" x="200" y="190" width="32" height="100" rx="2"/>
+<rect class="ruin" x="454" y="190" width="32" height="100" rx="2"/>
+<rect class="ruin" x="370" y="61" width="20" height="60" rx="2"/>
+<rect class="ruin" x="391" y="102" width="61" height="43" rx="2"/>
+<rect class="ruin" x="229" y="342" width="60" height="40" rx="2"/>
+<rect class="ruin" x="290" y="360" width="20" height="60" rx="2"/>
+<rect class="ruin" x="101" y="87" width="90" height="22" rx="2" transform="rotate(45 146.0 98.0)"/>
+<rect class="ruin" x="119" y="144" width="70" height="40" rx="2" transform="rotate(-45 154.0 164.0)"/>
+<rect class="ruin" x="492" y="298" width="70" height="40" rx="2" transform="rotate(-45 527.0 318.0)"/>
+<rect class="ruin" x="486" y="371" width="90" height="22" rx="2" transform="rotate(45 531.0 382.0)"/>
+<circle class="obj" cx="181" cy="341" r="7"/>
+<circle class="obj" cx="497" cy="141" r="7"/>
+<circle class="obj" cx="338" cy="223" r="7"/>
+<circle class="obj" cx="227" cy="111" r="7"/>
+<circle class="obj" cx="452" cy="370" r="7"/>
+<text class="lb" x="181" y="327" text-anchor="middle">your home</text>
+<text class="lb" x="348" y="227" text-anchor="start">centre</text>
+<text class="lb" x="237" y="128" text-anchor="start">your</text>
+<text class="lb" x="237" y="142" text-anchor="start">expansion</text>
+<text class="lb" x="497" y="127" text-anchor="middle">Chaos home</text>
+<text class="lb" x="441" y="361" text-anchor="end">Chaos</text>
+<text class="lb" x="441" y="376" text-anchor="end">expansion</text>
+<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
+<text class="lb" x="632" y="452" text-anchor="end">Chaos zone</text>
+<line class="arrow go" x1="190" y1="238" x2="326" y2="226" marker-end="url(#ahC)"/>
+<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahC)"/>
+<circle class="mk" cx="150" cy="360" r="11"/><text class="mkt" x="150" y="365">1</text>
+<circle class="mk" cx="205" cy="105" r="11"/><text class="mkt" x="205" y="110">2</text>
+<circle class="mk" cx="178" cy="240" r="11"/><text class="mkt" x="178" y="245">3</text>
+</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary + Acid spray Tyrannofex, at your expansion <span class="oc">OC 21</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, behind the wall on your zone edge <span class="oc">OC 38</span></li></ol><ul><li>The centre is about 12" from both zones, so neither side reaches it on turn 1. Expect two rounds of shooting first.</li><li>Your expansion is about 0.7" outside your zone, so you hold it from the start. Chaos fast units are about 23" away.</li><li>The wall on your zone edge lines up with the centre. Units behind it stay out of sight until you want them to move.</li><li>Barbgaunts alone on the home objective (OC 5) lose to a single Bikers unit (OC 6). Pairing them with the Rupture Tyrannofex makes 12, which ties two Bikers units and denies Chaos control.</li></ul></div></div>
+  <p class="note">Objective control ranges and Advance moves were not available to me, so turn-by-turn reach is approximate. The OC for Chaos infantry (Terminators and Chosen about 11 each, Legionaries and Cultists 10) is the number to beat at the centre, so killing models matters more than standing on the objective.</p>
+</section>
+
 <section id="plan">
   <h2>Game plan</h2>
   <div class="grid g2">
@@ -270,7 +428,7 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
         <li>Your monsters get stronger as they take damage (Enraged Behemoths), so a unit that survives the first exchange hits harder than it did before.</li>
         <li>For holding ground, the Singular Purpose objective option (OC 15, Feel No Pain 5+) turns a Norn into an anchor, but then it will not have the re-rolls. Pick one per Norn.</li>
       </ul>
-      <p class="note">I haven't read the exact Purge the Foe scoring in the mission pack, so check it before relying on these tips.</p>
+      <p class="note">The Unstoppable Force scoring and the objective plans are in the Deployment section above.</p>
     </div>
     <div class="card" style="grid-column:1/-1">
       <h3>Target priorities by unit</h3>
