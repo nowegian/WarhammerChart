@@ -94,6 +94,8 @@ ul{margin:8px 0;padding-left:20px;max-width:74ch} li{margin:4px 0}
 footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 @media (max-width:560px){.bar{grid-template-columns:100px 1fr auto}}
 @media (prefers-reduced-motion:no-preference){.fl{transition:width .5s ease}}
+.srt{all:unset;cursor:pointer;display:block;width:100%;font:inherit;text-transform:inherit;letter-spacing:inherit;color:inherit;text-align:inherit}
+.srt:hover{text-decoration:underline}.srt:focus-visible{outline:2px solid var(--ty,currentColor);outline-offset:2px}
 </style>
 
 <div class="wrap">
@@ -129,7 +131,7 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 
 <section id="you">
   <h2>Mathhammer: Shooting and Fight phases</h2>
-  <p class="lede">Each cell is one activation of one of your units against a plain target with no special rules, averaged over 500 simulated rolls with damage allocated model by model. Units with several models show <b>dead models</b>. Single-model targets show <b>wounds dealt · chance the model is destroyed</b>. Darker means a larger share of the target's wounds.</p>
+  <p class="lede">Each cell is one activation of one of your units against a plain target with no special rules, averaged over 500 simulated rolls with damage allocated model by model. Units with several models show <b>dead models</b>. Single-model targets show <b>wounds dealt · chance the model is destroyed</b>. Darker means a larger share of the target's wounds. Click a column heading to sort the units from highest to lowest; click again for lowest to highest, and a third time to restore the original order.</p>
   <p class="note">Targets: Guardsmen ×10 (T3, 5+ save, 1W), Marines ×10 (T5, 3+, 2W), Terminators ×5 (T6, 2+ save, 4+ invulnerable, 3W), Vehicle (T10, 3+, 11W) and Monster (T11, 2+, 16W). Shooting shows every target again in Cover (-1 to Hit); Fight shows every target again with -1 to Hit. Psychic weapons and Torrent ignore the modifier. No Feel No Pain, auras or Stratagems on either side.</p>
   <h3>Shooting phase</h3>
   <div class="tw"><table id="tblYouR"></table></div>
@@ -490,15 +492,31 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
     return "<td class='heat' style='"+shade(w/pool,kind)+"'>"+txt+"</td>";
   }
   function heat(id,cols,rows,kind,first){
-    var t=document.getElementById(id), h="<thead><tr><th class='lab'>"+first+"</th>";
-    cols.forEach(function(c){h+="<th>"+c+"</th>"});
-    h+="</tr></thead><tbody>";
-    rows.forEach(function(r){
-      h+="<tr><td class='lab'>"+r[0]+"<span class='wp'>"+r[1]+"</span></td>";
-      for(var i=2;i<r.length;i++) h+=cell(r[i],kind);
-      h+="</tr>";
+    var t=document.getElementById(id), st={c:-1,dir:0};
+    function val(r,i){var c=r[i+2];return c[3]>1?c[0]:c[1];}
+    function draw(){
+      var idx=rows.map(function(_,i){return i}), ord=idx;
+      if(st.dir!==0) ord=idx.slice().sort(function(x,y){var d=val(rows[y],st.c)-val(rows[x],st.c);if(d===0)d=x-y;return st.dir===1?d:(d===0?0:-d)||x-y;});
+      var h="<thead><tr><th class='lab'>"+first+"</th>";
+      cols.forEach(function(c,i){
+        var on=st.c===i&&st.dir!==0, ar=on?(st.dir===1?" \u25BC":" \u25B2"):"";
+        h+="<th aria-sort='"+(on?(st.dir===1?"descending":"ascending"):"none")+"'><button type='button' class='srt' data-c='"+i+"'>"+c+ar+"</button></th>";
+      });
+      h+="</tr></thead><tbody>";
+      ord.forEach(function(k){var r=rows[k];
+        h+="<tr><td class='lab'>"+r[0]+"<span class='wp'>"+r[1]+"</span></td>";
+        for(var i=2;i<r.length;i++) h+=cell(r[i],kind);
+        h+="</tr>";
+      });
+      t.innerHTML=h+"</tbody>";
+    }
+    t.addEventListener("click",function(e){
+      var b=e.target.closest("button.srt"); if(!b) return;
+      var c=+b.dataset.c;
+      if(st.c!==c){st.c=c;st.dir=1;} else st.dir=(st.dir+1)%3;
+      draw();
     });
-    t.innerHTML=h+"</tbody>";
+    draw();
   }
   function plain(id,cols,rows,txtCols){
     var t=document.getElementById(id), h="<thead><tr>";
