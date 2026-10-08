@@ -1,10 +1,10 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Crusher Talons vs Chaos</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Crusher Talons</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: one-column briefing with a sticky section nav; tables scroll inside their own wrappers.
-   Two armies get two hues: Tyranids = violet, Chaos = rust. Heat cells shade toward the attacker's hue. */
+   Tyranids = violet, enemy = rust. Heat cells shade toward the attacker's hue. */
 :root{
   --bg:#f3f4f7; --panel:#ffffff; --fg:#1b1e27; --muted:#5b6172; --line:#d9dce5;
   --ty:#6d3fb0; --ty-soft:#ece5f7; --ch:#b4452b; --ch-soft:#f8e6e0;
@@ -98,38 +98,19 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 
 <div class="wrap">
 <header class="top">
-  <div class="kicker">Warhammer 40,000 · 11th Edition · 2,000 pts · Mathhammer briefing</div>
-  <h1><span class="a">Crusher Talons</span><span class="v">vs</span><span class="b">Chaos</span></h1>
-  <p class="sub">Tyranids (Crusher Stampede + Talons of the Norn Queen) against Chaos Space Marines. Expected-value dice math on your two lists, with the detachment rules, Stratagems, Dark Pacts and Cover included where they could be modelled.</p>
+  <div class="kicker">Warhammer 40,000 · 11th Edition · 2,000 pts · Army briefing</div>
+  <h1><span class="a">Crusher Talons</span></h1>
+  <p class="sub">Tyranids (Crusher Stampede + Talons of the Norn Queen). Detachment rules, Stratagems, and deployment and objective plans for the 2,000-point list.</p>
 </header>
 
 <nav aria-label="Sections">
-  <a href="#summary">Summary</a><a href="#lists">Lists</a><a href="#race">Damage race</a><a href="#you">Your guns</a><a href="#them">Their guns</a><a href="#tempo">Range &amp; tempo</a><a href="#rules">Rules &amp; Stratagems</a><a href="#deploy">Deployment</a><a href="#plan">Game plan</a><a href="#limits">Limits</a>
+  <a href="#lists">Lists</a><a href="#you">Mathhammer</a><a href="#tempo">Range &amp; tempo</a><a href="#rules">Rules &amp; Stratagems</a><a href="#deploy">Deployment</a><a href="#plan">Game plan</a>
 </nav>
 
-<section id="summary">
-  <h2>Bottom line</h2>
-  <p class="lede">With everything in range, your list hits harder, and going first is worth a lot. The real fight is about range and charge distance, because Chaos moves faster and your monsters hit harder.</p>
-  <div class="grid g3" style="margin-top:12px">
-    <div class="card"><div class="stat ty">≈1,390 pts</div><small>of Chaos destroyed in round 1 if you go first. Chaos answers by destroying about 405 pts of yours.</small></div>
-    <div class="card"><div class="stat ch">≈1,000 pts</div><small>of your list destroyed in round 1 if Chaos goes first. You answer by destroying about 695 pts.</small></div>
-    <div class="card"><div class="stat">63%</div><small>chance your Norn Assimilator kills Vashtorr over one shooting and fight activation with Singular Purpose (12.2 of his 14 wounds on average).</small></div>
-  </div>
-  <h3>The six things that matter most</h3>
-  <ol class="pri">
-    <li><span><b>Point the Assimilator's Singular Purpose at Vashtorr.</b> Re-rolled hits and wounds average 12.2 of his 14 wounds and kill him 64% of the time across its shooting and fight phases, through his 4+ invulnerable save. Add Hive Tyrant, Emissary or Massive Impact damage to finish him. Protean Purpose lets you re-pick once if he is not the real threat.</span></li>
-    <li><span><b>Chosen with Bile and the Terminators are Chaos's engine.</b> They are about 860 of its 1,995 points. If they pick an Exocrine for Focus of Hatred and Death Hex, the Chosen kill it 98% of the time in melee and the Terminators 73%; without those two rules it is 56% and 13%. Kill them first. The Emissary is your best answer to the Chosen (5.6 of 10 dead per round).</span></li>
-    <li><span><b>Savage Roar is your best defensive Stratagem.</b> Against a focused Exocrine in the Fight phase it drops the Chosen's chance to kill it from 98% to 82%, the Terminators' from 73% to 50%, and Vashtorr's from 55% to 17%. It cannot stop Focus of Hatred and Death Hex, which are separate.</span></li>
-    <li><span><b>Their long-range guns outrange most of your list.</b> The Predator hits at 48", the Reaper autocannon and ectoplasma cannons at 36". Only your rupture-cannon Tyrannofex (48") matches the Predator, and your Exocrines and Hive Tyrant (36") match the rest. Your Maleceptors (18"), Emissary (18"), Assimilator (12") and acid-spray Tyrannofex (18") must close the distance before they can shoot.</span></li>
-    <li><span><b>Devastating Wounds ignore saves, and you have an answer.</b> Vashtorr, the Forgefiend, the Reaper autocannon and the Sorcerer all use it. Catalytic Biofortification (1 CP) gives the Assimilator Feel No Pain 4+ against mortal wounds, and the Emissary already has it.</span></li>
-    <li><span><b>Your Objective Control is far higher.</b> Monsters at Starting Strength carry +2 OC, so Norns and Tyrannofexes reach OC 7, Exocrines and Maleceptors OC 6. Chaos's best is OC 3. The bonus disappears once a monster is damaged.</span></li>
-  </ol>
-</section>
-
 <section id="lists">
-  <h2>The two lists as I read them</h2>
-  <p class="lede">Your file totals exactly 2,000 pts: 12 units, 166 wounds. Chaos totals 1,995 pts: 13 units, about 159 wounds.</p>
-  <div class="grid g2">
+  <h2>The list as I read it</h2>
+  <p class="lede">Your file totals exactly 2,000 pts: 12 units, 166 wounds.</p>
+  <div class="grid g1">
     <div class="card">
       <h3><span class="tag ty">Tyranids</span> Crusher Talons</h3>
       <dl class="kv">
@@ -143,72 +124,19 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
       </dl>
       <p class="note">An earlier read of the PDF counted 2 Exocrines and 1 Maleceptor. The HTML export shows 3 and 2, which also makes the total exactly 2,000.</p>
     </div>
-    <div class="card">
-      <h3><span class="tag ch">Chaos</span> Chaos Space Marines</h3>
-      <dl class="kv">
-        <dt>Characters</dt><dd>Vashtorr (220), Daemon Prince, Warlord, Slaanesh (175), Sorcerer in Terminator Armour (100), Fabius Bile (110)</dd>
-        <dt>Infantry</dt><dd>Terminators (370, likely 10), Chosen (280, likely 10), Legionaries ×5 (95), Cultists ×10 (50)</dd>
-        <dt>Fast</dt><dd>Bikers ×3, two units (80 each)</dd>
-        <dt>Vehicles</dt><dd>Predator Destructor (145), Forgefiend (170), Venomcrawler (120)</dd>
-      </dl>
-      <p class="note">Assumed: Bile leads the Chosen (T6, +1 Strength in melee), the Sorcerer leads the Terminators, and the Daemon Prince's aura gives their Infantry Cover. Model counts and weapon splits inside the Terminators, Chosen and Bikers are inferred from the export.</p>
-    </div>
   </div>
-</section>
-
-<section id="race">
-  <h2>Damage race</h2>
-  <p class="lede">Both armies fully engaged each round, each unit picking the target it destroys most efficiently. Bars show cumulative points of value destroyed (a unit's points are pro-rated by the wounds it has lost). Output scales down as units lose wounds.</p>
-  <div class="grid g2">
-    <div class="card">
-      <h3>You go first</h3>
-      <div class="bars" id="raceTy"></div>
-      <p class="note">Chaos is wiped in round 3. You lose about 410 pts of value, because Focus of Hatred and Death Hex make their one counter-attack hit harder.</p>
-    </div>
-    <div class="card">
-      <h3>Chaos goes first</h3>
-      <div class="bars" id="raceCh"></div>
-      <p class="note">With Focus of Hatred and Death Hex each turn Chaos wipes your list in round 4, while losing about 940 pts of its own and keeping 7 units.</p>
-    </div>
-  </div>
-  <div class="callout warn"><b>Read this as a stakes diagram, not a forecast.</b> It assumes everything is in range every round. Real games have terrain, 2" Engagement Range, failed charges and Hidden units. Chaos's mobility means it can often pick the engagement; your high Objective Control and wounds mean time works for you if you hold the objectives. Removing the Cover effect on their Infantry only slightly changes round 1.</div>
 </section>
 
 <section id="you">
-  <h2>Your units against theirs</h2>
-  <p class="lede">Each cell is one activation of one of your units, averaged over 800 simulated rolls with damage allocated model by model. Shooting and fighting are separate tables, and each row lists the weapons used. Units with several models show <b>dead models</b>. Single-model targets show <b>wounds dealt · chance the model is destroyed</b>. Darker means a larger share of the target's wounds.</p>
-  <p class="note">Norn Singular Purpose is applied to Vashtorr (Assimilator) and the Chosen (Emissary). Their Infantry get Cover (-1 BS) from the Daemon Prince's aura, and Vashtorr gives -1 to Hit on ranged attacks against him; psychic weapons and Torrent ignore both. Terminators and Chosen have 3 wounds per model, Legionaries 2, Cultists 1 and Bikers 3. Dead counts are the 10 Terminators or Chosen only, with the Sorcerer or Bile killed last. The Chosen have no Feel No Pain: Bile's is his own. Surgeon Acolyte (once per turn, one attack's damage becomes 0) is not included.</p>
+  <h2>Mathhammer: Shooting and Fight phases</h2>
+  <p class="lede">Each cell is one activation of one of your units against a plain target with no special rules, averaged over 500 simulated rolls with damage allocated model by model. Units with several models show <b>dead models</b>. Single-model targets show <b>wounds dealt · chance the model is destroyed</b>. Darker means a larger share of the target's wounds.</p>
+  <p class="note">Targets: Guardsmen ×10 (T3, 5+ save, 1W), Marines ×10 (T5, 3+, 2W), Terminators ×5 (T6, 2+ save, 4+ invulnerable, 3W), Vehicle (T10, 3+, 11W) and Monster (T11, 2+, 16W). Shooting shows every target again in Cover (-1 to Hit); Fight shows every target again with -1 to Hit. Psychic weapons and Torrent ignore the modifier. No Feel No Pain, auras or Stratagems on either side.</p>
   <h3>Shooting phase</h3>
   <div class="tw"><table id="tblYouR"></table></div>
-  <p class="note">Heavy weapons are assumed stationary (+1 to Hit). Blast adds 1 attack per 5 models in the target (the Sorcerer and Bile count). The Emissary's three tendrils are different weapons; the table uses the best one per target, and neurolance is shown without its Melta bonus.</p>
+  <p class="note">Heavy weapons are assumed stationary (+1 to Hit). Blast adds 1 attack per 5 models in the target. The Emissary's three tendrils are different weapons; the table uses the best one per target.</p>
   <h3>Fight phase</h3>
   <div class="tw"><table id="tblYouM"></table></div>
   <p class="note">Your units are assumed to be in Engagement Range with no charge bonus. The Maleceptor uses the better of strike or sweep per target.</p>
-  <h3>What each of your units is best used for</h3>
-  <div class="grid g2">
-    <div class="card"><h3>Norn Assimilator</h3><p>Your best single unit. In the Fight phase it deals 10.8 wounds to Vashtorr (42% kill; 64% with its harpoon shooting first), about 8.5–9 to the Predator, Forgefiend and Daemon Prince, and kills 4.1 Chosen or 2.8 Terminators. Save it for a high-value target, not infantry chaff.</p></div>
-    <div class="card"><h3>Norn Emissary</h3><p>Best against the Chosen: 4.3 dead in the Fight phase plus 1.2 from shooting (5.6 of 10 over both phases). It also kills 6.3 Cultists with its neuroblast and 7.0 with its blades. It does only 3.7 wounds to Vashtorr in melee.</p></div>
-    <div class="card"><h3>Tyrannofex, rupture cannon</h3><p>The anti-tank piece, shooting only. 8.4 wounds to the Predator (54% kill), 6.2 to the Venomcrawler (57%), 6.3 to the Forgefiend (22%) and 4.5 to the Daemon Prince (27%). It kills only 0.5 Terminators.</p></div>
-    <div class="card"><h3>Tyrannofex, acid spray</h3><p>Torrent auto-hits, so Cover does nothing to it. Best into Cultists (9.2 of 10 dead), Legionaries (3.9 of 5 dead) and Bikers (1.5 of 3 dead). Ignore it against vehicles. Its melee is weak.</p></div>
-    <div class="card"><h3>Exocrines ×3</h3><p>Your shooting volume. Each kills 1.9 Terminators, 3.1 Chosen, 2.7 Legionaries, 4.8 Cultists or 2.5 Bikers in the Shooting phase. They do only 2.2 wounds to Vashtorr because Reorder Reality's -1 to Hit applies. Their melee is minor.</p></div>
-    <div class="card"><h3>Maleceptors ×2</h3><p>Psychic overload ignores Cover and hit modifiers: 1.9 dead Terminators, 2.5 Chosen, 2.8 Legionaries per Shooting phase. In melee they kill 2.6 Chosen or 3.3 Cultists. The -1 to Hit aura within 6" is not modelled and makes them a strong screen.</p></div>
-    <div class="card"><h3>Hive Tyrant</h3><p>Onslaught gives nearby Tyranids Assault and Lethal Hits, and Will of the Hive Mind reduces a Stratagem by 1 CP once per round. In melee it kills 2.9 Chosen, 2.2 Terminators or 3.0 Legionaries; its venom cannon adds about 1 more. Leading the Tyrant Guard gives it Feel No Pain 5+.</p></div>
-    <div class="card"><h3>Barbgaunts and Tyrant Guard</h3><p>The Barbgaunts kill 6.5 of the 10 Cultists with their guns and disrupt (-2" Move) an Infantry unit they hit. The Tyrant Guard kill 2.9 Cultists or 1.8 Legionaries in melee and almost nothing else.</p></div>
-  </div>
-</section>
-
-<section id="them">
-  <h2>Their units against yours</h2>
-  <p class="lede">Same method and display. Barbgaunts (2 wounds per model) and Tyrant Guard (4 per model) show dead models; every other target of yours is a single model, shown as wounds and kill chance. Dark Pact gives the better of Lethal Hits or Sustained Hits 1 on each weapon.</p>
-  <p class="lede">By default each column assumes that unit is the target of two rules: <b>Focus of Hatred</b> (every Heretic Astartes model re-rolls Hit rolls against it) and the Sorcerer's <b>Death Hex</b> (every attack against it improves AP by 1, so a 3+ save becomes 4+). They can name only one unit each turn, so read each column as "if this is the one they pick". Use the buttons to apply both, either one alone, or neither.</p>
-  <div class="seg" id="themSeg" role="group" aria-label="Chaos rules applied" style="flex-wrap:wrap"><button type="button" data-m="both" aria-pressed="true">With Focus + Death Hex</button><button type="button" data-m="rr" aria-pressed="false">Just Focus</button><button type="button" data-m="hex" aria-pressed="false">Just Death Hex</button><button type="button" data-m="base" aria-pressed="false">Without</button></div></p>
-  <h3>Shooting phase</h3>
-  <div class="tw"><table id="tblThemR"></table></div>
-  <p class="note">Rapid Fire and Melta are counted at half range, which is the best case for them. The Predator's autocannon, Havoc launcher and combi-bolter are all counted as firing. Loadouts inside the Terminators, Chosen and Bikers are inferred from your export.</p>
-  <h3>Fight phase</h3>
-  <div class="tw"><table id="tblThemM"></table></div>
-  <p class="note">Charging bonuses are included: Lance on the Daemon Prince, Rapid Assault (+1 Strength) on the Bikers, and Enhanced Warriors (+1 Strength) for the Chosen. The Chosen's Veterans of the Long War re-rolls wound rolls of 1; against a unit on an objective it would re-roll all of them. Death Hex needs the target within 12" of the Sorcerer and visible, and on a roll of 1 the Sorcerer's unit takes D3 mortal wounds (not modelled).</p>
-  <div class="callout ch"><b>What this says about their plan.</b> Whatever unit they pick for Focus of Hatred and Death Hex is in real danger. A focused Exocrine takes 14 wounds from the Chosen in melee (99% kill) and 13.1 from the Terminators (70% kill); a focused Maleceptor 12.4 and 9.8. Vashtorr does 12.2 to a focused Exocrine (54% kill) but only 5.7 to the Hive Tyrant, whose Feel No Pain 5+ and 4+ invulnerable save help. The Terminators kill all 5 Barbgaunts from shooting alone. Their shooting alone rarely kills a monster: the Predator does 11.5 wounds to a focused Exocrine (48% kill), the Terminators 10.9 (25%). Death Hex hits your 2+ and 3+ saves hardest, so the Hive Tyrant, Norns and Tyrannofexes lose less than the Exocrines.</div>
 </section>
 
 <section id="tempo">
@@ -220,56 +148,43 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
       <div class="tw"><table id="tblCharge"></table></div>
       <p class="note">Deep Strike arrivals land more than 8" away, so a same-turn charge from there needs an 8 or more (42%) if your pack allows it. Check the mission pack.</p>
     </div>
-    <div>
-      <h3>Who outranges whom</h3>
-      <div class="tw"><table id="tblRange"></table></div>
-    </div>
   </div>
-  <div class="callout"><b>Practical read:</b> Chaos's Bikers, Vashtorr, the Daemon Prince and the Venomcrawler all move 12". Their threat range is about 19" on an average charge, against your 15–17". Keep your Synapse monsters tight (coherency 2" to one model, 9" to all), use terrain to block lines for the 48" guns, and use Tanglestrike Rounds (-2" Move on a tethered enemy) to slow a charger.</div>
+  <div class="callout"><b>Practical read:</b> Keep your Synapse monsters tight (coherency 2" to one model, 9" to all), use terrain to block lines for long-range guns, and use Tanglestrike Rounds (-2" Move on a tethered enemy) to slow a charger.</div>
 </section>
 
 <section id="rules">
   <h2>Detachment rules and Stratagems</h2>
   <p class="lede">Crusher Stampede rules are from Wahapedia. Talons of the Norn Queen rules are from Hutber and Spikeybits because Wahapedia's page was empty; check them against your copy.</p>
   <div class="tw"><table id="tblStrat"></table></div>
-  <h3>Enraged Behemoths in numbers</h3>
-  <p>Monsters at Starting Strength gain +2 OC. Once damaged they gain +1 to Hit, and below half strength +1 to Wound as well. That mostly cancels the "Damaged" penalty (-1 to Hit at 1–5 wounds) and sharpens wounded monsters. Full activation once a monster is below half strength (base → enraged):</p>
-  <div class="tw"><table id="tblEnr"></table></div>
-  <h3>Chaos rules that change the maths</h3>
-  <ul>
-    <li><b>Dark Pacts.</b> Each unit may take a Leadership test (their Ld is 6+) before shooting or fighting; failure costs D3 mortal wounds. In return they get Lethal Hits or Sustained Hits 1. Expect them to take it almost every phase.</li>
-    <li><b>Focus of Hatred.</b> Each Command phase they pick one of your units and every Heretic Astartes model in their army re-rolls Hit rolls against it. Expect the unit that threatens them most, probably the Assimilator, or an Exocrine or Maleceptor that can be reached. They also gain a CP on a 4+ when it is destroyed (Eye of Abaddon).</li>
-    <li><b>Death Hex.</b> At the start of their Shooting phase the Sorcerer picks one of your units within 12" and visible. On a 2+ every attack against it until their next Movement phase improves AP by 1, so a 3+ save becomes 4+. Keep important units more than 12" from the Sorcerer or out of its line of sight, or kill the Sorcerer inside the Terminators.</li>
-    <li><b>Fabius Bile.</b> Surgeon Acolyte sets one attack's damage to 0 each turn, and Bile comes back on a 2+ the first time he dies. Attached to the Chosen it adds +1 Toughness and +1 Strength in melee and makes them the hardest unit to remove.</li>
-    <li><b>Daemon Prince aura.</b> Chaos Infantry within 6" get Cover (-1 BS against ranged attacks). Swarm-Guided Salvoes (1 CP) ignores Cover and BS modifiers, which also cancels Vashtorr's Reorder Reality for a turn.</li>
-    <li><b>Venomcrawler.</b> Soul Eater adds +1 attacks for the battle after it destroys a unit, so don't feed it small units.</li>
-  </ul>
+  <h3>Enraged Behemoths</h3>
+  <p>Monsters at Starting Strength gain +2 OC. Once damaged they gain +1 to Hit, and below half strength +1 to Wound as well. That mostly cancels the "Damaged" penalty (-1 to Hit at 1–5 wounds) and sharpens wounded monsters.</p>
 </section>
 
 <section id="deploy">
   <h2>Deployment and objectives</h2>
-  <p class="lede">Three deployment maps, all with you in the red zone and the mission set to Unstoppable Force. Distances are measured from the map images and are within about 1 to 2 inches. OC numbers include the Enraged Behemoths +2 for monsters at full strength, so they fall as monsters take damage.</p>
-  <div class="card" style="margin:12px 0">
-    <h3>Unstoppable Force scoring (Purge the Foe)</h3>
-    <ul>
-      <li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li>
-      <li><b>Round 2 onward, end of your Command phase:</b> 4 VP for each objective you control, excluding your home. Your own home does not count, but the Chaos home does for you.</li>
-      <li><b>End of your turn, round 2 onward:</b> 3 VP if you control an objective you did not control at the start of the turn (not your home).</li>
-      <li><b>End of the battle:</b> 5 VP for holding the central objective.</li>
-      <li>Primaries are capped at 15 VP per round and 45 VP per game. Three held objectives plus a kill already reach 15 VP.</li>
-    </ul>
-    <p class="note">You chose Tactical secondaries: two are drawn each Command phase and you can discard for 1 CP. Cards that suit this list are No Prisoners, Overwhelming Force, Burden of Trust and Secure No Man's Land. Bring It Down helps Chaos against you, because ten of your models have 10 or more Wounds.</p>
-  </div>
-  <h3>Comparison</h3>
-  <div class="tw"><table id="tblDeploy"><thead><tr><th>Deployment</th><th>Centre from your / their zone</th><th>Your expansion from your / their zone</th><th>Your home from the Chaos zone</th><th class="txt">What to do</th></tr></thead><tbody>
-<tr><td>A: staggered</td><td>3" / 3"</td><td>2" / about 20"</td><td>about 24"</td><td class="txt">Win the centre on turn 1. Strong wings on both flanks.</td></tr>
-<tr><td>B: diagonal</td><td>7" / 9"</td><td>14" / 16"</td><td>about 28"</td><td class="txt">Everything moves north-west and to the centre. Beat Chaos fast units to your expansion.</td></tr>
-<tr><td>C: long zones</td><td>12" / 12"</td><td>0.7" / 23"</td><td>about 28"</td><td class="txt">Shoot for two rounds. Hide behind the wall and keep the home guard strong.</td></tr>
+  <p class="lede">Three deployment maps, all with you in the red zone. Pick the mission your opponent's disposition gives you. Distances are measured from the map images and are within about 1 to 2 inches. OC numbers include the Enraged Behemoths +2 for monsters at full strength, so they fall as monsters take damage.</p>
+  <div class="seg" id="depSeg" role="group" aria-label="Mission"><button type="button" data-m="uf" aria-pressed="true">Unstoppable Force</button><button type="button" data-m="p" aria-pressed="false">Punishment</button></div>
+  <h3>Distances</h3>
+  <div class="tw"><table id="tblDeploy"><thead><tr><th>Deployment</th><th>Centre from your / their zone</th><th>Your expansion from your / their zone</th><th>Your home from the enemy zone</th></tr></thead><tbody>
+<tr><td>A: staggered</td><td>3" / 3"</td><td>2" / about 20"</td><td>about 24"</td></tr>
+<tr><td>B: diagonal</td><td>7" / 9"</td><td>14" / 16"</td><td>about 28"</td></tr>
+<tr><td>C: long zones</td><td>12" / 12"</td><td>0.7" / 23"</td><td>about 28"</td></tr>
 </tbody></table></div>
-  <h3>Plans</h3>
-  <p class="note">Amber dots are objectives and numbered circles are your groups. Violet dashed arrows are your moves and the rust arrow is the route Chaos fast units take.</p>
-  <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The Chaos zone is the mirror image along the top.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
-<defs><marker id="ahA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <div id="depUF">
+    <div class="card" style="margin:12px 0">
+      <h3>Unstoppable Force (Purge the Foe vs Take and Hold)</h3>
+      <ul>
+        <li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li>
+        <li><b>Round 2 onward, end of your Command phase:</b> 4 VP for each objective you control, excluding your home. Your own home does not count, but the enemy home does for you.</li>
+        <li><b>End of your turn, round 2 onward:</b> 3 VP if you control an objective you did not control at the start of the turn (not your home).</li>
+        <li><b>End of the battle:</b> 5 VP for holding the central objective.</li>
+        <li>Primaries are capped at 15 VP per round and 45 VP per game. Three held objectives plus a kill already reach 15 VP.</li>
+      </ul>
+      <p class="note">You chose Tactical secondaries: two are drawn each Command phase and you can discard for 1 CP. Cards that suit this list are No Prisoners, Overwhelming Force, Burden of Trust and Secure No Man's Land. Bring It Down helps your opponent against you, because ten of your models have 10 or more Wounds.</p>
+    </div>
+    <p class="note">Amber dots are objectives and numbered circles are your groups. Violet dashed arrows are your moves and the rust arrow is the route fast enemy units take.</p>
+    <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The enemy zone is the mirror image along the top.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
+<defs><marker id="ahAU" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect class="board" x="40" y="20" width="600" height="440"/>
 <polygon class="zone you" points="40,320 340,320 340,380 640,380 640,460 40,460"/>
 <polygon class="zone them" points="40,20 640,20 640,160 340,160 340,100 40,100"/>
@@ -296,18 +211,18 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 <text class="lb" x="145" y="327" text-anchor="middle">your home</text>
 <text class="lb" x="333" y="244" text-anchor="start">centre</text>
 <text class="lb" x="543" y="348" text-anchor="middle">expansion</text>
-<text class="lb" x="534" y="128" text-anchor="middle">Chaos home</text>
-<text class="lb" x="135" y="140" text-anchor="middle">Chaos expansion</text>
-<text class="lb" x="48" y="38" text-anchor="start">Chaos zone</text>
+<text class="lb" x="534" y="128" text-anchor="middle">Enemy home</text>
+<text class="lb" x="135" y="140" text-anchor="middle">Enemy expansion</text>
+<text class="lb" x="48" y="38" text-anchor="start">Enemy zone</text>
 <text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<line class="arrow go" x1="195" y1="419" x2="142" y2="152" marker-end="url(#ahA)"/>
-<line class="arrow go" x1="322" y1="324" x2="323" y2="254" marker-end="url(#ahA)"/>
+<line class="arrow go" x1="195" y1="419" x2="142" y2="152" marker-end="url(#ahAU)"/>
+<line class="arrow go" x1="322" y1="324" x2="323" y2="254" marker-end="url(#ahAU)"/>
 <circle class="mk" cx="145" cy="360" r="11"/><text class="mkt" x="145" y="365">1</text>
 <circle class="mk" cx="200" cy="430" r="11"/><text class="mkt" x="200" y="435">2</text>
 <circle class="mk" cx="322" cy="336" r="11"/><text class="mkt" x="322" y="341">3</text>
 <circle class="mk" cx="550" cy="400" r="11"/><text class="mkt" x="550" y="405">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Hammer:</b> Assimilator + Emissary, up the left lane to the Chaos expansion <span class="oc">OC 14</span></li><li><b>3 Centre:</b> 3 Exocrines, 1 Maleceptor, Hive Tyrant + Guard, behind the central ruin <span class="oc">OC 32</span></li><li><b>4 Expansion:</b> Rupture Tyrannofex + 1 Maleceptor, on the right <span class="oc">OC 13</span></li></ol><ul><li>The centre ruin is about 3" from both zones, so the first turn decides it. Put the gun line at the zone corner and be ready to step on.</li><li>Your expansion is about 2" outside your zone. Hold it with the Rupture Tyrannofex, which also covers the right lane to the Chaos home.</li><li>Your home is about 24" from the Chaos zone. Bikers reach it on their second turn.</li><li>Your army splits across both flanks here, so the two wings need to be strong enough to stand alone.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, Chaos the upper-right. The nearest corners are about 12.7" apart.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
-<defs><marker id="ahB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Hammer:</b> Assimilator + Emissary, up the left lane to the enemy expansion <span class="oc">OC 14</span></li><li><b>3 Centre:</b> 3 Exocrines, 1 Maleceptor, Hive Tyrant + Guard, behind the central ruin <span class="oc">OC 32</span></li><li><b>4 Expansion:</b> Rupture Tyrannofex + 1 Maleceptor, on the right <span class="oc">OC 13</span></li></ol><ul><li>The centre ruin is about 3" from both zones, so the first turn decides it. Put the gun line at the zone corner and be ready to step on.</li><li>Your expansion is about 2" outside your zone. Hold it with the Rupture Tyrannofex, which also covers the right lane to the enemy home.</li><li>Your home is about 24" from the enemy zone. Fast units reach it on their second turn.</li><li>Your army splits across both flanks here, so the two wings need to be strong enough to stand alone.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, the enemy the upper-right. The nearest corners are about 12.7" apart.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
+<defs><marker id="ahBU" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect class="board" x="40" y="20" width="600" height="440"/>
 <polygon class="zone you" points="40,240 250,240 258,274 276,304 304,323 340,330 340,460 40,460"/>
 <polygon class="zone them" points="340,20 640,20 640,240 430,240 422,206 404,176 376,157 340,150"/>
@@ -334,20 +249,20 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 <text class="lb" x="136" y="327" text-anchor="middle">your home</text>
 <text class="lb" x="333" y="244" text-anchor="start">centre</text>
 <text class="lb" x="172" y="100" text-anchor="end">expansion</text>
-<text class="lb" x="544" y="128" text-anchor="middle">Chaos home</text>
-<text class="lb" x="535" y="366" text-anchor="middle">Chaos</text>
+<text class="lb" x="544" y="128" text-anchor="middle">Enemy home</text>
+<text class="lb" x="535" y="366" text-anchor="middle">Enemy</text>
 <text class="lb" x="535" y="381" text-anchor="middle">expansion</text>
-<text class="lb" x="580" y="38" text-anchor="start">Chaos zone</text>
+<text class="lb" x="580" y="38" text-anchor="start">Enemy zone</text>
 <text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahB)"/>
-<line class="arrow go" x1="262" y1="293" x2="318" y2="248" marker-end="url(#ahB)"/>
-<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahB)"/>
+<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahBU)"/>
+<line class="arrow go" x1="262" y1="293" x2="318" y2="248" marker-end="url(#ahBU)"/>
+<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahBU)"/>
 <circle class="mk" cx="136" cy="362" r="11"/><text class="mkt" x="136" y="367">1</text>
 <circle class="mk" cx="70" cy="265" r="11"/><text class="mkt" x="70" y="270">2</text>
 <circle class="mk" cx="252" cy="302" r="11"/><text class="mkt" x="252" y="307">3</text>
 <circle class="mk" cx="150" cy="272" r="11"/><text class="mkt" x="150" y="277">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Assimilator + Emissary, to your expansion <span class="oc">OC 14</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, at the zone edge <span class="oc">OC 38</span></li><li><b>4 Support:</b> Rupture Tyrannofex, in the north-west <span class="oc">OC 7</span></li></ol><ul><li>The centre is about 7" from your zone and about 9" from theirs. That favours you, and your 8" movers reach it on turn 1.</li><li>Your expansion is the top-left one, about 14" from your zone and 16" from Chaos. Fast Chaos units can take it on their first turn, so the Norns must get there first.</li><li>Nothing of yours is on the right-hand side, so the whole army moves north-west and into the centre.</li><li>Your home is about 28" from the Chaos zone, one turn further than in A.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, Chaos the right 18", with 24" of open ground between. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
-<defs><marker id="ahC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Assimilator + Emissary, to your expansion <span class="oc">OC 14</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, at the zone edge <span class="oc">OC 38</span></li><li><b>4 Support:</b> Rupture Tyrannofex, in the north-west <span class="oc">OC 7</span></li></ol><ul><li>The centre is about 7" from your zone and about 9" from theirs. That favours you, and your 8" movers reach it on turn 1.</li><li>Your expansion is the top-left one, about 14" from your zone and 16" from the enemy. Fast enemy units can take it on their first turn, so the Norns must get there first.</li><li>Nothing of yours is on the right-hand side, so the whole army moves north-west and into the centre.</li><li>Your home is about 28" from the enemy zone, one turn further than in A.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, the enemy the right 18", with 24" of open ground between. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
+<defs><marker id="ahCU" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect class="board" x="40" y="20" width="600" height="440"/>
 <polygon class="zone you" points="40,20 220,20 220,460 40,460"/>
 <polygon class="zone them" points="460,20 640,20 640,460 460,460"/>
@@ -375,18 +290,155 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 <text class="lb" x="348" y="227" text-anchor="start">centre</text>
 <text class="lb" x="237" y="128" text-anchor="start">your</text>
 <text class="lb" x="237" y="142" text-anchor="start">expansion</text>
-<text class="lb" x="497" y="127" text-anchor="middle">Chaos home</text>
-<text class="lb" x="441" y="361" text-anchor="end">Chaos</text>
+<text class="lb" x="497" y="127" text-anchor="middle">Enemy home</text>
+<text class="lb" x="441" y="361" text-anchor="end">Enemy</text>
 <text class="lb" x="441" y="376" text-anchor="end">expansion</text>
 <text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="632" y="452" text-anchor="end">Chaos zone</text>
-<line class="arrow go" x1="190" y1="238" x2="326" y2="226" marker-end="url(#ahC)"/>
-<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahC)"/>
+<text class="lb" x="632" y="452" text-anchor="end">Enemy zone</text>
+<line class="arrow go" x1="190" y1="238" x2="326" y2="226" marker-end="url(#ahCU)"/>
+<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahCU)"/>
 <circle class="mk" cx="150" cy="360" r="11"/><text class="mkt" x="150" y="365">1</text>
 <circle class="mk" cx="205" cy="105" r="11"/><text class="mkt" x="205" y="110">2</text>
 <circle class="mk" cx="178" cy="240" r="11"/><text class="mkt" x="178" y="245">3</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary + Acid spray Tyrannofex, at your expansion <span class="oc">OC 21</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, behind the wall on your zone edge <span class="oc">OC 38</span></li></ol><ul><li>The centre is about 12" from both zones, so neither side reaches it on turn 1. Expect two rounds of shooting first.</li><li>Your expansion is about 0.7" outside your zone, so you hold it from the start. Chaos fast units are about 23" away.</li><li>The wall on your zone edge lines up with the centre. Units behind it stay out of sight until you want them to move.</li><li>Barbgaunts alone on the home objective (OC 5) lose to a single Bikers unit (OC 6). Pairing them with the Rupture Tyrannofex makes 12, which ties two Bikers units and denies Chaos control.</li></ul></div></div>
-  <p class="note">Objective control ranges and Advance moves were not available to me, so turn-by-turn reach is approximate. The OC for Chaos infantry (Terminators and Chosen about 11 each, Legionaries and Cultists 10) is the number to beat at the centre, so killing models matters more than standing on the objective.</p>
+</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary + Acid spray Tyrannofex, at your expansion <span class="oc">OC 21</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, behind the wall on your zone edge <span class="oc">OC 38</span></li></ol><ul><li>The centre is about 12" from both zones, so neither side reaches it on turn 1. Expect two rounds of shooting first.</li><li>Your expansion is about 0.7" outside your zone, so you hold it from the start. Fast enemy units are about 23" away.</li><li>The wall on your zone edge lines up with the centre. Units behind it stay out of sight until you want them to move.</li><li>Barbgaunts alone on the home objective (OC 5) lose to a single fast enemy unit with OC 6. Pairing them with the Rupture Tyrannofex makes 12, which ties two such units and denies control.</li></ul></div></div>
+  </div>
+  <div id="depP" hidden>
+    <div class="card" style="margin:12px 0">
+      <h3>Punishment (Purge the Foe vs Disruption)</h3>
+      <ul>
+        <li><b>Any round, end of a turn:</b> 5 VP if one or more condemned enemy units left the battlefield this turn. At the start of your turn you condemn 1 to 3 enemy units that are within range of objectives or that destroyed one of yours last turn (one unit if none qualify).</li>
+        <li><b>Round 2 onward, end of your Command phase:</b> 4 VP if you control one or more objectives, excluding your home.</li>
+        <li><b>Same timing:</b> 5 VP if you control more objectives than your opponent.</li>
+        <li><b>End of the battle:</b> 8 VP for controlling your opponent's home objective.</li>
+        <li>The flat 4 VP means holding three objectives is worth no more than holding one. What matters is the comparison, so the centre decides each round.</li>
+      </ul>
+      <p class="note">Disruption's own mission against you (Delaying Action) is from a third-party article: 2 VP per unit you destroy, 4 VP for any non-home objective from round 2, and 3 VP for holding the centre plus an expansion. I could not confirm whether home objectives count in the comparison, so I kept a guard on your home.</p>
+    </div>
+    <p class="note">Same key as above. The "Late push" arrow is the route to the enemy home for the 8 VP at the end.</p>
+    <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The enemy zone is the mirror image along the top.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
+<defs><marker id="ahAP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect class="board" x="40" y="20" width="600" height="440"/>
+<polygon class="zone you" points="40,320 340,320 340,380 640,380 640,460 40,460"/>
+<polygon class="zone them" points="40,20 640,20 640,160 340,160 340,100 40,100"/>
+<rect class="ruin" x="89" y="119" width="116" height="71" rx="2"/>
+<rect class="ruin" x="464" y="70" width="117" height="71" rx="2"/>
+<rect class="ruin" x="281" y="190" width="116" height="100" rx="2"/>
+<rect class="ruin" x="100" y="339" width="116" height="70" rx="2"/>
+<rect class="ruin" x="474" y="291" width="116" height="70" rx="2"/>
+<rect class="ruin" x="286" y="94" width="60" height="12" rx="2" transform="rotate(40 316.0 100.0)"/>
+<rect class="ruin" x="377" y="112" width="40" height="10" rx="2" transform="rotate(-40 397.0 117.0)"/>
+<rect class="ruin" x="210" y="54" width="8" height="60" rx="2"/>
+<rect class="ruin" x="455" y="209" width="40" height="12" rx="2" transform="rotate(55 475.0 215.0)"/>
+<rect class="ruin" x="504" y="219" width="40" height="10" rx="2" transform="rotate(-40 524.0 224.0)"/>
+<rect class="ruin" x="135" y="250" width="40" height="10" rx="2" transform="rotate(-40 155.0 255.0)"/>
+<rect class="ruin" x="183" y="259" width="40" height="12" rx="2" transform="rotate(50 203.0 265.0)"/>
+<rect class="ruin" x="264" y="359" width="40" height="12" rx="2" transform="rotate(-45 284.0 365.0)"/>
+<rect class="ruin" x="331" y="378" width="70" height="12" rx="2" transform="rotate(45 366.0 384.0)"/>
+<rect class="ruin" x="460" y="360" width="8" height="60" rx="2"/>
+<circle class="obj" cx="145" cy="337" r="7"/>
+<circle class="obj" cx="534" cy="142" r="7"/>
+<circle class="obj" cx="323" cy="240" r="7"/>
+<circle class="obj" cx="543" cy="362" r="7"/>
+<circle class="obj" cx="135" cy="117" r="7"/>
+<text class="lb" x="145" y="327" text-anchor="middle">your home</text>
+<text class="lb" x="333" y="244" text-anchor="start">centre</text>
+<text class="lb" x="543" y="348" text-anchor="middle">expansion</text>
+<text class="lb" x="534" y="128" text-anchor="middle">Enemy home</text>
+<text class="lb" x="135" y="140" text-anchor="middle">Enemy expansion</text>
+<text class="lb" x="48" y="38" text-anchor="start">Enemy zone</text>
+<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
+<text class="lb" x="560" y="268" text-anchor="start">Late push</text>
+<line class="arrow go" x1="322" y1="324" x2="323" y2="254" marker-end="url(#ahAP)"/>
+<line class="arrow go" x1="545" y1="392" x2="538" y2="156" marker-end="url(#ahAP)"/>
+<circle class="mk" cx="145" cy="360" r="11"/><text class="mkt" x="145" y="365">1</text>
+<circle class="mk" cx="550" cy="405" r="11"/><text class="mkt" x="550" y="410">2</text>
+<circle class="mk" cx="322" cy="336" r="11"/><text class="mkt" x="322" y="341">3</text>
+</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Right wing:</b> Assimilator + Emissary + Rupture Tyrannofex, at your expansion, then north to the enemy home <span class="oc">OC 21</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, behind the central ruin <span class="oc">OC 38</span></li></ol><ul><li>The centre is about 3" from both zones. Holding it gives you more objectives than the enemy, which is the extra 5 VP each round.</li><li>Your expansion and the enemy home are both on the right, so one group holds the first and later takes the second, worth 8 VP at the end.</li><li>The left side is only the home guard. The enemy has to send fast units a long way to threaten it.</li><li>Condemned units: pick enemy units on objectives, and line up an easy kill on one each turn. Cheap screening units are the easiest; one is enough for 5 VP.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, the enemy the upper-right. The nearest corners are about 12.7" apart.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
+<defs><marker id="ahBP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect class="board" x="40" y="20" width="600" height="440"/>
+<polygon class="zone you" points="40,240 250,240 258,274 276,304 304,323 340,330 340,460 40,460"/>
+<polygon class="zone them" points="340,20 640,20 640,240 430,240 422,206 404,176 376,157 340,150"/>
+<rect class="ruin" x="110" y="59" width="71" height="116" rx="2"/>
+<rect class="ruin" x="475" y="70" width="115" height="71" rx="2"/>
+<rect class="ruin" x="282" y="190" width="116" height="99" rx="2"/>
+<rect class="ruin" x="90" y="340" width="116" height="70" rx="2"/>
+<rect class="ruin" x="500" y="304" width="70" height="115" rx="2"/>
+<rect class="ruin" x="340" y="60" width="40" height="60" rx="2"/>
+<rect class="ruin" x="373" y="120" width="77" height="20" rx="2"/>
+<rect class="ruin" x="450" y="180" width="40" height="60" rx="2"/>
+<rect class="ruin" x="490" y="240" width="60" height="20" rx="2"/>
+<rect class="ruin" x="130" y="220" width="60" height="20" rx="2"/>
+<rect class="ruin" x="190" y="240" width="40" height="60" rx="2"/>
+<rect class="ruin" x="240" y="340" width="60" height="20" rx="2"/>
+<rect class="ruin" x="300" y="360" width="40" height="60" rx="2"/>
+<rect class="ruin" x="226" y="104" width="90" height="22" rx="2" transform="rotate(50 271.0 115.0)"/>
+<rect class="ruin" x="362" y="353" width="90" height="22" rx="2" transform="rotate(50 407.0 364.0)"/>
+<circle class="obj" cx="136" cy="338" r="7"/>
+<circle class="obj" cx="544" cy="142" r="7"/>
+<circle class="obj" cx="323" cy="240" r="7"/>
+<circle class="obj" cx="182" cy="104" r="7"/>
+<circle class="obj" cx="497" cy="373" r="7"/>
+<text class="lb" x="136" y="327" text-anchor="middle">your home</text>
+<text class="lb" x="333" y="244" text-anchor="start">centre</text>
+<text class="lb" x="172" y="100" text-anchor="end">expansion</text>
+<text class="lb" x="544" y="128" text-anchor="middle">Enemy home</text>
+<text class="lb" x="535" y="366" text-anchor="middle">Enemy</text>
+<text class="lb" x="535" y="381" text-anchor="middle">expansion</text>
+<text class="lb" x="580" y="38" text-anchor="start">Enemy zone</text>
+<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
+<text class="lb" x="404" y="172" text-anchor="start">Late push</text>
+<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahBP)"/>
+<line class="arrow go" x1="262" y1="293" x2="318" y2="248" marker-end="url(#ahBP)"/>
+<line class="arrow go" x1="402" y1="214" x2="526" y2="150" marker-end="url(#ahBP)"/>
+<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahBP)"/>
+<circle class="mk" cx="136" cy="362" r="11"/><text class="mkt" x="136" y="367">1</text>
+<circle class="mk" cx="70" cy="265" r="11"/><text class="mkt" x="70" y="270">2</text>
+<circle class="mk" cx="252" cy="302" r="11"/><text class="mkt" x="252" y="307">3</text>
+</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Rupture Tyrannofex, anchoring your expansion <span class="oc">OC 7</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, both Norns, at the zone edge <span class="oc">OC 52</span></li></ol><ul><li>Only one objective stays away from the centre: your expansion, with a single Tyrannofex (OC 7). A single fast enemy unit with OC 6 cannot take it alone.</li><li>The Norns ride with the centre force, because the centre is about 24" from the enemy home. A round 4 to 5 push goes through the centre.</li><li>The centre is about 7" from your zone, so you should win it. Winning it flips the objective comparison to you.</li><li>Condemned units: pick enemy units on objectives, and line up an easy kill on one each turn. Cheap screening units are the easiest; one is enough for 5 VP.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, the enemy the right 18", with 24" of open ground between. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
+<defs><marker id="ahCP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect class="board" x="40" y="20" width="600" height="440"/>
+<polygon class="zone you" points="40,20 220,20 220,460 40,460"/>
+<polygon class="zone them" points="460,20 640,20 640,460 460,460"/>
+<rect class="ruin" x="229" y="41" width="70" height="116" rx="2"/>
+<rect class="ruin" x="291" y="183" width="99" height="115" rx="2"/>
+<rect class="ruin" x="381" y="324" width="70" height="116" rx="2"/>
+<rect class="ruin" x="500" y="70" width="70" height="116" rx="2"/>
+<rect class="ruin" x="109" y="295" width="71" height="115" rx="2"/>
+<rect class="ruin" x="200" y="190" width="32" height="100" rx="2"/>
+<rect class="ruin" x="454" y="190" width="32" height="100" rx="2"/>
+<rect class="ruin" x="370" y="61" width="20" height="60" rx="2"/>
+<rect class="ruin" x="391" y="102" width="61" height="43" rx="2"/>
+<rect class="ruin" x="229" y="342" width="60" height="40" rx="2"/>
+<rect class="ruin" x="290" y="360" width="20" height="60" rx="2"/>
+<rect class="ruin" x="101" y="87" width="90" height="22" rx="2" transform="rotate(45 146.0 98.0)"/>
+<rect class="ruin" x="119" y="144" width="70" height="40" rx="2" transform="rotate(-45 154.0 164.0)"/>
+<rect class="ruin" x="492" y="298" width="70" height="40" rx="2" transform="rotate(-45 527.0 318.0)"/>
+<rect class="ruin" x="486" y="371" width="90" height="22" rx="2" transform="rotate(45 531.0 382.0)"/>
+<circle class="obj" cx="181" cy="341" r="7"/>
+<circle class="obj" cx="497" cy="141" r="7"/>
+<circle class="obj" cx="338" cy="223" r="7"/>
+<circle class="obj" cx="227" cy="111" r="7"/>
+<circle class="obj" cx="452" cy="370" r="7"/>
+<text class="lb" x="181" y="327" text-anchor="middle">your home</text>
+<text class="lb" x="348" y="227" text-anchor="start">centre</text>
+<text class="lb" x="237" y="128" text-anchor="start">your</text>
+<text class="lb" x="237" y="142" text-anchor="start">expansion</text>
+<text class="lb" x="497" y="127" text-anchor="middle">Enemy home</text>
+<text class="lb" x="441" y="361" text-anchor="end">Enemy</text>
+<text class="lb" x="441" y="376" text-anchor="end">expansion</text>
+<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
+<text class="lb" x="632" y="452" text-anchor="end">Enemy zone</text>
+<text class="lb" x="310" y="86" text-anchor="start">Late push</text>
+<line class="arrow go" x1="190" y1="238" x2="326" y2="226" marker-end="url(#ahCP)"/>
+<line class="arrow go" x1="305" y1="98" x2="484" y2="148" marker-end="url(#ahCP)"/>
+<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahCP)"/>
+<circle class="mk" cx="150" cy="360" r="11"/><text class="mkt" x="150" y="365">1</text>
+<circle class="mk" cx="205" cy="105" r="11"/><text class="mkt" x="205" y="110">2</text>
+<circle class="mk" cx="178" cy="240" r="11"/><text class="mkt" x="178" y="245">3</text>
+</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary, at your expansion, then east to the enemy home <span class="oc">OC 14</span></li><li><b>3 Centre:</b> 3 Exocrines, 2 Maleceptors, Hive Tyrant + Guard, Acid spray Tyrannofex, behind the wall <span class="oc">OC 45</span></li></ol><ul><li>The centre is about 12" from both zones, so two rounds of shooting come first. The Acid spray Tyrannofex joins the centre force, where its 18" range matters.</li><li>The Norns hold your expansion and are your route to the enemy home, about 27" along the top edge. That is a round 4 to 5 push.</li><li>The centre force is heavy on purpose: holding the centre gives you more objectives than the enemy.</li><li>Condemned units: pick enemy units on objectives, and line up an easy kill on one each turn. Cheap screening units are the easiest; one is enough for 5 VP.</li></ul></div></div>
+  </div>
+  <p class="note">Objective control ranges and Advance moves were not available to me, so turn-by-turn reach is approximate. Enemy infantry units often carry an OC of 10 or more, so killing models matters more than standing on the objective.</p>
+  <script>(function(){var s=document.getElementById('depSeg');if(!s)return;var u=document.getElementById('depUF'),p=document.getElementById('depP');s.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(s.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});u.hidden=b.dataset.m!=='uf';p.hidden=b.dataset.m!=='p';});})();</script>
 </section>
 
 <section id="plan">
@@ -395,85 +447,31 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
     <div class="card">
       <h3>Deployment and turn 1</h3>
       <ul>
-        <li>Keep Norns and Exocrines out of the 48" lane unless they have cover from the Predator's line of sight.</li>
-        <li>Screen with the Barbgaunts and Tyrant Guard. They are cheap, and Chaos spending shots on them is good for you.</li>
+        <li>Keep Norns and Exocrines out of long-range lanes unless they have cover.</li>
+        <li>Screen with the Barbgaunts and Tyrant Guard. They are cheap, and enemy shots spent on them are good for you.</li>
         <li>Hold the Hive Tyrant back with the Tyrant Guard; its Onslaught aura and Will of the Hive Mind help the whole bubble.</li>
-        <li>Expect Vashtorr and the Bikers to arrive from Deep Strike or flank at 12". Keep a Maleceptor or Exocrine within reach to punish them.</li>
+        <li>Keep a Maleceptor or Exocrine within reach of any deep strike or flank arrival.</li>
       </ul>
-    </div>
-    <div class="card">
-      <h3>Kill order</h3>
-      <ol>
-        <li>Vashtorr (Assimilator).</li>
-        <li>Chosen with Bile (Emissary, then Exocrines).</li>
-        <li>Terminators with the Sorcerer.</li>
-        <li>Predator (rupture cannon).</li>
-        <li>Forgefiend, then the Daemon Prince.</li>
-        <li>Bikers last; they only matter at objectives.</li>
-      </ol>
     </div>
     <div class="card">
       <h3>Command points</h3>
       <ul>
-        <li>Savage Roar on the Chosen the turn they charge (against a focused Exocrine their kill chance in melee falls from 98% to 82%; against Vashtorr it falls from 55% to 17%).</li>
-        <li>Rampaging Monstrosities only on the Norns and Hive Tyrant (about +0.4 to +0.5 dead Terminators); it adds almost nothing to the Exocrines.</li>
-        <li>Massive Impact after a charge averages 3 mortal wounds, ignoring saves. Best on Vashtorr or the Daemon Prince.</li>
-        <li>Corrosive Viscera makes Deadly Demise automatic; use it when a monster dies next to the Terminators.</li>
+        <li>Savage Roar on a charger the turn it hits: the Battle-shock test and -1 to Hit and Wound make it the best defensive play.</li>
+        <li>Rampaging Monstrosities only on the Norns, Hive Tyrant and Tyrant Guard; it adds almost nothing to the Exocrines.</li>
+        <li>Massive Impact after a charge averages 3 mortal wounds, ignoring saves. Best on a tough character or monster.</li>
+        <li>Corrosive Viscera makes Deadly Demise automatic; use it when a monster dies next to enemy infantry.</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card" style="grid-column:1/-1">
       <h3>Purge the Foe and objectives</h3>
       <ul>
-        <li>Your units are expensive to kill (180–280 pts each), so Chaos has to commit to get kills. Make that costly.</li>
+        <li>Your units are expensive to kill (180–280 pts each), so the enemy has to commit to get kills. Make that costly.</li>
         <li>Your monsters get stronger as they take damage (Enraged Behemoths), so a unit that survives the first exchange hits harder than it did before.</li>
         <li>For holding ground, the Singular Purpose objective option (OC 15, Feel No Pain 5+) turns a Norn into an anchor, but then it will not have the re-rolls. Pick one per Norn.</li>
       </ul>
-      <p class="note">The Unstoppable Force scoring and the objective plans are in the Deployment section above.</p>
-    </div>
-    <div class="card" style="grid-column:1/-1">
-      <h3>Target priorities by unit</h3>
-      <div class="grid g2">
-        <div>
-          <p><strong>Shooting</strong></p>
-          <ul>
-            <li><strong>Exocrines (each):</strong> Chosen first (3.1 dead), then Terminators (1.9 dead), then the Venomcrawler (27% kill).</li>
-            <li><strong>Maleceptors (each):</strong> Chosen (2.5 dead), Terminators (1.9 dead), Venomcrawler (30% kill).</li>
-            <li><strong>Hive Tyrant:</strong> Chosen (1.2 dead), then Terminators (0.9 dead).</li>
-            <li><strong>Rupture Tyrannofex:</strong> Predator (54% kill), Venomcrawler (57% kill), then Forgefiend (22% kill).</li>
-            <li><strong>Acid spray Tyrannofex:</strong> Legionaries (3.9 dead), then Forgefiend.</li>
-            <li><strong>Norn Assimilator:</strong> Vashtorr, then the Predator.</li>
-            <li><strong>Norn Emissary:</strong> Predator, then Chosen (1.1 dead).</li>
-            <li><strong>Barbgaunts:</strong> Cultists (6.5 dead).</li>
-          </ul>
-        </div>
-        <div>
-          <p><strong>Fight</strong></p>
-          <ul>
-            <li><strong>Norn Assimilator:</strong> Vashtorr (42% kill, 10.8 wounds), otherwise Chosen (4.1 dead).</li>
-            <li><strong>Norn Emissary:</strong> Chosen (4.3 dead), then Terminators (1.9 dead).</li>
-            <li><strong>Hive Tyrant:</strong> Chosen (2.9 dead), Terminators (2.2 dead), Venomcrawler (48% kill).</li>
-            <li><strong>Tyrant Guard:</strong> Legionaries (1.8 dead).</li>
-            <li><strong>Exocrines, Maleceptors, Tyrannofexes, Barbgaunts:</strong> do not charge; their melee is worth under 40 points a unit, so keep them shooting.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="note">Three Exocrines and two Maleceptors on the Chosen average about 14 dead models, which is enough to wipe the unit. Each figure is one unit attacking alone from the matchup tables. Range, cover and wasted damage when several units target the same unit are not modelled.</p>
+      <p class="note">The Unstoppable Force and Punishment scoring and the objective plans are in the Deployment section above.</p>
     </div>
   </div>
-</section>
-
-<section id="limits">
-  <h2>What this does not model</h2>
-  <ul>
-    <li>Positioning, terrain, line of sight, failed charges, Engagement Range and Hidden units.</li>
-    <li>Battle-shock (Ld 7+ and 8+ on your side, 6+ on theirs), Deadly Demise and Dark Pact mortal wounds.</li>
-    <li>Fabius Bile's Surgeon Acolyte and revive, the Maleceptor's -1 to Hit aura, Onslaught's Lethal Hits, and Hazardous.</li>
-    <li>The Terminators' and Chosen's exact weapons: I assumed 10 models, 3 power fists or chainfists among the Terminators, 2 fists among the Chosen, and one meltagun per Biker unit.</li>
-    <li>Focus of Hatred and Death Hex can each name only one unit per turn. The Chaos tables show each column as if it were the unit chosen, and the damage race picks whichever target gives Chaos the best result each turn. The Death Hex failure roll and the Eye of Abaddon CP are not modelled.</li>
-    <li>Wound positioning inside a unit in the damage race: the matchup tables allocate damage one model at a time with no spill-over, but the race on top uses pooled wounds per unit.</li>
-    <li>Surgeon Acolyte (Bile's unit): once per turn one attack's damage becomes 0. That saves the Chosen about one model's worth of damage per opposing turn and is not in the tables.</li>
-  </ul>
-  <p class="note">Method: matchup tables are 1,000 simulated activations per cell (hit, wound, save, Feel No Pain, Devastating Wounds, Blast, Melta, Torrent, Twin-linked, Heavy, Dark Pact). The damage race uses expected values per weapon, alternating rounds, with each unit's output scaled by its remaining wounds. Sources: your two list files, Wahapedia, Hutber, Spikeybits.</p>
 </section>
 
 <footer>Prepared for the Crusher Talons list, 2,000 pts. Numbers are expected values, not guarantees.</footer>
@@ -481,9 +479,6 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 
 <script>
 (function(){
-  var youCols=["Vashtorr (14W)", "Daemon Prince (10W)", "Terminators \u00d710", "Chosen \u00d710", "Legionaries \u00d75", "Cultists \u00d710", "Bikers \u00d73 (each squad)", "Predator (11W)", "Forgefiend (12W)", "Venomcrawler (9W)"];
-  var themCols=["Hive Tyrant (10W)", "Barbgaunts \u00d75", "Tyrant Guard \u00d73", "Exocrine (14W)", "Maleceptor (14W)", "Norn Assimilator (16W)", "Norn Emissary (16W)", "Tyrannofex (16W)"];
-  var tables={"you_r": [["Hive Tyrant", "Heavy venom cannon \u00b7 36\" \u00b7 D3 attacks \u00b7 S9 AP-2 D3 \u00b7 Blast", [0, 0.6, 14, 1], [0, 0.8, 10, 1], [0.94, 2.8, 35, 11], [1.22, 3.7, 35, 11], [0.92, 1.8, 10, 5], [2.24, 2.2, 10, 10], [0.74, 2.2, 9, 3], [0, 1.0, 11, 1], [0, 1.1, 12, 1], [0.01, 1.7, 9, 1]], ["Barbgaunts x5", "5 \u00d7 Barblauncher \u00b7 24\" \u00b7 D6 attacks each \u00b7 S5 AP0 D1 \u00b7 Blast, Heavy", [0, 0.3, 14, 1], [0, 0.3, 10, 1], [0.04, 0.8, 35, 11], [0.17, 1.4, 35, 11], [0.68, 1.8, 10, 5], [6.53, 6.5, 10, 10], [0.13, 1.3, 9, 3], [0, 0.6, 11, 1], [0, 0.6, 12, 1], [0, 1.3, 9, 1]], ["Exocrine (each)", "Bio-plasmic cannon \u00b7 36\" \u00b7 D6+3 attacks \u00b7 S9 AP-3 D3 \u00b7 Blast, Heavy", [0, 2.2, 14, 1], [0.0, 2.6, 10, 1], [1.91, 5.7, 35, 11], [3.13, 9.4, 35, 11], [2.71, 5.4, 10, 5], [4.75, 4.8, 10, 10], [2.45, 7.4, 9, 3], [0.05, 4.6, 11, 1], [0.02, 3.5, 12, 1], [0.27, 5.0, 9, 1]], ["Maleceptor (each)", "Psychic overload \u00b7 18\" \u00b7 D6+3 attacks \u00b7 S10 AP-2 D3 \u00b7 Blast, Psychic", [0.0, 3.0, 14, 1], [0.02, 3.2, 10, 1], [1.9, 5.7, 35, 11], [2.52, 7.6, 35, 11], [2.77, 5.5, 10, 5], [4.75, 4.8, 10, 10], [1.74, 5.2, 9, 3], [0.05, 4.0, 11, 1], [0.04, 4.2, 12, 1], [0.3, 5.3, 9, 1]], ["Norn Assimilator", "Toxinjecter harpoon \u00b7 12\" \u00b7 2 attacks \u00b7 S12 AP-3 D6+1", [0.0, 3.6, 14, 1], [0.03, 2.4, 10, 1], [0.46, 1.5, 35, 11], [0.78, 2.6, 35, 11], [0.92, 1.8, 10, 5], [1.13, 1.1, 10, 10], [1.02, 3.3, 9, 3], [0.05, 3.9, 11, 1], [0.02, 3.4, 12, 1], [0.08, 3.1, 9, 1]], ["Norn Emissary", "Best of three psychic tendrils \u00b7 18\" \u00b7 neuroparasite (2 A, S8 AP-2 D3), neurolance (2 A, S12 AP-3 D6), neuroblast (2D6 A, S6 AP-2 D1, Blast)", [0, 2.0, 14, 1], [0.02, 2.0, 10, 1], [0.49, 1.7, 35, 11], [1.15, 4.4, 35, 11], [1.21, 2.9, 10, 5], [6.25, 6.2, 10, 10], [0.81, 2.8, 9, 3], [0.02, 3.3, 11, 1], [0.01, 2.7, 12, 1], [0.04, 2.4, 9, 1]], ["Tyrannofex A (acid spray)", "Acid spray \u00b7 18\" \u00b7 D6+6 attacks \u00b7 S6 AP-2 D2 \u00b7 Torrent; stinger salvoes \u00b7 24\" \u00b7 8 attacks \u00b7 S5 AP0 D1", [0, 3.2, 14, 1], [0.02, 3.5, 10, 1], [1.05, 4.1, 35, 11], [1.49, 5.3, 35, 11], [3.93, 8.1, 10, 5], [9.19, 9.2, 10, 10], [1.52, 5.4, 9, 3], [0.03, 4.5, 11, 1], [0.01, 4.5, 12, 1], [0.1, 4.6, 9, 1]], ["Tyrannofex B (rupture cannon)", "Rupture cannon \u00b7 48\" \u00b7 2 attacks \u00b7 S18 AP-4 D6+6 \u00b7 Heavy; stinger salvoes \u00b7 24\" \u00b7 8 attacks \u00b7 S5 AP0 D1", [0.05, 3.9, 14, 1], [0.27, 4.5, 10, 1], [0.55, 1.9, 35, 11], [1.1, 3.7, 35, 11], [1.29, 3.0, 10, 5], [3.4, 3.4, 10, 10], [1.4, 4.8, 9, 3], [0.54, 8.4, 11, 1], [0.22, 6.3, 12, 1], [0.57, 6.2, 9, 1]]], "you_m": [["Hive Tyrant", "Monstrous bonesword and lash whip \u00b7 6 attacks \u00b7 WS2+ \u00b7 S9 AP-2 D3 \u00b7 Twin-linked", [0.0, 4.2, 14, 1], [0.03, 4.3, 10, 1], [2.23, 6.7, 35, 11], [2.87, 8.6, 35, 11], [3.0, 6.0, 10, 5], [4.8, 4.8, 10, 10], [2.53, 7.6, 9, 3], [0.09, 5.6, 11, 1], [0.07, 5.4, 12, 1], [0.48, 6.7, 9, 1]], ["Barbgaunts x5", "5 \u00d7 chitinous claws and teeth \u00b7 1 attack \u00b7 WS4+ \u00b7 S4 AP0 D1", [0, 0.1, 14, 1], [0, 0.1, 10, 1], [0.0, 0.1, 35, 11], [0.0, 0.2, 35, 11], [0.02, 0.3, 10, 5], [1.38, 1.4, 10, 10], [0, 0.3, 9, 3], [0, 0.1, 11, 1], [0, 0.2, 12, 1], [0, 0.2, 9, 1]], ["Tyrant Guard x3", "3 \u00d7 crushing and rending claws \u00b7 2 attacks each \u00b7 WS4+ \u00b7 S8 AP-2 D2 \u00b7 Twin-linked", [0, 1.6, 14, 1], [0, 1.7, 10, 1], [0.43, 2.3, 35, 11], [0.63, 2.9, 35, 11], [1.78, 3.6, 10, 5], [2.94, 2.9, 10, 10], [0.64, 3.0, 9, 3], [0, 2.1, 11, 1], [0, 2.2, 12, 1], [0.0, 2.3, 9, 1]], ["Exocrine (each)", "Powerful limbs \u00b7 3 attacks \u00b7 WS3+ \u00b7 S7 AP0 D2", [0, 0.2, 14, 1], [0, 0.2, 10, 1], [0.02, 0.4, 35, 11], [0.06, 0.8, 35, 11], [0.46, 0.9, 10, 5], [1.37, 1.4, 10, 10], [0.06, 0.8, 9, 3], [0, 0.4, 11, 1], [0, 0.4, 12, 1], [0, 0.5, 9, 1]], ["Maleceptor (each)", "Best of strike (3 A, S9 AP-2 D6+1) or sweep (6 A, S7 AP-1 D2) \u00b7 WS3+", [0.0, 1.6, 14, 1], [0.02, 1.5, 10, 1], [0.54, 1.8, 35, 11], [0.81, 2.6, 35, 11], [1.31, 2.6, 10, 5], [3.31, 3.3, 10, 10], [0.69, 2.3, 9, 3], [0.02, 2.0, 11, 1], [0.01, 1.9, 12, 1], [0.08, 2.9, 9, 1]], ["Norn Assimilator", "Monstrous scything talons (6 A, S9 AP-2 D3) + Toxinjecter harpoon (4 A, S12 AP-3 D6+1, Extra Attacks) \u00b7 WS2+", [0.42, 10.8, 14, 1], [0.29, 6.3, 10, 1], [2.83, 8.8, 35, 11], [4.11, 12.6, 35, 11], [4.18, 8.4, 10, 5], [6.93, 6.9, 10, 10], [2.84, 8.6, 9, 3], [0.54, 8.9, 11, 1], [0.39, 8.6, 12, 1], [0.72, 7.9, 9, 1]], ["Norn Emissary", "Monstrous scything talons (6 A, S9 AP-2 D3) + rending claws (4 A, S7 AP-2 D2, Extra Attacks) \u00b7 WS2+", [0.0, 3.7, 14, 1], [0.04, 3.5, 10, 1], [1.95, 6.8, 35, 11], [4.31, 13.9, 35, 11], [3.45, 6.9, 10, 5], [6.96, 7.0, 10, 10], [2.33, 7.5, 9, 3], [0.06, 4.8, 11, 1], [0.03, 4.6, 12, 1], [0.33, 6.1, 9, 1]], ["Tyrannofex A (limbs)", "Powerful limbs \u00b7 4 attacks \u00b7 WS3+ \u00b7 S8 AP0 D2", [0, 0.3, 14, 1], [0, 0.3, 10, 1], [0.02, 0.6, 35, 11], [0.09, 1.0, 35, 11], [0.67, 1.3, 10, 5], [1.83, 1.8, 10, 10], [0.13, 1.1, 9, 3], [0, 0.6, 11, 1], [0, 0.6, 12, 1], [0, 0.6, 9, 1]], ["Tyrannofex B (limbs)", "Powerful limbs \u00b7 4 attacks \u00b7 WS3+ \u00b7 S8 AP0 D2", [0, 0.3, 14, 1], [0, 0.3, 10, 1], [0.03, 0.6, 35, 11], [0.11, 1.1, 35, 11], [0.65, 1.3, 10, 5], [1.87, 1.9, 10, 10], [0.09, 1.0, 9, 3], [0, 0.6, 11, 1], [0, 0.6, 12, 1], [0, 0.5, 9, 1]]], "them_r": [["Vashtorr", "Vashtorr's claw \u00b7 12\" \u00b7 D6 attacks \u00b7 S5 AP-2 D1 \u00b7 Torrent", [0, 0.2, 10, 1], [0.87, 2.3, 10, 5], [0.0, 0.6, 12, 3], [0, 0.5, 14, 1], [0, 0.3, 14, 1], [0, 0.3, 16, 1], [0, 0.3, 16, 1], [0, 0.4, 16, 1]], ["Daemon Prince", "Infernal cannon \u00b7 24\" \u00b7 3 attacks \u00b7 BS2+ \u00b7 S5 AP-1 D2", [0, 0.7, 10, 1], [1.9, 3.8, 10, 5], [0.07, 1.2, 12, 3], [0, 1.3, 14, 1], [0, 1.0, 14, 1], [0, 0.9, 16, 1], [0, 1.0, 16, 1], [0, 1.0, 16, 1]], ["Terminators + Sorc", "9 \u00d7 combi-bolter (24\", 2 A, Rapid Fire 2, S5 AP-1 D1) + Reaper autocannon (36\", 4 A, S7 AP-1 D1, Devastating Wounds) + Sorcerer Infernal Gaze (24\", D6 A, S6 AP-2 D3, Devastating Wounds)", [0.07, 5.7, 10, 1], [5, 10, 10, 5], [1.93, 9.0, 12, 3], [0.25, 10.9, 14, 1], [0.07, 8.5, 14, 1], [0.02, 8.6, 16, 1], [0.02, 8.4, 16, 1], [0.01, 8.3, 16, 1]], ["Chosen + Bile", "9 \u00d7 boltgun (24\", 2 A, S5 AP-1 D1) + plasma pistol (12\", supercharge S8 AP-3 D2)", [0, 2.4, 10, 1], [4.86, 9.8, 10, 5], [0.7, 4.3, 12, 3], [0, 4.8, 14, 1], [0, 3.4, 14, 1], [0, 3.5, 16, 1], [0, 3.5, 16, 1], [0, 3.8, 16, 1]], ["Legionaries x5", "5 \u00d7 boltgun \u00b7 24\" \u00b7 2 attacks \u00b7 S5 AP-1 D1", [0, 1.1, 10, 1], [2.89, 6.3, 10, 5], [0.12, 2.0, 12, 3], [0, 2.2, 14, 1], [0, 1.6, 14, 1], [0, 1.6, 16, 1], [0, 1.7, 16, 1], [0, 1.7, 16, 1]], ["Cultists x10", "10 \u00d7 autopistol \u00b7 12\" \u00b7 1 attack \u00b7 BS4+ \u00b7 S3 AP0 D1", [0, 0.7, 10, 1], [1.1, 2.7, 10, 5], [0.02, 1.2, 12, 3], [0, 1.6, 14, 1], [0, 1.7, 14, 1], [0, 1.1, 16, 1], [0, 1.1, 16, 1], [0, 1.1, 16, 1]], ["Bikers x3 (each)", "Meltagun (12\", S9 AP-4 D6+2 at half range) + 2 \u00d7 combi-bolter (24\", Rapid Fire 2, S5 AP-1 D1)", [0.0, 1.7, 10, 1], [3.11, 6.7, 10, 5], [0.62, 3.9, 12, 3], [0, 4.3, 14, 1], [0, 2.4, 14, 1], [0, 2.7, 16, 1], [0, 2.6, 16, 1], [0, 4.0, 16, 1]], ["Predator", "Predator autocannon (48\", 4 A, S9 AP-1 D3, Rapid Fire 2) + 2 \u00d7 lascannon (48\", S12 AP-3 D6+1) + Havoc launcher (48\", D6 A, S5 AP0 D1, Blast) + combi-bolter; +1 AP against Infantry", [0.14, 5.4, 10, 1], [5.0, 10.0, 10, 5], [2.35, 10.2, 12, 3], [0.48, 11.5, 14, 1], [0.15, 8.0, 14, 1], [0.1, 8.2, 16, 1], [0.08, 8.1, 16, 1], [0.1, 8.9, 16, 1]], ["Forgefiend", "2 \u00d7 ectoplasma cannon \u00b7 36\" \u00b7 D3 attacks \u00b7 S10 AP-3 D3 \u00b7 Blast; Devastating Wounds via Daemonic Ordnance", [0.01, 3.0, 10, 1], [4.13, 8.3, 10, 5], [1.0, 5.2, 12, 3], [0.03, 6.6, 14, 1], [0, 3.5, 14, 1], [0, 3.2, 16, 1], [0, 3.3, 16, 1], [0.0, 4.7, 16, 1]], ["Venomcrawler", "Excruciator cannon \u00b7 36\" \u00b7 6 attacks \u00b7 S6 AP-1 D2", [0, 1.7, 10, 1], [3.54, 7.1, 10, 5], [0.24, 2.3, 12, 3], [0, 3.6, 14, 1], [0, 2.5, 14, 1], [0, 2.6, 16, 1], [0, 2.7, 16, 1], [0, 2.0, 16, 1]]], "them_m": [["Vashtorr", "Best of Vashtorr's hammer strike (6 A, WS2+, S14 AP-3 D3) or sweep (12 A, S8 AP-1 D2); Devastating Wounds", [0.13, 5.7, 10, 1], [5.0, 10.0, 10, 5], [1.69, 8.0, 12, 3], [0.54, 12.2, 14, 1], [0.11, 8.4, 14, 1], [0.03, 8.9, 16, 1], [0.04, 8.9, 16, 1], [0.18, 11.8, 16, 1]], ["Daemon Prince", "Best of Hellforged strike (6 A, S8 AP-2 D3) or sweep (14 A, S6 AP0 D1); Lance; Dark Pact adds +2 S and +1 AP (assumed)", [0.01, 2.7, 10, 1], [4.12, 8.6, 10, 5], [1.21, 6.0, 12, 3], [0.07, 8, 14, 1], [0, 2.8, 14, 1], [0, 2.9, 16, 1], [0, 3.1, 16, 1], [0, 5.0, 16, 1]], ["Terminators + Sorc", "3 \u00d7 power fist or chainfist (3 A, S8 AP-2 D2) + 7 \u00d7 accursed weapon (4 A, S5 AP-2 D1) + Sorcerer force weapon (4 A, S6 AP-1 D3)", [0.15, 6.4, 10, 1], [5, 10, 10, 5], [2.61, 11.1, 12, 3], [0.7, 13.1, 14, 1], [0.15, 9.8, 14, 1], [0.06, 9.5, 16, 1], [0.06, 9.8, 16, 1], [0.2, 12.0, 16, 1]], ["Chosen + Bile", "2 \u00d7 power fist (4 A, S9 AP-2 D2) + 8 \u00d7 accursed weapon (4 A, S6 AP-2 D1) + Bile's Rod of Torment (6 A, WS2+, S5 AP-1 D3); +1 S from Enhanced Warriors; re-roll wound rolls of 1", [0.48, 8.4, 10, 1], [5, 10, 10, 5], [2.97, 11.9, 12, 3], [0.99, 14.0, 14, 1], [0.56, 12.4, 14, 1], [0.4, 13.3, 16, 1], [0.41, 13.5, 16, 1], [0.52, 14.2, 16, 1]], ["Legionaries x5", "5 \u00d7 close combat weapon \u00b7 3 attacks \u00b7 S5 AP0 D1", [0, 1.1, 10, 1], [3.39, 7.2, 10, 5], [0.17, 2.2, 12, 3], [0, 2.4, 14, 1], [0, 2.5, 14, 1], [0, 1.6, 16, 1], [0, 1.6, 16, 1], [0, 1.7, 16, 1]], ["Cultists x10", "10 \u00d7 brutal assault weapon \u00b7 2 attacks \u00b7 WS4+ \u00b7 S3 AP0 D1", [0, 1.4, 10, 1], [2.52, 5.5, 10, 5], [0.19, 2.2, 12, 3], [0, 3.3, 14, 1], [0, 3.4, 14, 1], [0, 2.2, 16, 1], [0, 2.2, 16, 1], [0, 2.2, 16, 1]], ["Bikers x3 (each)", "2 \u00d7 Astartes chainsword (4 A, S6 AP-1 D1 on the charge) + power fist (3 A, S9 AP-2 D2)", [0, 2.0, 10, 1], [4.46, 8.9, 10, 5], [0.64, 3.9, 12, 3], [0, 4.5, 14, 1], [0, 3.1, 14, 1], [0, 3.2, 16, 1], [0, 3.1, 16, 1], [0, 3.1, 16, 1]], ["Predator", "Armoured tracks \u00b7 3 attacks \u00b7 WS4+ \u00b7 S6 AP0 D1", [0, 0.3, 10, 1], [0.44, 1.4, 10, 5], [0, 0.4, 12, 3], [0, 0.6, 14, 1], [0, 0.6, 14, 1], [0, 0.4, 16, 1], [0, 0.4, 16, 1], [0, 0.4, 16, 1]], ["Forgefiend", "Armoured limbs \u00b7 2 attacks \u00b7 WS3+ \u00b7 S6 AP0 D2", [0, 0.3, 10, 1], [0.96, 1.9, 10, 5], [0.01, 0.6, 12, 3], [0, 0.8, 14, 1], [0, 0.9, 14, 1], [0, 0.6, 16, 1], [0, 0.7, 16, 1], [0, 0.5, 16, 1]], ["Venomcrawler", "Soulflayer tendrils and claws \u00b7 6 attacks \u00b7 WS3+ \u00b7 S6 AP-1 D2", [0, 1.7, 10, 1], [3.6, 7.2, 10, 5], [0.25, 2.3, 12, 3], [0, 3.6, 14, 1], [0, 2.6, 14, 1], [0, 2.7, 16, 1], [0, 2.6, 16, 1], [0, 2.1, 16, 1]]], "them_r_base": [["Vashtorr", "Vashtorr's claw \u00b7 12\" \u00b7 D6 attacks \u00b7 S5 AP-2 D1 \u00b7 Torrent", [0, 0.2, 10, 1], [0.69, 1.9, 10, 5], [0.0, 0.5, 12, 3], [0, 0.4, 14, 1], [0, 0.3, 14, 1], [0, 0.3, 16, 1], [0, 0.3, 16, 1], [0, 0.3, 16, 1]], ["Daemon Prince", "Infernal cannon \u00b7 24\" \u00b7 3 attacks \u00b7 BS2+ \u00b7 S5 AP-1 D2", [0, 0.4, 10, 1], [1.28, 2.6, 10, 5], [0.03, 0.8, 12, 3], [0, 0.8, 14, 1], [0, 0.8, 14, 1], [0, 0.6, 16, 1], [0, 0.5, 16, 1], [0, 0.6, 16, 1]], ["Terminators + Sorc", "9 \u00d7 combi-bolter (24\", 2 A, Rapid Fire 2, S5 AP-1 D1) + Reaper autocannon (36\", 4 A, S7 AP-1 D1, Devastating Wounds) + Sorcerer Infernal Gaze (24\", D6 A, S6 AP-2 D3, Devastating Wounds)", [0.01, 3.3, 10, 1], [4.99, 10.0, 10, 5], [0.98, 5.4, 12, 3], [0.01, 6.4, 14, 1], [0.01, 6.6, 14, 1], [0, 4.8, 16, 1], [0, 4.8, 16, 1], [0, 4.5, 16, 1]], ["Chosen + Bile", "9 \u00d7 boltgun (24\", 2 A, S5 AP-1 D1) + plasma pistol (12\", supercharge S8 AP-3 D2)", [0, 1.2, 10, 1], [3.6, 7.4, 10, 5], [0.24, 2.5, 12, 3], [0, 2.8, 14, 1], [0, 2.6, 14, 1], [0, 1.9, 16, 1], [0, 1.8, 16, 1], [0, 2.0, 16, 1]], ["Legionaries x5", "5 \u00d7 boltgun \u00b7 24\" \u00b7 2 attacks \u00b7 S5 AP-1 D1", [0, 0.5, 10, 1], [1.69, 3.9, 10, 5], [0.02, 1.1, 12, 3], [0, 1.2, 14, 1], [0, 1.3, 14, 1], [0, 0.8, 16, 1], [0, 0.8, 16, 1], [0, 0.9, 16, 1]], ["Cultists x10", "10 \u00d7 autopistol \u00b7 12\" \u00b7 1 attack \u00b7 BS4+ \u00b7 S3 AP0 D1", [0, 0.2, 10, 1], [0.49, 1.5, 10, 5], [0.0, 0.5, 12, 3], [0, 0.8, 14, 1], [0, 0.8, 14, 1], [0, 0.4, 16, 1], [0, 0.4, 16, 1], [0, 0.4, 16, 1]], ["Bikers x3 (each)", "Meltagun (12\", S9 AP-4 D6+2 at half range) + 2 \u00d7 combi-bolter (24\", Rapid Fire 2, S5 AP-1 D1)", [0, 1.0, 10, 1], [2.01, 4.5, 10, 5], [0.37, 2.5, 12, 3], [0, 2.8, 14, 1], [0, 1.9, 14, 1], [0, 1.5, 16, 1], [0, 1.7, 16, 1], [0, 2.4, 16, 1]], ["Predator", "Predator autocannon (48\", 4 A, S9 AP-1 D3, Rapid Fire 2) + 2 \u00d7 lascannon (48\", S12 AP-3 D6+1) + Havoc launcher (48\", D6 A, S5 AP0 D1, Blast) + combi-bolter; +1 AP against Infantry", [0.04, 3.2, 10, 1], [4.69, 9.5, 10, 5], [1.56, 7.3, 12, 3], [0.14, 7.6, 14, 1], [0.07, 6.1, 14, 1], [0.01, 4.7, 16, 1], [0.01, 4.9, 16, 1], [0.01, 4.9, 16, 1]], ["Forgefiend", "2 \u00d7 ectoplasma cannon \u00b7 36\" \u00b7 D3 attacks \u00b7 S10 AP-3 D3 \u00b7 Blast; Devastating Wounds via Daemonic Ordnance", [0.01, 2.3, 10, 1], [3.34, 6.7, 10, 5], [0.6, 3.7, 12, 3], [0.01, 4.5, 14, 1], [0, 2.5, 14, 1], [0, 2.5, 16, 1], [0, 2.4, 16, 1], [0, 2.8, 16, 1]], ["Venomcrawler", "Excruciator cannon \u00b7 36\" \u00b7 6 attacks \u00b7 S6 AP-1 D2", [0, 0.8, 10, 1], [2.17, 4.3, 10, 5], [0.08, 1.3, 12, 3], [0, 2.0, 14, 1], [0, 2.0, 14, 1], [0, 1.3, 16, 1], [0, 1.5, 16, 1], [0, 0.9, 16, 1]]], "them_m_base": [["Vashtorr", "Best of Vashtorr's hammer strike (6 A, WS2+, S14 AP-3 D3) or sweep (12 A, S8 AP-1 D2); Devastating Wounds", [0.09, 5.1, 10, 1], [4.88, 9.8, 10, 5], [1.21, 6.1, 12, 3], [0.25, 10.0, 14, 1], [0.07, 7.4, 14, 1], [0.02, 7.5, 16, 1], [0.02, 7.3, 16, 1], [0.06, 9.1, 16, 1]], ["Daemon Prince", "Best of Hellforged strike (6 A, S8 AP-2 D3) or sweep (14 A, S6 AP0 D1); Lance; Dark Pact adds +2 S and +1 AP (assumed)", [0.0, 2.4, 10, 1], [3.75, 7.5, 10, 5], [0.8, 4.4, 12, 3], [0.02, 6.0, 14, 1], [0, 2.2, 14, 1], [0, 2.7, 16, 1], [0, 2.6, 16, 1], [0, 3.3, 16, 1]], ["Terminators + Sorc", "3 \u00d7 power fist or chainfist (3 A, S8 AP-2 D2) + 7 \u00d7 accursed weapon (4 A, S5 AP-2 D1) + Sorcerer force weapon (4 A, S6 AP-1 D3)", [0.04, 4.8, 10, 1], [5, 10, 10, 5], [1.66, 7.9, 12, 3], [0.13, 9.1, 14, 1], [0.04, 7.3, 14, 1], [0.01, 7.3, 16, 1], [0.01, 7.2, 16, 1], [0.0, 6.6, 16, 1]], ["Chosen + Bile", "2 \u00d7 power fist (4 A, S9 AP-2 D2) + 8 \u00d7 accursed weapon (4 A, S6 AP-2 D1) + Bile's Rod of Torment (6 A, WS2+, S5 AP-1 D3); +1 S from Enhanced Warriors; re-roll wound rolls of 1", [0.17, 6.7, 10, 1], [5, 10, 10, 5], [2.4, 10.4, 12, 3], [0.56, 12.5, 14, 1], [0.26, 10.4, 14, 1], [0.09, 10.2, 16, 1], [0.09, 10.3, 16, 1], [0.04, 8.8, 16, 1]], ["Legionaries x5", "5 \u00d7 close combat weapon \u00b7 3 attacks \u00b7 S5 AP0 D1", [0, 0.4, 10, 1], [1.84, 4.2, 10, 5], [0.03, 1.1, 12, 3], [0, 1.3, 14, 1], [0, 1.3, 14, 1], [0, 0.6, 16, 1], [0, 0.6, 16, 1], [0, 0.6, 16, 1]], ["Cultists x10", "10 \u00d7 brutal assault weapon \u00b7 2 attacks \u00b7 WS4+ \u00b7 S3 AP0 D1", [0, 0.5, 10, 1], [1.16, 2.8, 10, 5], [0.02, 1.0, 12, 3], [0, 1.5, 14, 1], [0, 1.5, 14, 1], [0, 0.8, 16, 1], [0, 0.7, 16, 1], [0, 0.8, 16, 1]], ["Bikers x3 (each)", "2 \u00d7 Astartes chainsword (4 A, S6 AP-1 D1 on the charge) + power fist (3 A, S9 AP-2 D2)", [0, 1.3, 10, 1], [2.96, 6.0, 10, 5], [0.25, 2.3, 12, 3], [0, 2.6, 14, 1], [0, 2.4, 14, 1], [0, 1.8, 16, 1], [0, 1.8, 16, 1], [0, 1.7, 16, 1]], ["Predator", "Armoured tracks \u00b7 3 attacks \u00b7 WS4+ \u00b7 S6 AP0 D1", [0, 0.1, 10, 1], [0.14, 0.6, 10, 5], [0, 0.2, 12, 3], [0, 0.3, 14, 1], [0, 0.3, 14, 1], [0, 0.1, 16, 1], [0, 0.1, 16, 1], [0, 0.1, 16, 1]], ["Forgefiend", "Armoured limbs \u00b7 2 attacks \u00b7 WS3+ \u00b7 S6 AP0 D2", [0, 0.1, 10, 1], [0.56, 1.1, 10, 5], [0, 0.3, 12, 3], [0, 0.5, 14, 1], [0, 0.4, 14, 1], [0, 0.2, 16, 1], [0, 0.3, 16, 1], [0, 0.1, 16, 1]], ["Venomcrawler", "Soulflayer tendrils and claws \u00b7 6 attacks \u00b7 WS3+ \u00b7 S6 AP-1 D2", [0, 0.9, 10, 1], [2.21, 4.4, 10, 5], [0.07, 1.2, 12, 3], [0, 1.9, 14, 1], [0, 2.1, 14, 1], [0, 1.2, 16, 1], [0, 1.3, 16, 1], [0, 1.0, 16, 1]]], "them_r_rr": [["Vashtorr", "Vashtorr's claw \u00b7 12\" \u00b7 D6 attacks \u00b7 S5 AP-2 D1 \u00b7 Torrent", [0, 0.2, 10, 1], [0.69, 1.9, 10, 5], [0.0, 0.5, 12, 3], [0, 0.4, 14, 1], [0, 0.3, 14, 1], [0, 0.3, 16, 1], [0, 0.3, 16, 1], [0, 0.3, 16, 1]], ["Daemon Prince", "Infernal cannon \u00b7 24\" \u00b7 3 attacks \u00b7 BS2+ \u00b7 S5 AP-1 D2", [0, 0.4, 10, 1], [1.51, 3.0, 10, 5], [0.04, 0.9, 12, 3], [0, 1.0, 14, 1], [0, 1.0, 14, 1], [0, 0.6, 16, 1], [0, 0.7, 16, 1], [0, 0.6, 16, 1]], ["Terminators + Sorc", "9 \u00d7 combi-bolter (24\", 2 A, Rapid Fire 2, S5 AP-1 D1) + Reaper autocannon (36\", 4 A, S7 AP-1 D1, Devastating Wounds) + Sorcerer Infernal Gaze (24\", D6 A, S6 AP-2 D3, Devastating Wounds)", [0.01, 4.3, 10, 1], [5, 10, 10, 5], [1.43, 7.1, 12, 3], [0.08, 8.9, 14, 1], [0.07, 8.6, 14, 1], [0.0, 6.4, 16, 1], [0.0, 6.3, 16, 1], [0.0, 6.0, 16, 1]], ["Chosen + Bile", "9 \u00d7 boltgun (24\", 2 A, S5 AP-1 D1) + plasma pistol (12\", supercharge S8 AP-3 D2)", [0, 1.7, 10, 1], [4.56, 9.2, 10, 5], [0.44, 3.2, 12, 3], [0, 3.8, 14, 1], [0, 3.5, 14, 1], [0, 2.4, 16, 1], [0, 2.5, 16, 1], [0, 2.6, 16, 1]], ["Legionaries x5", "5 \u00d7 boltgun \u00b7 24\" \u00b7 2 attacks \u00b7 S5 AP-1 D1", [0, 0.7, 10, 1], [2.24, 5.0, 10, 5], [0.05, 1.5, 12, 3], [0, 1.6, 14, 1], [0, 1.6, 14, 1], [0, 1.1, 16, 1], [0, 1.1, 16, 1], [0, 1.1, 16, 1]], ["Cultists x10", "10 \u00d7 autopistol \u00b7 12\" \u00b7 1 attack \u00b7 BS4+ \u00b7 S3 AP0 D1", [0, 0.4, 10, 1], [0.81, 2.1, 10, 5], [0.01, 0.8, 12, 3], [0, 1.1, 14, 1], [0, 1.1, 14, 1], [0, 0.5, 16, 1], [0, 0.5, 16, 1], [0, 0.6, 16, 1]], ["Bikers x3 (each)", "Meltagun (12\", S9 AP-4 D6+2 at half range) + 2 \u00d7 combi-bolter (24\", Rapid Fire 2, S5 AP-1 D1)", [0, 1.6, 10, 1], [2.62, 5.7, 10, 5], [0.57, 3.5, 12, 3], [0, 3.9, 14, 1], [0, 2.7, 14, 1], [0, 2.2, 16, 1], [0, 2.3, 16, 1], [0, 2.9, 16, 1]], ["Predator", "Predator autocannon (48\", 4 A, S9 AP-1 D3, Rapid Fire 2) + 2 \u00d7 lascannon (48\", S12 AP-3 D6+1) + Havoc launcher (48\", D6 A, S5 AP0 D1, Blast) + combi-bolter; +1 AP against Infantry", [0.08, 4.3, 10, 1], [4.96, 9.9, 10, 5], [2.0, 9.0, 12, 3], [0.25, 9.3, 14, 1], [0.15, 8.1, 14, 1], [0.04, 6.4, 16, 1], [0.04, 6.3, 16, 1], [0.03, 6.5, 16, 1]], ["Forgefiend", "2 \u00d7 ectoplasma cannon \u00b7 36\" \u00b7 D3 attacks \u00b7 S10 AP-3 D3 \u00b7 Blast; Devastating Wounds via Daemonic Ordnance", [0.02, 2.9, 10, 1], [4.08, 8.2, 10, 5], [0.87, 4.7, 12, 3], [0.04, 5.7, 14, 1], [0.0, 3.4, 14, 1], [0, 3.3, 16, 1], [0, 3.4, 16, 1], [0, 4.1, 16, 1]], ["Venomcrawler", "Excruciator cannon \u00b7 36\" \u00b7 6 attacks \u00b7 S6 AP-1 D2", [0, 1.1, 10, 1], [2.9, 5.8, 10, 5], [0.12, 1.7, 12, 3], [0, 2.7, 14, 1], [0, 2.6, 14, 1], [0, 1.7, 16, 1], [0, 1.7, 16, 1], [0, 1.4, 16, 1]]], "them_r_hex": [["Vashtorr", "Vashtorr's claw \u00b7 12\" \u00b7 D6 attacks \u00b7 S5 AP-2 D1 \u00b7 Torrent", [0, 0.2, 10, 1], [0.87, 2.3, 10, 5], [0.0, 0.6, 12, 3], [0, 0.5, 14, 1], [0, 0.3, 14, 1], [0, 0.3, 16, 1], [0, 0.3, 16, 1], [0, 0.4, 16, 1]], ["Daemon Prince", "Infernal cannon \u00b7 24\" \u00b7 3 attacks \u00b7 BS2+ \u00b7 S5 AP-1 D2", [0, 0.5, 10, 1], [1.6, 3.2, 10, 5], [0.05, 1.1, 12, 3], [0, 1.1, 14, 1], [0, 0.8, 14, 1], [0, 0.8, 16, 1], [0, 0.8, 16, 1], [0, 0.8, 16, 1]], ["Terminators + Sorc", "9 \u00d7 combi-bolter (24\", 2 A, Rapid Fire 2, S5 AP-1 D1) + Reaper autocannon (36\", 4 A, S7 AP-1 D1, Devastating Wounds) + Sorcerer Infernal Gaze (24\", D6 A, S6 AP-2 D3, Devastating Wounds)", [0.02, 4.4, 10, 1], [5, 10, 10, 5], [1.37, 6.9, 12, 3], [0.04, 8.2, 14, 1], [0.01, 6.5, 14, 1], [0.0, 6.5, 16, 1], [0, 6.5, 16, 1], [0.0, 6.0, 16, 1]], ["Chosen + Bile", "9 \u00d7 boltgun (24\", 2 A, S5 AP-1 D1) + plasma pistol (12\", supercharge S8 AP-3 D2)", [0, 1.7, 10, 1], [4.19, 8.5, 10, 5], [0.39, 3.1, 12, 3], [0, 3.7, 14, 1], [0, 2.6, 14, 1], [0, 2.6, 16, 1], [0, 2.6, 16, 1], [0, 2.8, 16, 1]], ["Legionaries x5", "5 \u00d7 boltgun \u00b7 24\" \u00b7 2 attacks \u00b7 S5 AP-1 D1", [0, 0.8, 10, 1], [2.12, 4.7, 10, 5], [0.06, 1.5, 12, 3], [0, 1.6, 14, 1], [0, 1.3, 14, 1], [0, 1.3, 16, 1], [0, 1.2, 16, 1], [0, 1.3, 16, 1]], ["Cultists x10", "10 \u00d7 autopistol \u00b7 12\" \u00b7 1 attack \u00b7 BS4+ \u00b7 S3 AP0 D1", [0, 0.5, 10, 1], [0.71, 1.9, 10, 5], [0.01, 0.7, 12, 3], [0, 1.1, 14, 1], [0, 1.1, 14, 1], [0, 0.7, 16, 1], [0, 0.8, 16, 1], [0, 0.8, 16, 1]], ["Bikers x3 (each)", "Meltagun (12\", S9 AP-4 D6+2 at half range) + 2 \u00d7 combi-bolter (24\", Rapid Fire 2, S5 AP-1 D1)", [0, 1.3, 10, 1], [2.37, 5.2, 10, 5], [0.39, 2.8, 12, 3], [0, 3.2, 14, 1], [0, 2.0, 14, 1], [0, 1.9, 16, 1], [0, 1.9, 16, 1], [0, 2.9, 16, 1]], ["Predator", "Predator autocannon (48\", 4 A, S9 AP-1 D3, Rapid Fire 2) + 2 \u00d7 lascannon (48\", S12 AP-3 D6+1) + Havoc launcher (48\", D6 A, S5 AP0 D1, Blast) + combi-bolter; +1 AP against Infantry", [0.06, 4.2, 10, 1], [4.87, 9.8, 10, 5], [1.75, 8.2, 12, 3], [0.25, 9.2, 14, 1], [0.07, 6.3, 14, 1], [0.03, 6.0, 16, 1], [0.04, 6.0, 16, 1], [0.03, 6.9, 16, 1]], ["Forgefiend", "2 \u00d7 ectoplasma cannon \u00b7 36\" \u00b7 D3 attacks \u00b7 S10 AP-3 D3 \u00b7 Blast; Devastating Wounds via Daemonic Ordnance", [0.01, 2.3, 10, 1], [3.35, 6.7, 10, 5], [0.69, 4.0, 12, 3], [0.02, 4.8, 14, 1], [0.0, 2.5, 14, 1], [0, 2.7, 16, 1], [0, 2.5, 16, 1], [0, 3.5, 16, 1]], ["Venomcrawler", "Excruciator cannon \u00b7 36\" \u00b7 6 attacks \u00b7 S6 AP-1 D2", [0, 1.3, 10, 1], [2.63, 5.3, 10, 5], [0.14, 1.8, 12, 3], [0, 2.6, 14, 1], [0, 2.0, 14, 1], [0, 2.0, 16, 1], [0, 2.1, 16, 1], [0, 1.5, 16, 1]]], "them_m_rr": [["Vashtorr", "Best of Vashtorr's hammer strike (6 A, WS2+, S14 AP-3 D3) or sweep (12 A, S8 AP-1 D2); Devastating Wounds", [0.13, 5.7, 10, 1], [4.99, 10.0, 10, 5], [1.46, 7.1, 12, 3], [0.4, 11.3, 14, 1], [0.13, 8.5, 14, 1], [0.03, 8.5, 16, 1], [0.04, 8.8, 16, 1], [0.09, 10.5, 16, 1]], ["Daemon Prince", "Best of Hellforged strike (6 A, S8 AP-2 D3) or sweep (14 A, S6 AP0 D1); Lance; Dark Pact adds +2 S and +1 AP (assumed)", [0.01, 2.7, 10, 1], [4.21, 8.4, 10, 5], [0.97, 5.2, 12, 3], [0.03, 6.9, 14, 1], [0.0, 3.0, 14, 1], [0, 2.9, 16, 1], [0, 2.8, 16, 1], [0, 3.8, 16, 1]], ["Terminators + Sorc", "3 \u00d7 power fist or chainfist (3 A, S8 AP-2 D2) + 7 \u00d7 accursed weapon (4 A, S5 AP-2 D1) + Sorcerer force weapon (4 A, S6 AP-1 D3)", [0.14, 6.2, 10, 1], [5, 10, 10, 5], [2.17, 9.8, 12, 3], [0.43, 11.9, 14, 1], [0.14, 9.7, 14, 1], [0.04, 9.2, 16, 1], [0.05, 9.5, 16, 1], [0.04, 9.3, 16, 1]], ["Chosen + Bile", "2 \u00d7 power fist (4 A, S9 AP-2 D2) + 8 \u00d7 accursed weapon (4 A, S6 AP-2 D1) + Bile's Rod of Torment (6 A, WS2+, S5 AP-1 D3); +1 S from Enhanced Warriors; re-roll wound rolls of 1", [0.39, 8.1, 10, 1], [5, 10, 10, 5], [2.83, 11.6, 12, 3], [0.86, 13.7, 14, 1], [0.56, 12.4, 14, 1], [0.29, 12.8, 16, 1], [0.29, 12.7, 16, 1], [0.16, 11.2, 16, 1]], ["Legionaries x5", "5 \u00d7 close combat weapon \u00b7 3 attacks \u00b7 S5 AP0 D1", [0, 0.6, 10, 1], [2.48, 5.4, 10, 5], [0.07, 1.5, 12, 3], [0, 1.6, 14, 1], [0, 1.6, 14, 1], [0, 0.9, 16, 1], [0, 0.8, 16, 1], [0, 0.8, 16, 1]], ["Cultists x10", "10 \u00d7 brutal assault weapon \u00b7 2 attacks \u00b7 WS4+ \u00b7 S3 AP0 D1", [0, 0.7, 10, 1], [1.82, 4.1, 10, 5], [0.05, 1.5, 12, 3], [0, 2.3, 14, 1], [0, 2.3, 14, 1], [0, 1.1, 16, 1], [0, 1.1, 16, 1], [0, 1.0, 16, 1]], ["Bikers x3 (each)", "2 \u00d7 Astartes chainsword (4 A, S6 AP-1 D1 on the charge) + power fist (3 A, S9 AP-2 D2)", [0, 1.6, 10, 1], [3.85, 7.7, 10, 5], [0.41, 3.0, 12, 3], [0, 3.7, 14, 1], [0, 3.0, 14, 1], [0, 2.6, 16, 1], [0, 2.5, 16, 1], [0, 2.2, 16, 1]], ["Predator", "Armoured tracks \u00b7 3 attacks \u00b7 WS4+ \u00b7 S6 AP0 D1", [0, 0.2, 10, 1], [0.28, 1.0, 10, 5], [0, 0.3, 12, 3], [0, 0.4, 14, 1], [0, 0.4, 14, 1], [0, 0.2, 16, 1], [0, 0.2, 16, 1], [0, 0.1, 16, 1]], ["Forgefiend", "Armoured limbs \u00b7 2 attacks \u00b7 WS3+ \u00b7 S6 AP0 D2", [0, 0.2, 10, 1], [0.73, 1.5, 10, 5], [0.0, 0.4, 12, 3], [0, 0.6, 14, 1], [0, 0.6, 14, 1], [0, 0.3, 16, 1], [0, 0.3, 16, 1], [0, 0.2, 16, 1]], ["Venomcrawler", "Soulflayer tendrils and claws \u00b7 6 attacks \u00b7 WS3+ \u00b7 S6 AP-1 D2", [0, 1.2, 10, 1], [2.86, 5.7, 10, 5], [0.14, 1.7, 12, 3], [0, 2.6, 14, 1], [0, 2.6, 14, 1], [0, 1.8, 16, 1], [0, 1.8, 16, 1], [0, 1.4, 16, 1]]], "them_m_hex": [["Vashtorr", "Best of Vashtorr's hammer strike (6 A, WS2+, S14 AP-3 D3) or sweep (12 A, S8 AP-1 D2); Devastating Wounds", [0.09, 5.1, 10, 1], [4.98, 10.0, 10, 5], [1.42, 6.9, 12, 3], [0.34, 10.9, 14, 1], [0.08, 7.5, 14, 1], [0.02, 7.4, 16, 1], [0.02, 7.5, 16, 1], [0.08, 10.3, 16, 1]], ["Daemon Prince", "Best of Hellforged strike (6 A, S8 AP-2 D3) or sweep (14 A, S6 AP0 D1); Lance; Dark Pact adds +2 S and +1 AP (assumed)", [0.0, 2.4, 10, 1], [3.64, 7.7, 10, 5], [1.03, 5.4, 12, 3], [0.04, 6.7, 14, 1], [0, 2.5, 14, 1], [0, 2.5, 16, 1], [0, 2.7, 16, 1], [0, 4.2, 16, 1]], ["Terminators + Sorc", "3 \u00d7 power fist or chainfist (3 A, S8 AP-2 D2) + 7 \u00d7 accursed weapon (4 A, S5 AP-2 D1) + Sorcerer force weapon (4 A, S6 AP-1 D3)", [0.07, 5.0, 10, 1], [5, 10, 10, 5], [2.08, 9.5, 12, 3], [0.34, 11.4, 14, 1], [0.04, 7.3, 14, 1], [0.01, 7.4, 16, 1], [0.01, 7.5, 16, 1], [0.04, 9.0, 16, 1]], ["Chosen + Bile", "2 \u00d7 power fist (4 A, S9 AP-2 D2) + 8 \u00d7 accursed weapon (4 A, S6 AP-2 D1) + Bile's Rod of Torment (6 A, WS2+, S5 AP-1 D3); +1 S from Enhanced Warriors; re-roll wound rolls of 1", [0.23, 7.0, 10, 1], [5, 10, 10, 5], [2.76, 11.4, 12, 3], [0.81, 13.5, 14, 1], [0.25, 10.3, 14, 1], [0.15, 10.9, 16, 1], [0.15, 10.9, 16, 1], [0.19, 11.6, 16, 1]], ["Legionaries x5", "5 \u00d7 close combat weapon \u00b7 3 attacks \u00b7 S5 AP0 D1", [0, 0.8, 10, 1], [2.56, 5.6, 10, 5], [0.1, 1.8, 12, 3], [0, 1.9, 14, 1], [0, 1.9, 14, 1], [0, 1.3, 16, 1], [0, 1.3, 16, 1], [0, 1.3, 16, 1]], ["Cultists x10", "10 \u00d7 brutal assault weapon \u00b7 2 attacks \u00b7 WS4+ \u00b7 S3 AP0 D1", [0, 1.0, 10, 1], [1.58, 3.7, 10, 5], [0.06, 1.5, 12, 3], [0, 2.2, 14, 1], [0, 2.2, 14, 1], [0, 1.5, 16, 1], [0, 1.5, 16, 1], [0, 1.4, 16, 1]], ["Bikers x3 (each)", "2 \u00d7 Astartes chainsword (4 A, S6 AP-1 D1 on the charge) + power fist (3 A, S9 AP-2 D2)", [0, 1.6, 10, 1], [3.5, 7.0, 10, 5], [0.4, 3.0, 12, 3], [0, 3.4, 14, 1], [0, 2.3, 14, 1], [0, 2.4, 16, 1], [0, 2.3, 16, 1], [0, 2.4, 16, 1]], ["Predator", "Armoured tracks \u00b7 3 attacks \u00b7 WS4+ \u00b7 S6 AP0 D1", [0, 0.2, 10, 1], [0.22, 0.9, 10, 5], [0, 0.3, 12, 3], [0, 0.4, 14, 1], [0, 0.4, 14, 1], [0, 0.3, 16, 1], [0, 0.3, 16, 1], [0, 0.2, 16, 1]], ["Forgefiend", "Armoured limbs \u00b7 2 attacks \u00b7 WS3+ \u00b7 S6 AP0 D2", [0, 0.3, 10, 1], [0.69, 1.4, 10, 5], [0.01, 0.5, 12, 3], [0, 0.7, 14, 1], [0, 0.7, 14, 1], [0, 0.5, 16, 1], [0, 0.4, 16, 1], [0, 0.3, 16, 1]], ["Venomcrawler", "Soulflayer tendrils and claws \u00b7 6 attacks \u00b7 WS3+ \u00b7 S6 AP-1 D2", [0, 1.3, 10, 1], [2.81, 5.6, 10, 5], [0.14, 1.7, 12, 3], [0, 2.7, 14, 1], [0, 1.9, 14, 1], [0, 2.0, 16, 1], [0, 1.9, 16, 1], [0, 1.6, 16, 1]]]};
   function shade(v,kind){
     var a=Math.min(1,v)*0.6;
     return "background:color-mix(in srgb, var(--"+kind+") "+Math.round(a*100)+"%, var(--panel))";
@@ -505,19 +500,6 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
     });
     t.innerHTML=h+"</tbody>";
   }
-  heat("tblYouR",youCols,tables.you_r,"ty","Your unit and gun");
-  heat("tblYouM",youCols,tables.you_m,"ty","Your unit and melee weapon");
-  var themMode="both";
-  function renderThem(){
-    var sfx={both:"",rr:"_rr",hex:"_hex",base:"_base"}[themMode];
-    heat("tblThemR",themCols,tables["them_r"+sfx],"ch","Their unit and gun");
-    heat("tblThemM",themCols,tables["them_m"+sfx],"ch","Their unit and melee weapon");
-    var bs=document.querySelectorAll("#themSeg button");
-    for(var i=0;i<bs.length;i++){bs[i].setAttribute("aria-pressed",bs[i].getAttribute("data-m")===themMode?"true":"false");}
-  }
-  var segBtns=document.querySelectorAll("#themSeg button");
-  for(var i=0;i<segBtns.length;i++){segBtns[i].addEventListener("click",function(e){themMode=e.currentTarget.getAttribute("data-m");renderThem();});}
-  renderThem();
   function plain(id,cols,rows,txtCols){
     var t=document.getElementById(id), h="<thead><tr>";
     cols.forEach(function(c,i){h+="<th"+(txtCols.indexOf(i)>-1?" class='txt'":"")+">"+c+"</th>"});
@@ -525,43 +507,25 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
     rows.forEach(function(r){h+="<tr>";r.forEach(function(c,i){h+="<td"+(txtCols.indexOf(i)>-1?" class='txt'":"")+">"+c+"</td>"});h+="</tr>"});
     t.innerHTML=h+"</tbody>";
   }
+  var gCols=["Guardsmen \u00d710","Marines \u00d710","Terminators \u00d75","Guardsmen (cover / -1 Hit)","Marines (cover / -1 Hit)","Terminators (cover / -1 Hit)","Vehicle (11W)","Monster (16W)","Vehicle (cover / -1 Hit)","Monster (cover / -1 Hit)"];
+  var gTabs={"shoot": [["Hive Tyrant", "Heavy venom cannon \u00b7 36\" \u00b7 D3 attacks \u00b7 S9 AP-2 D3 \u00b7 Blast", [2.76, 2.8, 10, 10], [1.43, 2.9, 20, 10], [0.89, 2.7, 15, 5], [2.2, 2.2, 10, 10], [1.28, 2.6, 20, 10], [0.71, 2.1, 15, 5], [0, 1.0, 11, 1], [0, 0.9, 16, 1], [0, 0.8, 11, 1], [0, 0.7, 16, 1]], ["Barbgaunts x5", "5 \u00d7 Barblauncher \u00b7 24\" \u00b7 D6 attacks each \u00b7 S5 AP0 D1 \u00b7 Blast, Heavy", [6.64, 6.6, 10, 10], [1.2, 2.9, 20, 10], [0.05, 0.9, 15, 5], [5.29, 5.3, 10, 10], [0.83, 2.2, 20, 10], [0.03, 0.6, 15, 5], [0, 0.7, 11, 1], [0, 0.3, 16, 1], [0, 0.5, 11, 1], [0, 0.3, 16, 1]], ["Exocrine (each)", "Bio-plasmic cannon \u00b7 36\" \u00b7 D6+3 attacks \u00b7 S9 AP-3 D3 \u00b7 Blast, Heavy", [5.85, 5.8, 10, 10], [3.89, 7.8, 20, 10], [2.08, 6.2, 15, 5], [4.78, 4.8, 10, 10], [3.22, 6.4, 20, 10], [1.63, 4.9, 15, 5], [0.05, 4.2, 11, 1], [0, 3.5, 16, 1], [0.04, 3.6, 11, 1], [0, 2.9, 16, 1]], ["Maleceptor (each)", "Psychic overload \u00b7 18\" \u00b7 D6+3 attacks \u00b7 S10 AP-2 D3 \u00b7 Blast, Psychic", [4.78, 4.8, 10, 10], [3.08, 6.2, 20, 10], [1.66, 5.0, 15, 5], [4.68, 4.7, 10, 10], [3.19, 6.4, 20, 10], [1.62, 4.8, 15, 5], [0.04, 4.2, 11, 1], [0.0, 2.3, 16, 1], [0.07, 4.5, 11, 1], [0, 2.3, 16, 1]], ["Norn Assimilator", "Toxinjecter harpoon \u00b7 12\" \u00b7 2 attacks \u00b7 S12 AP-3 D6+1", [1.39, 1.4, 10, 10], [1.12, 2.2, 20, 10], [0.6, 2.0, 15, 5], [1.07, 1.1, 10, 10], [1.0, 2.0, 20, 10], [0.45, 1.5, 15, 5], [0.06, 4.2, 11, 1], [0, 3.4, 16, 1], [0.05, 3.2, 11, 1], [0, 2.7, 16, 1]], ["Norn Emissary", "Best of three psychic tendrils \u00b7 18\" \u00b7 neuroparasite (2 A, S8 AP-2 D3), neurolance (2 A, S12 AP-3 D6), neuroblast (2D6 A, S6 AP-2 D1, Blast)", [6.26, 6.3, 10, 10], [1.41, 3.3, 20, 10], [0.48, 1.7, 15, 5], [6.29, 6.3, 10, 10], [1.47, 3.4, 20, 10], [0.23, 1.7, 15, 5], [0.02, 3.2, 11, 1], [0, 2.6, 16, 1], [0.01, 3.1, 11, 1], [0, 2.5, 16, 1]], ["Tyrannofex A (acid spray)", "Acid spray \u00b7 18\" \u00b7 D6+6 attacks \u00b7 S6 AP-2 D2 \u00b7 Torrent; stinger salvoes \u00b7 24\" \u00b7 8 attacks \u00b7 S5 AP0 D1", [9.29, 9.3, 10, 10], [4.37, 9.2, 20, 10], [1.06, 4.0, 15, 5], [8.92, 8.9, 10, 10], [4.42, 9.2, 20, 10], [1.04, 4.1, 15, 5], [0.02, 4.7, 11, 1], [0, 3.3, 16, 1], [0.02, 4.3, 11, 1], [0, 3.3, 16, 1]], ["Tyrannofex B (rupture cannon)", "Rupture cannon \u00b7 48\" \u00b7 2 attacks \u00b7 S18 AP-4 D6+6 \u00b7 Heavy; stinger salvoes \u00b7 24\" \u00b7 8 attacks \u00b7 S5 AP0 D1", [3.79, 3.8, 10, 10], [1.57, 3.6, 20, 10], [0.7, 2.4, 15, 5], [2.92, 2.9, 10, 10], [1.18, 2.7, 20, 10], [0.56, 1.9, 15, 5], [0.46, 7.8, 11, 1], [0.21, 8.6, 16, 1], [0.37, 6.8, 11, 1], [0.13, 6.4, 16, 1]]], "fight": [["Hive Tyrant", "Monstrous bonesword and lash whip \u00b7 6 attacks \u00b7 WS2+ \u00b7 S9 AP-2 D3 \u00b7 Twin-linked", [4.78, 4.8, 10, 10], [2.92, 5.8, 20, 10], [2.23, 6.7, 15, 5], [3.91, 3.9, 10, 10], [2.35, 4.7, 20, 10], [1.84, 5.5, 15, 5], [0.07, 5.4, 11, 1], [0, 4.1, 16, 1], [0.03, 4.6, 11, 1], [0, 3.5, 16, 1]], ["Barbgaunts x5", "5 \u00d7 chitinous claws and teeth \u00b7 1 attack \u00b7 WS4+ \u00b7 S4 AP0 D1", [1.08, 1.1, 10, 10], [0.03, 0.3, 20, 10], [0, 0.2, 15, 5], [0.77, 0.8, 10, 10], [0.02, 0.2, 20, 10], [0, 0.1, 15, 5], [0, 0.1, 11, 1], [0, 0.1, 16, 1], [0, 0.1, 11, 1], [0, 0.1, 16, 1]], ["Tyrant Guard x3", "3 \u00d7 crushing and rending claws \u00b7 2 attacks each \u00b7 WS4+ \u00b7 S8 AP-2 D2 \u00b7 Twin-linked", [2.94, 2.9, 10, 10], [1.71, 3.4, 20, 10], [0.4, 2.1, 15, 5], [1.93, 1.9, 10, 10], [1.25, 2.5, 20, 10], [0.24, 1.6, 15, 5], [0, 2.2, 11, 1], [0, 1.5, 16, 1], [0, 1.5, 11, 1], [0, 1.2, 16, 1]], ["Exocrine (each)", "Powerful limbs \u00b7 3 attacks \u00b7 WS3+ \u00b7 S7 AP0 D2", [1.14, 1.1, 10, 10], [0.47, 0.9, 20, 10], [0.01, 0.3, 15, 5], [0.78, 0.8, 10, 10], [0.34, 0.7, 20, 10], [0.01, 0.3, 15, 5], [0, 0.5, 11, 1], [0, 0.3, 16, 1], [0, 0.3, 11, 1], [0, 0.2, 16, 1]], ["Maleceptor (each)", "Best of strike (3 A, S9 AP-2 D6+1) or sweep (6 A, S7 AP-1 D2) \u00b7 WS3+", [2.82, 2.8, 10, 10], [1.33, 2.7, 20, 10], [0.53, 1.7, 15, 5], [2.04, 2.0, 10, 10], [0.95, 1.9, 20, 10], [0.11, 1.1, 15, 5], [0.02, 2.0, 11, 1], [0, 1.5, 16, 1], [0.02, 1.5, 11, 1], [0, 1.2, 16, 1]], ["Norn Assimilator", "Monstrous scything talons (6 A, S9 AP-2 D3) + Toxinjecter harpoon (4 A, S12 AP-3 D6+1, Extra Attacks) \u00b7 WS2+", [7.08, 7.1, 10, 10], [4.55, 9.1, 20, 10], [2.8, 8.6, 15, 5], [5.62, 5.6, 10, 10], [3.71, 7.4, 20, 10], [2.25, 7.0, 15, 5], [0.55, 9.0, 11, 1], [0.13, 8.7, 16, 1], [0.38, 7.8, 11, 1], [0.08, 7, 16, 1]], ["Norn Emissary", "Monstrous scything talons (6 A, S9 AP-2 D3) + rending claws (4 A, S7 AP-2 D2, Extra Attacks) \u00b7 WS2+", [7.06, 7.1, 10, 10], [3.72, 7.4, 20, 10], [2.04, 7.1, 15, 5], [5.52, 5.5, 10, 10], [2.95, 5.9, 20, 10], [1.5, 5.4, 15, 5], [0.04, 4.8, 11, 1], [0.0, 3.6, 16, 1], [0.03, 3.7, 11, 1], [0, 2.9, 16, 1]], ["Tyrannofex A (limbs)", "Powerful limbs \u00b7 4 attacks \u00b7 WS3+ \u00b7 S8 AP0 D2", [1.6, 1.6, 10, 10], [0.62, 1.2, 20, 10], [0.02, 0.6, 15, 5], [1.14, 1.1, 10, 10], [0.44, 0.9, 20, 10], [0.02, 0.5, 15, 5], [0, 0.5, 11, 1], [0, 0.2, 16, 1], [0, 0.4, 11, 1], [0, 0.3, 16, 1]], ["Tyrannofex B (limbs)", "Powerful limbs \u00b7 4 attacks \u00b7 WS3+ \u00b7 S8 AP0 D2", [1.49, 1.5, 10, 10], [0.57, 1.1, 20, 10], [0.03, 0.6, 15, 5], [1.13, 1.1, 10, 10], [0.41, 0.8, 20, 10], [0.03, 0.4, 15, 5], [0, 0.6, 11, 1], [0, 0.3, 16, 1], [0, 0.5, 11, 1], [0, 0.3, 16, 1]]]};
+  heat("tblYouR",gCols,gTabs.shoot,"ty","Your unit and gun");
+  heat("tblYouM",gCols,gTabs.fight,"ty","Your unit and melee weapon");
   var ch=[["2\"","100%"],["4\"","92%"],["6\"","72%"],["7\"","58%"],["8\"","42%"],["9\"","28%"],["10\"","17%"],["12\"","3%"]];
   plain("tblCharge",["Gap","Reach"],ch,[]);
-  plain("tblRange",["Unit","Move","Longest gun"],[
-   ["Predator Destructor","10\"","48\" (lascannon, Havoc launcher)"],
-   ["Terminators (Reaper)","5\"","36\""],
-   ["Forgefiend","8\"","36\" Blast"],
-   ["Venomcrawler","12\"","36\""],
-   ["Vashtorr","12\"","12\" (claw)"],
-   ["Exocrine / Hive Tyrant","8\"","36\""],
-   ["Tyrannofex B","9\"","48\" (rupture)"],
-   ["Maleceptor","8\"","18\""],
-   ["Norn Assimilator","10\"","12\" (harpoon)"],
-   ["Norn Emissary","10\"","18\""],
-   ["Chosen / Chaos Bikers","6\" / 12\"","24\""]
+  plain("tblStrat",["Rule","Cost","What it does"],[
+   ["Enraged Behemoths","Always","Monsters: +1 Hit below Starting Strength, +1 Wound below half. At Starting Strength and not Battle-shocked, +2 OC."],
+   ["Higher Imperatives","Always","Norns can re-pick Singular Purpose once each."],
+   ["Savage Roar","1 CP","Enemy unit takes a Battle-shock test and gets -1 to Hit and Wound."],
+   ["Rampaging Monstrosities","1 CP","Re-roll Hit rolls in melee."],
+   ["Massive Impact","1 CP","After a charge, roll 6D6; each 4+ is a mortal wound."],
+   ["Swarm-Guided Salvoes","1 CP","Ranged: Ignores Cover and BS modifiers."],
+   ["Corrosive Viscera","1 CP","Deadly Demise mortal wounds are automatic."],
+   ["Untrammelled Ferocity","1 CP","Monster can move through terrain and models."],
+   ["Tanglestrike Rounds","1 CP","After the Assimilator shoots, one hit enemy unit gets -2\" Move."],
+   ["Lesser Prey","1 CP","Norn melee +2 Strength this fight."],
+   ["Catalytic Biofortification","1 CP","Assimilator gains Feel No Pain 4+ against mortal wounds."]
   ],[0,2]);
-  plain("tblStrat",["Rule","Cost","What it does","Value on this matchup"],[
-   ["Enraged Behemoths","Always","Monsters: +1 Hit below Starting Strength, +1 Wound below half. At Starting Strength and not Battle-shocked, +2 OC.","Cancels the Damaged penalty; OC 6–7 on most of your list."],
-   ["Higher Imperatives","Always","Norns can re-pick Singular Purpose once each.","Lets the Assimilator switch from Vashtorr to the next threat."],
-   ["Savage Roar","1 CP","Enemy unit takes a Battle-shock test and gets -1 to Hit and Wound.","Best defensive play. Against a focused Exocrine, Chosen kill chance 98% → 82%, Terminators 73% → 50%."],
-   ["Rampaging Monstrosities","1 CP","Re-roll Hit rolls in melee.","About +0.5 dead Terminators on a Norn or Hive Tyrant, +0.4 on the Tyrant Guard. Skip on Exocrines."],
-   ["Massive Impact","1 CP","After a charge, roll 6D6; each 4+ is a mortal wound.","About 3 mortal wounds. Good on Vashtorr (4+ invulnerable)."],
-   ["Swarm-Guided Salvoes","1 CP","Ranged: Ignores Cover and BS modifiers.","Cancels the Daemon Prince's Cover aura and Vashtorr's -1 to Hit."],
-   ["Corrosive Viscera","1 CP","Deadly Demise mortal wounds are automatic.","Punishes Terminators near a dying Tyrannofex or Norn (D6)."],
-   ["Untrammelled Ferocity","1 CP","Monster can move through terrain and models.","Closes range on 48\" guns."],
-   ["Tanglestrike Rounds","1 CP","After the Assimilator shoots, one hit enemy unit gets -2\" Move.","Slows a Biker or Vashtorr charge."],
-   ["Lesser Prey","1 CP","Norn melee +2 Strength this fight.","Improves wounding on T10 targets (4+ to 3+ with Strength 11)."],
-   ["Catalytic Biofortification","1 CP","Assimilator gains Feel No Pain 4+ against mortal wounds.","Counters Devastating Wounds. The Emissary has it built in."]
-  ],[0,2,3]);
-  plain("tblEnr",["Unit","Terminators dead (of 10)","Vashtorr wounds (of 14)","Predator wounds (of 11)"],[
-   ["Hive Tyrant","3.0 → 3.8","4.7 → 7.0","6.4 → 8.2"],
-   ["Exocrine","1.9 → 2.9","2.5 → 4.5","4.8 → 7.0"],
-   ["Maleceptor","2.4 → 3.9","4.8 → 8.0","6.0 → 8.8"],
-   ["Norn Assimilator","3.2 → 3.9","12.3 → 13.1","10.1 → 10.7"],
-   ["Norn Emissary","2.3 → 3.0","4.6 → 6.7","5.8 → 8.2"],
-   ["Tyrannofex A","1.0 → 1.5","3.2 → 4.9","4.5 → 6.9"],
-   ["Tyrannofex B","0.6 → 0.7","4.0 → 6.4","8.1 → 9.6"]
-  ],[]);
   function bars(id,rows){
     var el=document.getElementById(id),h="";
     rows.forEach(function(r){
@@ -569,8 +533,6 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
     });
     el.innerHTML=h;
   }
-  bars("raceTy",[["After your R1","69","ty","1,387 pts"],["After Chaos R1","20","ch","404 pts"],["After your R2","99","ty","1,983 pts"],["After Chaos R2","21","ch","411 pts"],["After your R3","100","ty","1,995 pts"]]);
-  bars("raceCh",[["After Chaos R1","50","ch","1,006 pts"],["After your R1","35","ty","694 pts"],["After Chaos R2","72","ch","1,432 pts"],["After your R2","43","ty","869 pts"],["After Chaos R3","90","ch","1,804 pts"],["After your R3","47","ty","936 pts"],["After Chaos R4","100","ch","2,000 pts"]]);
 })();
 </script>
 
