@@ -1,10 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#6d3fb0">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Crusher Talons</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -97,6 +91,9 @@ ul{margin:8px 0;padding-left:20px;max-width:74ch} li{margin:4px 0}
 .keyl li{margin:5px 0}
 .keyl .oc{font:500 12px var(--mono);color:var(--muted);padding-left:6px}
 .card.dep h3{font-size:20px}
+.map .arrow.hunt{stroke:var(--ty);stroke-dasharray:2 4;opacity:.85}
+.map .hl{fill:var(--ty);font-weight:600}
+table.rt td:first-child{font:700 15px var(--mono);color:var(--ty);text-align:center;width:56px}
 footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 @media (max-width:560px){.bar{grid-template-columns:100px 1fr auto}}
 @media (prefers-reduced-motion:no-preference){.fl{transition:width .5s ease}}
@@ -109,19 +106,17 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
   td.lab,th.lab{min-width:140px;max-width:160px;font-size:12.5px}
 }
 </style>
-</head>
-<body>
 
 
 <div class="wrap">
 <header class="top">
   <div class="kicker">Warhammer 40,000 · 11th Edition · 2,000 pts · Army briefing</div>
   <h1><span class="a">Crusher Talons</span></h1>
-  <p class="sub">Tyranids (Crusher Stampede + Talons of the Norn Queen). Detachment rules, Stratagems, and deployment and objective plans for the 2,000-point list.</p>
+  <p class="sub">Tyranids (Crusher Stampede + Talons of the Norn Queen). Detachment rules, a Norn playbook, secondaries and round-by-round plans for every Take and Hold and Purge the Foe mission.</p>
 </header>
 
 <nav aria-label="Sections">
-  <a href="#lists">Lists</a><a href="#you">Mathhammer</a><a href="#tempo">Range &amp; tempo</a><a href="#rules">Rules &amp; Stratagems</a><a href="#deploy">Deployment</a>
+  <a href="#lists">List</a><a href="#you">Mathhammer</a><a href="#rules">Rules</a><a href="#plan">Game plan</a><a href="#norns">Norns</a><a href="#cp">CP</a><a href="#secondaries">Secondaries</a><a href="#matchup">Matchup</a><a href="#deploy">Deployment</a>
 </nav>
 
 <section id="lists">
@@ -178,35 +173,143 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 
 <section id="rules">
   <h2>Detachment rules and Stratagems</h2>
-  <p class="lede">Crusher Stampede rules are from Wahapedia. Talons of the Norn Queen rules are from Hutber and Spikeybits because Wahapedia's page was empty; check them against your copy.</p>
+  <p class="lede">Crusher Stampede, Talons of the Norn Queen and Singular Purpose are from the Wahapedia 11th edition Tyranids pages (faction pack 1.2).</p>
   <div class="tw"><table id="tblStrat"></table></div>
+</section>
+
+<section id="plan">
+  <h2>Game plan</h2>
+  <p class="lede">Twelve units and 166 wounds means every unit you lose is a big share of the army. The list wins by holding ground with monsters that are hard to shift and trading only when the trade favours you.</p>
+  <div class="grid g2">
+    <div class="card"><h3>What the list does well</h3><ul>
+      <li>Two Norns that can each become OC 15 with Feel No Pain 5+ on a chosen objective.</li>
+      <li>Ten models with 10+ wounds, all getting better at hitting once damaged.</li>
+      <li>Long guns (rupture cannon 48", Exocrines 36") that shoot from cover.</li>
+      <li>Psychic Maleceptors and Torrent acid spray that ignore cover penalties.</li>
+    </ul></div>
+    <div class="card"><h3>Where it is weak</h3><ul>
+      <li>Only five cheap models. You cannot screen deep strikers or soak a charge with chaff.</li>
+      <li>Twelve activations. A unit that is badly placed costs a large share of your turn.</li>
+      <li>Bring It Down pays your opponent for every big model he kills.</li>
+      <li>Your home objective relies on one Tyrannofex and five Barbgaunts.</li>
+    </ul></div>
+  </div>
+  <h3>Rules of thumb at the table</h3>
+  <ol class="pri">
+    <li><span><b>Score first, kill second.</b> Decide which objectives you will hold this turn before you pick a single target.</span></li>
+    <li><span><b>Move as groups.</b> When one monster steps into the open, he can focus all his guns on it. When four step out together, he kills one at most.</span></li>
+    <li><span><b>Shoot his anti-monster guns first.</b> Lascannons, melta and high-damage cannons decide whether your monsters survive. Elite infantry can wait.</span></li>
+    <li><span><b>Let melee come to you.</b> Your Norns and Hive Tyrant hit hardest on the counter-charge, after his unit has spent its own turn getting there.</span></li>
+    <li><span><b>Pull wounded monsters back.</b> A damaged monster still shoots well thanks to Enraged Behemoths, and keeping it alive denies him kill points.</span></li>
+  </ol>
+</section>
+
+<section id="norns">
+  <h2>Norn playbook</h2>
+  <p class="lede">Both Norns have Singular Purpose, chosen at the start of the first battle round. Talons of the Norn Queen lets each of them re-pick once per battle in your Command phase (Protean Purpose). That makes them two objective anchors early and a hunter late.</p>
+  <div class="grid g2">
+    <div class="card"><h3>The two options</h3>
+      <dl class="kv">
+        <dt>Objective</dt><dd>While within range of that objective marker: OC 15 and Feel No Pain 5+, until the end of the battle.</dd>
+        <dt>Enemy unit</dt><dd>Re-roll Hit rolls and Wound rolls for every attack against that unit, until the end of the battle.</dd>
+      </dl>
+      <p class="note">The Emissary also has Feel No Pain 4+ against mortal wounds. The Assimilator has Harpoon Barbs: an enemy that falls back from her takes D6 mortal wounds on a 2+.</p>
+    </div>
+    <div class="card"><h3>Opening picks</h3><ul>
+      <li><b>Split them.</b> Two different objectives, never the same one. OC 15 on one point is already more than most units can contest.</li>
+      <li><b>Assimilator on the hardest point.</b> She keeps it all game. Harpoon Barbs punishes units that tie her up and leave, and Catalytic Biofortification protects her from psychic damage.</li>
+      <li><b>Emissary on the point another group can take over</b>, or the far point a fast unit would steal. She is the one who re-picks later.</li>
+    </ul></div>
+  </div>
+  <h3>When the Emissary re-picks</h3>
+  <div class="grid g2">
+    <div class="card"><h3>Re-pick when all of these are true</h3><ul>
+      <li>Another group already controls her objective with OC to spare at the start of your turn.</li>
+      <li>A high-value target is within 18" of her or will be by next turn: a Terminator brick, a Daemon Prince, a heavy gun platform, or a unit on the objective you need.</li>
+      <li>The target will still be alive and relevant next turn, because this choice lasts the rest of the game.</li>
+      <li>The mission pays for it: Punishment, Meatgrinder and Consecrate all reward a late push on his home objective.</li>
+    </ul></div>
+    <div class="card"><h3>Do not re-pick when</h3><ul>
+      <li>Her leaving would drop the objective. Most primaries score at the end of your Command phase, and Protean Purpose also happens in your Command phase, so her OC 15 is gone before you score that turn.</li>
+      <li>Nothing worth the re-rolls is in reach. A re-pick onto a three-model squad wastes the only one she has.</li>
+      <li>You are in Destroyer's Wrath and objective count is decided by one point.</li>
+    </ul></div>
+  </div>
+  <div class="callout"><b>The Assimilator stays put</b> in almost every game. She re-picks only if her objective has been removed or the game is decided and a kill is worth more than the point.</div>
+</section>
+
+<section id="cp">
+  <h2>Command points</h2>
+  <p class="lede">Spend CP where it protects a monster or wins a scoring turn. Discarding a dead secondary at the end of your turn gives 1 CP back.</p>
+  <div class="tw"><table><thead><tr><th>Stratagem</th><th class="txt">Spend it when</th></tr></thead><tbody>
+    <tr><td>Swarm-Guided Salvoes</td><td class="txt">An Exocrine or the rupture Tyrannofex shoots at a target hiding in cover. Not needed for Maleceptors or acid spray.</td></tr>
+    <tr><td>Lesser Prey</td><td class="txt">A Norn fights something tough. +2 Strength turns her talons into S11, wounding T6 on 2s. Better than re-rolling hits on a Norn who already re-rolls her chosen target.</td></tr>
+    <tr><td>Rampaging Monstrosities</td><td class="txt">The Hive Tyrant or a Norn without a matching Singular Purpose fights an important unit.</td></tr>
+    <tr><td>Savage Roar</td><td class="txt">His strongest melee unit swings at one of your monsters. -1 to hit, and -1 to wound if it fails the test.</td></tr>
+    <tr><td>Catalytic Biofortification</td><td class="txt">The Assimilator is hit by psychic or other mortal-wound damage.</td></tr>
+    <tr><td>Untrammelled Ferocity</td><td class="txt">A monster needs to pass through a ruin or a screen to reach an objective or a charge.</td></tr>
+    <tr><td>Massive Impact</td><td class="txt">A charge that could finish a unit off. Roll six dice, each 4+ is a mortal wound.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="secondaries">
+  <h2>Tactical secondaries</h2>
+  <p class="lede">From the 2026-27 Mission Deck. Two cards are drawn each Command phase; you can discard on your turn for 1 CP each, and once per battle pay 1 CP to swap one at the end of your Command phase.</p>
+  <div class="grid g3">
+    <div class="card"><h3><span class="tag ty">Keep</span></h3><ul>
+      <li><b>Burden of Trust:</b> 2 VP per guarded objective at the end of his turn, up to 5. Norns guard their points.</li>
+      <li><b>Secure No Man's Land:</b> 5 VP for two objectives in No Man's Land.</li>
+      <li><b>Defend Stronghold:</b> 3 VP for your home, +2 if no enemies are in your zone.</li>
+      <li><b>Beacon:</b> pick the Assimilator. 3 VP outside your zone, 5 in his half.</li>
+    </ul></div>
+    <div class="card"><h3><span class="tag">Usually keep</span></h3><ul>
+      <li><b>No Prisoners</b> and <b>Overwhelming Force:</b> scored on either player's turn.</li>
+      <li><b>A Tempting Target:</b> your OC usually wins whatever he chooses.</li>
+      <li><b>Plunder:</b> an instant action in a terrain area in his half.</li>
+      <li><b>Assassination</b> and <b>Bring It Down:</b> if a target is in reach.</li>
+      <li><b>Cleanse:</b> a Norn on a non-home objective does it while holding.</li>
+    </ul></div>
+    <div class="card"><h3><span class="tag ch">Discard for CP</span></h3><ul>
+      <li><b>Behind Enemy Lines</b> and <b>Forward Position:</b> your monsters rarely survive deep in his zone.</li>
+      <li><b>A Grievous Blow:</b> swap free if he has no 13+ model units.</li>
+      <li><b>Display of Might</b> and <b>Engage on All Fronts:</b> too few units to spread out.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="matchup">
+  <h2>Matchup: Chaos Space Marines</h2>
+  <p class="lede">For the rematch against Gil's Veterans of the Long War and Cabal of Chaos list. If you play Purge the Foe, his Take and Hold primary is Immovable Object: 3 VP each turn for a central objective and 5 VP per non-home objective. If you both play Take and Hold, you both get Battlefield Dominance, a straight objective fight your OC should win.</p>
+  <div class="grid g2">
+    <div class="card"><h3>Target order</h3><ol class="pri">
+      <li><span>Predator Destructor and Forgefiend: his monster killers. Rupture Tyrannofex first.</span></li>
+      <li><span>Biker squads with meltaguns: acid spray Torrent when they come in range.</span></li>
+      <li><span>Chosen with Fabius Bile: Exocrines and Maleceptors, no invulnerable save to stop AP-3.</span></li>
+      <li><span>Terminators with the Sorcerer: Norns in melee with Lesser Prey, never the first shooting target.</span></li>
+      <li><span>Cultists and Legionaries: only when they sit on an objective you need.</span></li>
+    </ol></div>
+    <div class="card"><h3>How his plan works against you</h3><ul>
+      <li><b>Focus of Hatred</b> gives his whole army re-rolls against one unit each turn. Give him no lone monster to pick, and if one must be exposed, make it a Norn on her objective with Feel No Pain 5+.</li>
+      <li><b>He hides until you step out.</b> Your Norns on central objectives deny his 3 VP and 5 VP scores every turn he stays hidden, so the clock works against him.</li>
+      <li><b>Cabal psychic damage:</b> keep a CP for Catalytic Biofortification on the Assimilator. The Emissary already has Feel No Pain 4+ against mortal wounds.</li>
+      <li><b>Emissary re-pick:</b> the Terminators or the Daemon Prince once they commit to one of your objectives.</li>
+    </ul></div>
+  </div>
 </section>
 
 <section id="deploy">
   <h2>Deployment and objectives</h2>
-  <p class="lede">The central objectives are shown as two points, placed 6" either side of the single central point along the dashed line that separates the territories (the roll of 6 in Create the Battlefield). Three deployment maps, all with you in the red zone. Pick the mission your opponent's disposition gives you; five Purge the Foe missions are covered. Distances are measured from the map images and are within about 1 to 2 inches. OC numbers include the Enraged Behemoths +2 for monsters at full strength, so they fall as monsters take damage.</p>
-  <div class="seg" id="depSeg" role="group" aria-label="Mission"><button type="button" data-m="uf" aria-pressed="true">Unstoppable Force</button><button type="button" data-m="p" aria-pressed="false">Punishment</button><button type="button" data-m="m" aria-pressed="false">Meat Grinder</button><button type="button" data-m="c" aria-pressed="false">Consecrate</button><button type="button" data-m="d" aria-pressed="false">Destroyer's Wrath</button></div>
+  <p class="lede">The deployment groups below are the base placement for every mission. Each Take and Hold mission lists the changes it needs; the rest is how you score and when a Norn leaves her objective. The central objectives are shown as two points, 6" either side of the single central point (the roll of 6 in Create the Battlefield). Distances are measured from the map images and are within 1 to 2 inches.</p>
+  <p class="note">OC figures count each monster at full strength with the Enraged Behemoths +2, and each Norn on her chosen objective as OC 15. Whether the +2 also applies on top of the Norn's set OC of 15 depends on how your group reads modifiers to a set characteristic, so it is left out.</p>
   <h3>Distances</h3>
   <div class="tw"><table id="tblDeploy"><thead><tr><th>Deployment</th><th>Centre points from your / their zone</th><th>Your expansion from your / their zone</th><th>Your home from the enemy zone</th></tr></thead><tbody>
 <tr><td>A: staggered</td><td>West 9" / 11", east 9" / 9"</td><td>2" / about 20"</td><td>about 24"</td></tr>
 <tr><td>B: diagonal</td><td>NW 4" / 9", SE 6" / 7"</td><td>14" / 16"</td><td>about 28"</td></tr>
 <tr><td>C: long zones</td><td>North 12" / 12", south 12" / 12"</td><td>0.7" / 23"</td><td>about 28"</td></tr>
 </tbody></table></div>
-  <div id="depUF">
-    <div class="card" style="margin:12px 0">
-      <h3>Unstoppable Force (Purge the Foe vs Take and Hold)</h3>
-      <ul>
-        <li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li>
-        <li><b>Round 2 onward, end of your Command phase:</b> 4 VP for each objective you control, excluding your home. Your own home does not count, but the enemy home does for you.</li>
-        <li><b>End of your turn, round 2 onward:</b> 3 VP if you control an objective you did not control at the start of the turn (not your home).</li>
-        <li><b>End of the battle:</b> 5 VP if you control one or more central objectives. There are two on these maps, and holding either one is enough.</li>
-        <li>Primaries are capped at 15 VP per round and 45 VP per game. Three held objectives plus a kill already reach 15 VP. Each central objective counts as its own objective for the 4 VP.</li>
-      </ul>
-      <p class="note">You chose Tactical secondaries: two are drawn each Command phase and you can discard for 1 CP. Cards that suit this list are No Prisoners, Overwhelming Force, Burden of Trust and Secure No Man's Land. Bring It Down helps your opponent against you, because ten of your models have 10 or more Wounds.</p>
-    </div>
-    <p class="note">Amber dots are objectives and numbered circles are your groups. Violet dashed arrows are your moves and the rust arrow is the route fast enemy units take. The dotted grey line is the territory line that the two central objectives sit on.</p>
-    <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The enemy zone is the mirror image along the top. The two central objectives sit either side of the central ruin along the dashed line.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
-<defs><marker id="ahAU" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <p class="note">Amber dots are objectives and numbered circles are your groups. Violet arrows are opening moves, the dotted violet arrow is the Emissary's route once she re-picks, and the rust arrow is the route fast enemy units take.</p>
+  <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. Centre W is about 9" from you and 11" from them; centre E is 9" from both, so it is the contested point.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
+<defs><marker id="ahA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect class="board" x="40" y="20" width="600" height="440"/>
 <polygon class="zone you" points="40,320 340,320 340,380 640,380 640,460 40,460"/>
 <polygon class="zone them" points="40,20 640,20 640,160 340,160 340,100 40,100"/>
@@ -240,16 +343,17 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 <text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
 <text class="lb" x="272" y="222" text-anchor="end">centre W</text>
 <text class="lb" x="383" y="232" text-anchor="middle">centre E</text>
-<line class="arrow go" x1="195" y1="419" x2="142" y2="152" marker-end="url(#ahAU)"/>
-<line class="arrow go" x1="280" y1="325" x2="265" y2="245" marker-end="url(#ahAU)"/>
-<line class="arrow go" x1="362" y1="383" x2="381" y2="257" marker-end="url(#ahAU)"/>
+<line class="arrow go" x1="280" y1="325" x2="265" y2="245" marker-end="url(#ahA)"/>
+<line class="arrow go" x1="362" y1="383" x2="381" y2="257" marker-end="url(#ahA)"/>
+<line class="arrow go" x1="548" y1="390" x2="544" y2="373" marker-end="url(#ahA)"/>
+<line class="arrow hunt" x1="250" y1="222" x2="150" y2="128" marker-end="url(#ahA)"/>
+<text class="lb hl" x="180" y="190" text-anchor="start">Emissary hunt (R3+)</text>
 <circle class="mk" cx="145" cy="360" r="11"/><text class="mkt" x="145" y="365">1</text>
-<circle class="mk" cx="200" cy="430" r="11"/><text class="mkt" x="200" y="435">2</text>
-<circle class="mk" cx="282" cy="338" r="11"/><text class="mkt" x="282" y="343">3</text>
-<circle class="mk" cx="360" cy="396" r="11"/><text class="mkt" x="360" y="401">4</text>
-<circle class="mk" cx="550" cy="400" r="11"/><text class="mkt" x="550" y="405">5</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Hammer:</b> Assimilator + Emissary, up the left lane to the enemy expansion <span class="oc">OC 14</span></li><li><b>3 Centre west:</b> Hive Tyrant + Guard, 1 Exocrine, behind the central ruin <span class="oc">OC 14</span></li><li><b>4 Centre east:</b> 2 Exocrines + 1 Maleceptor, at the zone corner <span class="oc">OC 18</span></li><li><b>5 Expansion:</b> Rupture Tyrannofex + 1 Maleceptor, on the right <span class="oc">OC 13</span></li></ol><ul><li>Both centre points are about 9" from your zone. The west one is about 11" from the enemy zone and the east one about 9", so the east point is the contested one and gets the extra gun.</li><li>Two centre points plus your expansion are three non-home objectives, worth 12 VP a round from round 2. A kill on top reaches the 15 VP cap.</li><li>Your expansion is about 2" outside your zone. Hold it with the Rupture Tyrannofex, which also covers the right lane to the enemy home.</li><li>Your home is about 24" from the enemy zone. Fast units reach it on their second turn.</li><li>Your army splits across both flanks and both centre points, so every group needs to be strong enough to stand alone.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, the enemy the upper-right. The nearest corners are about 12.7" apart. The two central objectives sit north-west and south-east of the central ruin along the dashed diagonal.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
-<defs><marker id="ahBU" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<circle class="mk" cx="282" cy="338" r="11"/><text class="mkt" x="282" y="343">2</text>
+<circle class="mk" cx="360" cy="396" r="11"/><text class="mkt" x="360" y="401">3</text>
+<circle class="mk" cx="550" cy="402" r="11"/><text class="mkt" x="550" y="407">4</text>
+</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts. The 48" cannon shoots from home all game, so your longest gun is also your home guard. <span class="oc">OC 12</span></li><li><b>2 Centre W:</b> Norn Emissary (Singular Purpose: centre W) + Hive Tyrant with Guard + 1 Exocrine. <span class="oc">OC 15 + 14</span></li><li><b>3 Centre E:</b> Norn Assimilator (Singular Purpose: centre E) + 2 Exocrines + 1 Maleceptor, behind the corner ruin. <span class="oc">OC 15 + 18</span></li><li><b>4 Expansion:</b> Acid spray Tyrannofex + 1 Maleceptor. Torrent and stinger salvoes kill anything that races up the right lane. <span class="oc">OC 13</span></li></ol><ul><li>Both Norns sit on a different centre point, so each centre has OC 15 from one model and your gun groups are free to shoot instead of standing still to hold.</li><li>The Assimilator takes the contested point because she stays there all game. The Emissary takes the easier one so she can hand it to the Tyrant group later.</li><li>Round 3 or 4: once the Tyrant group holds centre W comfortably (OC 14 against whatever is near it), the Emissary re-picks onto an enemy unit and goes up the left lane.</li><li>Your three non-home objectives (both centres and the expansion) never depend on a single unit, so one bad round does not drop your primary.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half. Centre NW is about 4" from you and 9" from them; centre SE is 6" and 7", so it is contested. Your expansion (top left) is 14" from you and 16" from them, and fast units race for it.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
+<defs><marker id="ahB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect class="board" x="40" y="20" width="600" height="440"/>
 <polygon class="zone you" points="40,240 250,240 258,274 276,304 304,323 340,330 340,460 40,460"/>
 <polygon class="zone them" points="340,20 640,20 640,240 430,240 422,206 404,176 376,157 340,150"/>
@@ -284,17 +388,18 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 <text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
 <text class="lb" x="278" y="194" text-anchor="end">centre NW</text>
 <text class="lb" x="383" y="280" text-anchor="start">centre SE</text>
-<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahBU)"/>
-<line class="arrow go" x1="243" y1="251" x2="269" y2="213" marker-end="url(#ahBU)"/>
-<line class="arrow go" x1="302" y1="332" x2="362" y2="283" marker-end="url(#ahBU)"/>
-<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahBU)"/>
+<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahB)"/>
+<line class="arrow go" x1="243" y1="251" x2="269" y2="213" marker-end="url(#ahB)"/>
+<line class="arrow go" x1="302" y1="332" x2="362" y2="283" marker-end="url(#ahB)"/>
+<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahB)"/>
+<line class="arrow hunt" x1="196" y1="96" x2="330" y2="70" marker-end="url(#ahB)"/>
+<text class="lb hl" x="205" y="60" text-anchor="start">Emissary hunt (R3+)</text>
 <circle class="mk" cx="136" cy="362" r="11"/><text class="mkt" x="136" y="367">1</text>
 <circle class="mk" cx="70" cy="265" r="11"/><text class="mkt" x="70" y="270">2</text>
 <circle class="mk" cx="236" cy="262" r="11"/><text class="mkt" x="236" y="267">3</text>
 <circle class="mk" cx="292" cy="340" r="11"/><text class="mkt" x="292" y="345">4</text>
-<circle class="mk" cx="150" cy="272" r="11"/><text class="mkt" x="150" y="277">5</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Assimilator + Emissary, to your expansion <span class="oc">OC 14</span></li><li><b>3 Centre NW:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the zone edge <span class="oc">OC 20</span></li><li><b>4 Centre SE:</b> 2 Exocrines + 1 Maleceptor, at the bottom of the zone edge <span class="oc">OC 18</span></li><li><b>5 Support:</b> Rupture Tyrannofex, in the north-west <span class="oc">OC 7</span></li></ol><ul><li>The north-west centre point is about 4" from your zone and 9" from theirs, so your group gets there first. The south-east point is about 6" from your zone and 7" from theirs, so it is the contested one.</li><li>Your expansion is the top-left one, about 14" from your zone and 16" from the enemy. Fast enemy units can take it on their first turn, so the Norns must get there first.</li><li>Nothing of yours is on the right-hand side, so the whole army moves north-west and toward the centre.</li><li>Your home is about 28" from the enemy zone, one turn further than in A.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, the enemy the right 18", with 24" of open ground between. The two central objectives sit north and south of the centre along the vertical dashed line. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
-<defs><marker id="ahCU" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts. <span class="oc">OC 12</span></li><li><b>2 Expansion:</b> Norn Emissary (Singular Purpose: your expansion). She wins the race for it, and fast raiders that arrive meet a Norn with OC 15. <span class="oc">OC 15</span></li><li><b>3 Centre NW:</b> Hive Tyrant with Guard + 1 Exocrine + 1 Maleceptor. You reach this point first and need no Norn to hold it. <span class="oc">OC 20</span></li><li><b>4 Centre SE:</b> Norn Assimilator (Singular Purpose: centre SE) + 2 Exocrines + 1 Maleceptor + Acid spray Tyrannofex. <span class="oc">OC 15 + 25</span></li></ol><ul><li>The Emissary anchors the far objective that a fast unit would otherwise steal on turn 1 or 2. Her shooting covers the lane the raiders use.</li><li>The Assimilator anchors the contested centre with your heaviest shooting behind her. The Acid spray Tyrannofex goes here because its 18" Torrent matters most near the fight.</li><li>Once the expansion has been quiet for a round, the Emissary re-picks onto the best enemy target. If nothing threatens the expansion, a Barbgaunt or Tyrannofex move can take it over.</li><li>Nothing of yours deploys on the right. The enemy expansion is a long way off, so you score three non-home objectives and let him come to you.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18", the enemy the right 18", with 24" between. Both centre points are about 12" from both zones, so two rounds of shooting come first. Your expansion is 0.7" outside your zone.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
+<defs><marker id="ahC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect class="board" x="40" y="20" width="600" height="440"/>
 <polygon class="zone you" points="40,20 220,20 220,460 40,460"/>
 <polygon class="zone them" points="460,20 640,20 640,460 460,460"/>
@@ -330,607 +435,98 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 <text class="lb" x="632" y="452" text-anchor="end">Enemy zone</text>
 <text class="lb" x="338" y="151" text-anchor="middle">centre N</text>
 <text class="lb" x="338" y="311" text-anchor="middle">centre S</text>
-<line class="arrow go" x1="191" y1="192" x2="327" y2="165" marker-end="url(#ahCU)"/>
-<line class="arrow go" x1="191" y1="285" x2="327" y2="283" marker-end="url(#ahCU)"/>
-<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahCU)"/>
+<line class="arrow go" x1="191" y1="192" x2="327" y2="165" marker-end="url(#ahC)"/>
+<line class="arrow go" x1="191" y1="285" x2="327" y2="283" marker-end="url(#ahC)"/>
+<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahC)"/>
+<line class="arrow hunt" x1="350" y1="158" x2="485" y2="145" marker-end="url(#ahC)"/>
+<text class="lb hl" x="372" y="178" text-anchor="start">Emissary hunt (R3+)</text>
 <circle class="mk" cx="150" cy="360" r="11"/><text class="mkt" x="150" y="365">1</text>
 <circle class="mk" cx="205" cy="105" r="11"/><text class="mkt" x="205" y="110">2</text>
 <circle class="mk" cx="178" cy="195" r="11"/><text class="mkt" x="178" y="200">3</text>
 <circle class="mk" cx="178" cy="285" r="11"/><text class="mkt" x="178" y="290">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary + Acid spray Tyrannofex, at your expansion <span class="oc">OC 21</span></li><li><b>3 Centre N:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the north end of the wall <span class="oc">OC 20</span></li><li><b>4 Centre S:</b> 2 Exocrines + 1 Maleceptor, at the south end of the wall <span class="oc">OC 18</span></li></ol><ul><li>Both centre points are about 12" from both zones, so neither side reaches them on turn 1. Expect two rounds of shooting first.</li><li>Your expansion is about 0.7" outside your zone, so you hold it from the start. Fast enemy units are about 23" away.</li><li>The wall on your zone edge sits between the two centre groups. Units behind it stay out of sight until you want them to move.</li><li>Barbgaunts alone on the home objective (OC 5) lose to a single fast enemy unit with OC 6. Pairing them with the Rupture Tyrannofex makes 12, which ties two such units and denies control.</li></ul></div></div>
+</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts. <span class="oc">OC 12</span></li><li><b>2 Expansion:</b> Acid spray Tyrannofex. You hold it from turn 1, and its Torrent meets the raiders who come along the top edge. <span class="oc">OC 7</span></li><li><b>3 Centre N:</b> Norn Emissary (Singular Purpose: centre N) + Hive Tyrant with Guard + 1 Exocrine + 1 Maleceptor, at the north end of the wall. <span class="oc">OC 15 + 20</span></li><li><b>4 Centre S:</b> Norn Assimilator (Singular Purpose: centre S) + 2 Exocrines + 1 Maleceptor, at the south end of the wall. <span class="oc">OC 15 + 18</span></li></ol><ul><li>The Norns choose their objectives at the start of round 1 even though they cannot stand on them yet. They walk out behind the wall in round 1 and step onto the points in round 2, when scoring starts.</li><li>Give the Assimilator whichever centre point faces his heaviest units, because she will not leave it.</li><li>The Emissary's hunt goes east from centre N toward the enemy home, about 27" away. It is a round 4 to 5 move, and only worth it in missions that pay for the enemy home.</li><li>Your expansion only has OC 7. A single fast unit with OC 6 cannot take it alone, and if two come, the Acid spray Tyrannofex should have killed one already.</li></ul></div></div>
+  <h3>Mission plans</h3>
+  <p class="lede">Your Force Disposition and your opponent's decide your primary. Talons of the Norn Queen gives you Take and Hold and Crusher Stampede gives you Purge the Foe, so you can choose either.</p>
+  <div class="grid g2">
+    <div class="card"><h3>Take and Hold <span class="tag ty">Recommended</span></h3><p>Every mission pays per objective and none needs kills. Two Norns at OC 15 and monsters at +2 OC win objective fights, and an opponent who hides loses points every turn he stays hidden. Protean Purpose can also move a Norn's OC 15 onto a new objective you are pushing into.</p></div>
+    <div class="card"><h3>Purge the Foe</h3><p>Most missions pay for killing a unit every turn and out-killing your opponent. That is harder with twelve activations against a hiding opponent, and an opponent playing Take and Hold gets Immovable Object against you, a better mission than your Unstoppable Force.</p></div>
   </div>
-  <div id="depP" hidden>
-    <div class="card" style="margin:12px 0">
-      <h3>Punishment (Purge the Foe vs Disruption)</h3>
-      <ul>
-        <li><b>Any round, end of a turn:</b> 5 VP if one or more condemned enemy units left the battlefield this turn. At the start of your turn you condemn 1 to 3 enemy units that are within range of objectives or that destroyed one of yours last turn (one unit if none qualify).</li>
-        <li><b>Round 2 onward, end of your Command phase:</b> 4 VP if you control one or more objectives, excluding your home.</li>
-        <li><b>Same timing:</b> 5 VP if you control more objectives than your opponent.</li>
-        <li><b>End of the battle:</b> 8 VP for controlling your opponent's home objective.</li>
-        <li>The flat 4 VP means holding three objectives is worth no more than holding one. What matters is the comparison, so the centre decides each round. Each central objective counts on its own, so splitting the two with your opponent is a tie there.</li>
-      </ul>
-      <p class="note">Disruption's own mission against you (Delaying Action) is from a third-party article: 2 VP per unit you destroy, 4 VP for any non-home objective from round 2, and 3 VP for holding the centre plus an expansion. I could not confirm whether home objectives count in the comparison, so I kept a guard on your home.</p>
-    </div>
-    <p class="note">Same key as above. The "Late push" arrow is the route to the enemy home for the 8 VP at the end.</p>
-    <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The enemy zone is the mirror image along the top. The two central objectives sit either side of the central ruin along the dashed line.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
-<defs><marker id="ahAP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,320 340,320 340,380 640,380 640,460 40,460"/>
-<polygon class="zone them" points="40,20 640,20 640,160 340,160 340,100 40,100"/>
-<line x1="40" y1="211.6" x2="640" y2="271.8" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="89" y="119" width="116" height="71" rx="2"/>
-<rect class="ruin" x="464" y="70" width="117" height="71" rx="2"/>
-<rect class="ruin" x="281" y="190" width="116" height="100" rx="2"/>
-<rect class="ruin" x="100" y="339" width="116" height="70" rx="2"/>
-<rect class="ruin" x="474" y="291" width="116" height="70" rx="2"/>
-<rect class="ruin" x="286" y="94" width="60" height="12" rx="2" transform="rotate(40 316.0 100.0)"/>
-<rect class="ruin" x="377" y="112" width="40" height="10" rx="2" transform="rotate(-40 397.0 117.0)"/>
-<rect class="ruin" x="210" y="54" width="8" height="60" rx="2"/>
-<rect class="ruin" x="455" y="209" width="40" height="12" rx="2" transform="rotate(55 475.0 215.0)"/>
-<rect class="ruin" x="504" y="219" width="40" height="10" rx="2" transform="rotate(-40 524.0 224.0)"/>
-<rect class="ruin" x="135" y="250" width="40" height="10" rx="2" transform="rotate(-40 155.0 255.0)"/>
-<rect class="ruin" x="183" y="259" width="40" height="12" rx="2" transform="rotate(50 203.0 265.0)"/>
-<rect class="ruin" x="264" y="359" width="40" height="12" rx="2" transform="rotate(-45 284.0 365.0)"/>
-<rect class="ruin" x="331" y="378" width="70" height="12" rx="2" transform="rotate(45 366.0 384.0)"/>
-<rect class="ruin" x="460" y="360" width="8" height="60" rx="2"/>
-<circle class="obj" cx="145" cy="337" r="7"/>
-<circle class="obj" cx="534" cy="142" r="7"/>
-<circle class="obj" cx="263" cy="234" r="7"/>
-<circle class="obj" cx="383" cy="246" r="7"/>
-<circle class="obj" cx="543" cy="362" r="7"/>
-<circle class="obj" cx="135" cy="117" r="7"/>
-<text class="lb" x="145" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="543" y="348" text-anchor="middle">expansion</text>
-<text class="lb" x="534" y="128" text-anchor="middle">Enemy home</text>
-<text class="lb" x="135" y="140" text-anchor="middle">Enemy expansion</text>
-<text class="lb" x="48" y="38" text-anchor="start">Enemy zone</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="272" y="222" text-anchor="end">centre W</text>
-<text class="lb" x="383" y="232" text-anchor="middle">centre E</text>
-<text class="lb" x="560" y="268" text-anchor="start">Late push</text>
-<line class="arrow go" x1="280" y1="325" x2="265" y2="245" marker-end="url(#ahAP)"/>
-<line class="arrow go" x1="362" y1="383" x2="381" y2="257" marker-end="url(#ahAP)"/>
-<line class="arrow go" x1="545" y1="392" x2="538" y2="156" marker-end="url(#ahAP)"/>
-<circle class="mk" cx="145" cy="360" r="11"/><text class="mkt" x="145" y="365">1</text>
-<circle class="mk" cx="550" cy="405" r="11"/><text class="mkt" x="550" y="410">2</text>
-<circle class="mk" cx="282" cy="338" r="11"/><text class="mkt" x="282" y="343">3</text>
-<circle class="mk" cx="360" cy="396" r="11"/><text class="mkt" x="360" y="401">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Right wing:</b> Assimilator + Emissary + Rupture Tyrannofex, at your expansion, then north to the enemy home <span class="oc">OC 21</span></li><li><b>3 Centre west:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, behind the central ruin <span class="oc">OC 20</span></li><li><b>4 Centre east:</b> 2 Exocrines + 1 Maleceptor, at the zone corner <span class="oc">OC 18</span></li></ol><ul><li>Both centre points are about 9" from your zone. Each counts as its own objective, so holding both gives you more objectives than the enemy, which is the extra 5 VP each round.</li><li>Your expansion and the enemy home are both on the right, so one group holds the first and later takes the second, worth 8 VP at the end.</li><li>The left side is only the home guard. The enemy has to send fast units a long way to threaten it.</li><li>Condemned units: pick enemy units on objectives, and line up an easy kill on one each turn. Cheap screening units are the easiest; one is enough for 5 VP.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, the enemy the upper-right. The nearest corners are about 12.7" apart. The two central objectives sit north-west and south-east of the central ruin along the dashed diagonal.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
-<defs><marker id="ahBP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,240 250,240 258,274 276,304 304,323 340,330 340,460 40,460"/>
-<polygon class="zone them" points="340,20 640,20 640,240 430,240 422,206 404,176 376,157 340,150"/>
-<line x1="40" y1="32.3" x2="623" y2="460" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="110" y="59" width="71" height="116" rx="2"/>
-<rect class="ruin" x="475" y="70" width="115" height="71" rx="2"/>
-<rect class="ruin" x="282" y="190" width="116" height="99" rx="2"/>
-<rect class="ruin" x="90" y="340" width="116" height="70" rx="2"/>
-<rect class="ruin" x="500" y="304" width="70" height="115" rx="2"/>
-<rect class="ruin" x="340" y="60" width="40" height="60" rx="2"/>
-<rect class="ruin" x="373" y="120" width="77" height="20" rx="2"/>
-<rect class="ruin" x="450" y="180" width="40" height="60" rx="2"/>
-<rect class="ruin" x="490" y="240" width="60" height="20" rx="2"/>
-<rect class="ruin" x="130" y="220" width="60" height="20" rx="2"/>
-<rect class="ruin" x="190" y="240" width="40" height="60" rx="2"/>
-<rect class="ruin" x="240" y="340" width="60" height="20" rx="2"/>
-<rect class="ruin" x="300" y="360" width="40" height="60" rx="2"/>
-<rect class="ruin" x="226" y="104" width="90" height="22" rx="2" transform="rotate(50 271.0 115.0)"/>
-<rect class="ruin" x="362" y="353" width="90" height="22" rx="2" transform="rotate(50 407.0 364.0)"/>
-<circle class="obj" cx="136" cy="338" r="7"/>
-<circle class="obj" cx="544" cy="142" r="7"/>
-<circle class="obj" cx="275" cy="204" r="7"/>
-<circle class="obj" cx="371" cy="276" r="7"/>
-<circle class="obj" cx="182" cy="104" r="7"/>
-<circle class="obj" cx="497" cy="373" r="7"/>
-<text class="lb" x="136" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="172" y="100" text-anchor="end">expansion</text>
-<text class="lb" x="544" y="128" text-anchor="middle">Enemy home</text>
-<text class="lb" x="535" y="366" text-anchor="middle">Enemy</text>
-<text class="lb" x="535" y="381" text-anchor="middle">expansion</text>
-<text class="lb" x="580" y="38" text-anchor="start">Enemy zone</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="278" y="194" text-anchor="end">centre NW</text>
-<text class="lb" x="383" y="280" text-anchor="start">centre SE</text>
-<text class="lb" x="452" y="196" text-anchor="start">Late push</text>
-<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahBP)"/>
-<line class="arrow go" x1="243" y1="251" x2="269" y2="213" marker-end="url(#ahBP)"/>
-<line class="arrow go" x1="302" y1="332" x2="362" y2="283" marker-end="url(#ahBP)"/>
-<line class="arrow go" x1="388" y1="268" x2="526" y2="152" marker-end="url(#ahBP)"/>
-<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahBP)"/>
-<circle class="mk" cx="136" cy="362" r="11"/><text class="mkt" x="136" y="367">1</text>
-<circle class="mk" cx="70" cy="265" r="11"/><text class="mkt" x="70" y="270">2</text>
-<circle class="mk" cx="236" cy="262" r="11"/><text class="mkt" x="236" y="267">3</text>
-<circle class="mk" cx="292" cy="340" r="11"/><text class="mkt" x="292" y="345">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Rupture Tyrannofex, anchoring your expansion <span class="oc">OC 7</span></li><li><b>3 Centre NW:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the zone edge <span class="oc">OC 20</span></li><li><b>4 Centre SE:</b> 2 Exocrines, 1 Maleceptor, both Norns, at the bottom of the zone edge <span class="oc">OC 32</span></li></ol><ul><li>Only one objective stays away from the centre: your expansion, with a single Tyrannofex (OC 7). A single fast enemy unit with OC 6 cannot take it alone.</li><li>The Norns ride with the south-east group. That point is about 22" from the enemy home, against about 28" from the north-west point, so it is the better starting line for the late push (8 VP).</li><li>The north-west centre point is about 4" from your zone, so you should win it. The south-east point is contested, and holding both flips the objective comparison to you.</li><li>Condemned units: pick enemy units on objectives, and line up an easy kill on one each turn. Cheap screening units are the easiest; one is enough for 5 VP.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, the enemy the right 18", with 24" of open ground between. The two central objectives sit north and south of the centre along the vertical dashed line. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
-<defs><marker id="ahCP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,20 220,20 220,460 40,460"/>
-<polygon class="zone them" points="460,20 640,20 640,460 460,460"/>
-<line x1="338" y1="20" x2="338" y2="460" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="229" y="41" width="70" height="116" rx="2"/>
-<rect class="ruin" x="291" y="183" width="99" height="115" rx="2"/>
-<rect class="ruin" x="381" y="324" width="70" height="116" rx="2"/>
-<rect class="ruin" x="500" y="70" width="70" height="116" rx="2"/>
-<rect class="ruin" x="109" y="295" width="71" height="115" rx="2"/>
-<rect class="ruin" x="200" y="190" width="32" height="100" rx="2"/>
-<rect class="ruin" x="454" y="190" width="32" height="100" rx="2"/>
-<rect class="ruin" x="370" y="61" width="20" height="60" rx="2"/>
-<rect class="ruin" x="391" y="102" width="61" height="43" rx="2"/>
-<rect class="ruin" x="229" y="342" width="60" height="40" rx="2"/>
-<rect class="ruin" x="290" y="360" width="20" height="60" rx="2"/>
-<rect class="ruin" x="101" y="87" width="90" height="22" rx="2" transform="rotate(45 146.0 98.0)"/>
-<rect class="ruin" x="119" y="144" width="70" height="40" rx="2" transform="rotate(-45 154.0 164.0)"/>
-<rect class="ruin" x="492" y="298" width="70" height="40" rx="2" transform="rotate(-45 527.0 318.0)"/>
-<rect class="ruin" x="486" y="371" width="90" height="22" rx="2" transform="rotate(45 531.0 382.0)"/>
-<circle class="obj" cx="181" cy="341" r="7"/>
-<circle class="obj" cx="497" cy="141" r="7"/>
-<circle class="obj" cx="338" cy="163" r="7"/>
-<circle class="obj" cx="338" cy="283" r="7"/>
-<circle class="obj" cx="227" cy="111" r="7"/>
-<circle class="obj" cx="452" cy="370" r="7"/>
-<text class="lb" x="181" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="237" y="128" text-anchor="start">your</text>
-<text class="lb" x="237" y="142" text-anchor="start">expansion</text>
-<text class="lb" x="497" y="127" text-anchor="middle">Enemy home</text>
-<text class="lb" x="441" y="361" text-anchor="end">Enemy</text>
-<text class="lb" x="441" y="376" text-anchor="end">expansion</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="632" y="452" text-anchor="end">Enemy zone</text>
-<text class="lb" x="338" y="151" text-anchor="middle">centre N</text>
-<text class="lb" x="338" y="311" text-anchor="middle">centre S</text>
-<text class="lb" x="310" y="86" text-anchor="start">Late push</text>
-<line class="arrow go" x1="191" y1="192" x2="327" y2="165" marker-end="url(#ahCP)"/>
-<line class="arrow go" x1="191" y1="285" x2="327" y2="283" marker-end="url(#ahCP)"/>
-<line class="arrow go" x1="305" y1="98" x2="484" y2="148" marker-end="url(#ahCP)"/>
-<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahCP)"/>
-<circle class="mk" cx="150" cy="360" r="11"/><text class="mkt" x="150" y="365">1</text>
-<circle class="mk" cx="205" cy="105" r="11"/><text class="mkt" x="205" y="110">2</text>
-<circle class="mk" cx="178" cy="195" r="11"/><text class="mkt" x="178" y="200">3</text>
-<circle class="mk" cx="178" cy="285" r="11"/><text class="mkt" x="178" y="290">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary, at your expansion, then east to the enemy home <span class="oc">OC 14</span></li><li><b>3 Centre N:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the north end of the wall <span class="oc">OC 20</span></li><li><b>4 Centre S:</b> 2 Exocrines, 1 Maleceptor, Acid spray Tyrannofex, at the south end of the wall <span class="oc">OC 25</span></li></ol><ul><li>Both centre points are about 12" from both zones, so two rounds of shooting come first. The Acid spray Tyrannofex joins the south group, where its 18" range matters.</li><li>The Norns hold your expansion and are your route to the enemy home, about 27" along the top edge. That is a round 4 to 5 push.</li><li>The centre groups are heavy on purpose: holding both centre points gives you more objectives than the enemy.</li><li>Condemned units: pick enemy units on objectives, and line up an easy kill on one each turn. Cheap screening units are the easiest; one is enough for 5 VP.</li></ul></div></div>
+  <div class="seg" id="dispSeg" role="group" aria-label="Your Force Disposition"><button type="button" data-d="t" aria-pressed="true">Take and Hold</button><button type="button" data-d="p" aria-pressed="false">Purge the Foe</button></div>
+  <div id="disp_t">
+    <p class="note">As Take and Hold you get Battlefield Dominance against Take and Hold, Immovable Object against Purge the Foe, Determined Acquisition against Disruption, Purge and Secure against Reconnaissance and Inescapable Dominion against Priority Assets.</p>
+    <div class="seg mseg" data-p="t" role="group" aria-label="Mission"><button type="button" data-m="bd" aria-pressed="true">Battlefield Dominance</button><button type="button" data-m="io" aria-pressed="false">Immovable Object</button><button type="button" data-m="da" aria-pressed="false">Determined Acquisition</button><button type="button" data-m="ps" aria-pressed="false">Purge and Secure</button><button type="button" data-m="id" aria-pressed="false">Inescapable Dominion</button></div><div id="t_bd" class="mispanel t">
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Battlefield Dominance <span class="tag">Take and Hold vs Take and Hold</span></h3><ul><li><b>Rounds 1 and 2, end of your turn:</b> 2 VP if you control more objectives than your opponent.</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 3 VP for each objective you control, including your home.</li><li><b>Same timing:</b> +2 VP for each of those objectives other than your home, if you control your home.</li><li>Home plus two others is 13 VP; home plus three others is 18, capped at 15. Without your home, three objectives are only 9 VP.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>Your home objective multiplies everything else, so it is the most important point on the table. Both Norns anchor the two centre points all game. Extra objectives above home plus three add nothing, so the Emissary re-picks only onto an enemy unit that threatens your home or one of your three scoring points.</p></div>
+</div><div class="card" style="margin-top:12px"><h3>Placement for this mission</h3><ul><li><b>A:</b> as drawn. The rupture Tyrannofex and Barbgaunts on home are the core of the plan; do not move them forward.</li><li><b>B:</b> as drawn. Centre NW is 4" away, so the Tyrant group takes it on turn 1 for the round 1 bonus.</li><li><b>C:</b> as drawn. Home and expansion are both yours from turn 1, so you out-number him in round 1 unless he reaches a centre.</li></ul></div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Control more objectives than him at the end of your turn for 2 VP: home, expansion and at least one centre.</td></tr><tr><td>2</td><td class="txt">Home plus three others for the 15 VP cap, and 2 VP again if you out-number him at the end of your turn.</td></tr><tr><td>3</td><td class="txt">Hold. If something threatens your home, the Tyrant group or the home Tyrannofex deals with it before anything else.</td></tr><tr><td>4</td><td class="txt">Emissary re-picks only onto a unit attacking one of your four points. Otherwise she stays.</td></tr><tr><td>5</td><td class="txt">Primaries score at the end of your turn. Check home plus three before you finish moving.</td></tr></tbody></table></div>
+</div><div id="t_io" class="mispanel t" hidden>
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Immovable Object <span class="tag">Take and Hold vs Purge the Foe</span></h3><ul><li><b>Any round, end of your turn:</b> 3 VP if you control one or more central objectives.</li><li><b>Rounds 2 to 4, end of your Command phase:</b> 5 VP for each objective you control, excluding your home.</li><li><b>Round 5, end of your turn:</b> 5 VP for each objective you control, excluding your home.</li><li>A centre plus three non-home objectives is 18 VP, capped at 15. Two non-home objectives including a centre already make 13.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>No kills are needed at all. Both Norns stand on the central objectives, which pay at the end of every turn including round 1. Neither Norn should re-pick unless an objective is removed or a single enemy unit is the only thing contesting one of your points.</p></div>
+</div><div class="card" style="margin-top:12px"><h3>Placement for this mission</h3><ul><li><b>Your home scores nothing.</b> Leave the Barbgaunts there to stop him walking onto it, and use the rupture Tyrannofex elsewhere.</li><li><b>A:</b> rupture Tyrannofex joins the expansion group with the acid spray Tyrannofex and Maleceptor, covering the right lane.</li><li><b>B:</b> rupture Tyrannofex joins the centre NW group, where it has lanes onto both centres.</li><li><b>C:</b> rupture Tyrannofex joins the acid spray Tyrannofex on your expansion, giving that point OC 14.</li></ul></div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Get a Norn onto a central objective by the end of your turn for 3 VP. Advance if you have to.</td></tr><tr><td>2</td><td class="txt">Three non-home objectives at your Command phase for 15 VP.</td></tr><tr><td>3</td><td class="txt">Hold all three. Shoot only what threatens your points; nothing else scores.</td></tr><tr><td>4</td><td class="txt">Same. If one point falls, retake it in your turn so it counts at your next Command phase.</td></tr><tr><td>5</td><td class="txt">You score at the end of your turn. Move everything spare onto objectives in this last movement phase.</td></tr></tbody></table></div>
+</div><div id="t_da" class="mispanel t" hidden>
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Determined Acquisition <span class="tag">Take and Hold vs Disruption</span></h3><ul><li><b>Any round, end of your turn:</b> 2 VP for each non-home objective you control that you did not control at the start of the turn.</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 3 VP for each objective you control, including your home.</li><li><b>Same timing:</b> +3 VP for each of those objectives in your opponent's territory.</li><li>Home, expansion and both centres are 12 VP. Add his expansion and you reach the 15 cap. It is unconfirmed whether the centres on the territory line count as his territory.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>This is the mission where Protean Purpose pays off best. Both Norns open on the centres. In round 3, the Norn nearest his expansion re-picks it as her new objective: she walks over, takes it for 2 VP, and holds it with OC 15 for 6 VP a turn. The other Norn keeps her centre.</p></div>
+</div><div class="card" style="margin-top:12px"><h3>Placement for this mission</h3><ul><li><b>A:</b> his expansion is top left. The Emissary pushes from centre W up the left lane, the dotted route already on the map.</li><li><b>B:</b> his expansion is bottom right, next to centre SE. The Assimilator pushes instead; the 2 Exocrines, Maleceptor and acid spray Tyrannofex keep centre SE with OC 25.</li><li><b>C:</b> his expansion is bottom right, near centre S. The Assimilator pushes from centre S; her gun group keeps the centre.</li></ul></div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Take objectives during your turn: each new non-home objective is 2 VP. Expansion and a centre.</td></tr><tr><td>2</td><td class="txt">Home, expansion and both centres: 12 VP at your Command phase.</td></tr><tr><td>3</td><td class="txt">The pushing Norn re-picks his expansion in your Command phase and moves toward it. Her old centre must already be held by her group.</td></tr><tr><td>4</td><td class="txt">Take his expansion (2 VP) and hold it. From now on it is 6 VP a turn, so you reach the 15 cap.</td></tr><tr><td>5</td><td class="txt">Hold everything at the end of your turn. Retaking anything he stole is 2 VP each.</td></tr></tbody></table></div>
+</div><div id="t_ps" class="mispanel t" hidden>
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Purge and Secure <span class="tag">Take and Hold vs Reconnaissance</span></h3><ul><li><b>Any round, end of your turn:</b> 3 VP if a friendly unit within range of an objective destroyed an enemy unit, or if an enemy unit that started the turn on an objective was destroyed.</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP for each non-home objective you control.</li><li><b>End of your turn:</b> 3 VP if you control a non-home objective you did not control at the start of the turn.</li><li>Three non-home objectives plus one qualifying kill reach the 15 cap.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>Norns on objectives that kill in melee score the kill bonus without moving. Gun groups should shoot from in range of an objective so their kills count too. Re-pick the Emissary only onto a unit sitting on one of your objectives, since killing it scores twice over.</p></div>
+</div><div class="card" style="margin-top:12px"><h3>Placement for this mission</h3><ul><li><b>A and C:</b> as drawn. The rupture Tyrannofex on your home objective is within range of an objective, so its kills score the bonus.</li><li><b>B:</b> as drawn. Keep the Emissary on your expansion; anything fast that comes for it dies on an objective.</li><li><b>All maps:</b> do not leave a gun group standing between objectives. Move it a few inches onto a point before shooting.</li></ul></div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Kill a unit with a group standing on an objective (your home or expansion counts) for 3 VP.</td></tr><tr><td>2</td><td class="txt">Three non-home objectives for 12 VP, plus one qualifying kill.</td></tr><tr><td>3</td><td class="txt">Prefer targets that started the turn on an objective: they score the kill bonus wherever your shooter stands.</td></tr><tr><td>4</td><td class="txt">If he takes one of your points, retaking it is 3 VP on its own.</td></tr><tr><td>5</td><td class="txt">Primaries score at the end of your turn. End every group in range of an objective.</td></tr></tbody></table></div>
+</div><div id="t_id" class="mispanel t" hidden>
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Inescapable Dominion <span class="tag">Take and Hold vs Priority Assets</span></h3><ul><li><b>Any round, end of your turn:</b> 4 VP if you control three or more objectives (your home counts).</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 5 VP for two or more objectives, and 4 VP for controlling more objectives than your opponent.</li><li><b>End of the battle:</b> 5 VP if you control your opponent's home objective. End-of-battle VP are not subject to the round cap.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>Three objectives every turn from round 1 is worth 13 VP a round. Both Norns anchor so you never drop below three. In round 4 the Emissary re-picks onto the unit holding his home objective, then ends the game standing on it for the extra 5 VP.</p></div>
+</div><div class="card" style="margin-top:12px"><h3>Placement for this mission</h3><ul><li><b>A:</b> home, the expansion 2" outside your zone and centre W give you three on turn 1.</li><li><b>B:</b> your expansion is 14" away, so use home and both centres on turn 1. The Emissary reaches the expansion on turn 2.</li><li><b>C:</b> home and expansion are yours at once. One Norn advances onto a centre for the third.</li></ul></div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Three objectives at the end of your turn for 4 VP: home, expansion and one centre.</td></tr><tr><td>2</td><td class="txt">Hold three or more and out-number him: 13 VP a round.</td></tr><tr><td>3</td><td class="txt">Hold. The out-number score means taking one of his points is worth as much as adding one of yours.</td></tr><tr><td>4</td><td class="txt">Emissary re-picks onto the unit on his home and moves toward it, once her centre is held by her group.</td></tr><tr><td>5</td><td class="txt">Emissary ends the battle on his home objective. Everyone else keeps three or more.</td></tr></tbody></table></div>
+</div>
   </div>
-  <div id="depM" hidden>
-    <div class="card" style="margin:12px 0">
-      <h3>Meat Grinder (Purge the Foe)</h3>
-      <ul>
-        <li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li>
-        <li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP if you control one or more objectives other than your home.</li>
-        <li><b>Round 2 onward, end of your turn:</b> 5 VP if you destroyed more enemy units this turn than the enemy destroyed of yours in their previous turn.</li>
-        <li><b>Control of your opponent's home objective:</b> 5 VP. The page gives no separate timing for this line, so I treat it as unconfirmed.</li>
-        <li>No mission-specific cap. The usual 15 VP per round and 45 VP per game apply.</li>
-      </ul>
-      <p class="note">The 4 VP is flat, so holding one non-home objective is enough. The 5 VP compares units destroyed, so losing few units matters as much as killing many. I could not confirm which Force Disposition pairing gives this mission.</p>
-    </div>
-    <p class="note">Same key as above. The "Late push" arrow is the route to the enemy home.</p>
-    <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The enemy zone is the mirror image along the top. The two central objectives sit either side of the central ruin along the dashed line.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
-<defs><marker id="ahAM" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,320 340,320 340,380 640,380 640,460 40,460"/>
-<polygon class="zone them" points="40,20 640,20 640,160 340,160 340,100 40,100"/>
-<line x1="40" y1="211.6" x2="640" y2="271.8" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="89" y="119" width="116" height="71" rx="2"/>
-<rect class="ruin" x="464" y="70" width="117" height="71" rx="2"/>
-<rect class="ruin" x="281" y="190" width="116" height="100" rx="2"/>
-<rect class="ruin" x="100" y="339" width="116" height="70" rx="2"/>
-<rect class="ruin" x="474" y="291" width="116" height="70" rx="2"/>
-<rect class="ruin" x="286" y="94" width="60" height="12" rx="2" transform="rotate(40 316.0 100.0)"/>
-<rect class="ruin" x="377" y="112" width="40" height="10" rx="2" transform="rotate(-40 397.0 117.0)"/>
-<rect class="ruin" x="210" y="54" width="8" height="60" rx="2"/>
-<rect class="ruin" x="455" y="209" width="40" height="12" rx="2" transform="rotate(55 475.0 215.0)"/>
-<rect class="ruin" x="504" y="219" width="40" height="10" rx="2" transform="rotate(-40 524.0 224.0)"/>
-<rect class="ruin" x="135" y="250" width="40" height="10" rx="2" transform="rotate(-40 155.0 255.0)"/>
-<rect class="ruin" x="183" y="259" width="40" height="12" rx="2" transform="rotate(50 203.0 265.0)"/>
-<rect class="ruin" x="264" y="359" width="40" height="12" rx="2" transform="rotate(-45 284.0 365.0)"/>
-<rect class="ruin" x="331" y="378" width="70" height="12" rx="2" transform="rotate(45 366.0 384.0)"/>
-<rect class="ruin" x="460" y="360" width="8" height="60" rx="2"/>
-<circle class="obj" cx="145" cy="337" r="7"/>
-<circle class="obj" cx="534" cy="142" r="7"/>
-<circle class="obj" cx="263" cy="234" r="7"/>
-<circle class="obj" cx="383" cy="246" r="7"/>
-<circle class="obj" cx="543" cy="362" r="7"/>
-<circle class="obj" cx="135" cy="117" r="7"/>
-<text class="lb" x="145" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="543" y="348" text-anchor="middle">expansion</text>
-<text class="lb" x="534" y="128" text-anchor="middle">Enemy home</text>
-<text class="lb" x="135" y="140" text-anchor="middle">Enemy expansion</text>
-<text class="lb" x="48" y="38" text-anchor="start">Enemy zone</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="272" y="222" text-anchor="end">centre W</text>
-<text class="lb" x="383" y="232" text-anchor="middle">centre E</text>
-<text class="lb" x="560" y="268" text-anchor="start">Late push</text>
-<line class="arrow go" x1="280" y1="325" x2="265" y2="245" marker-end="url(#ahAM)"/>
-<line class="arrow go" x1="362" y1="383" x2="381" y2="257" marker-end="url(#ahAM)"/>
-<line class="arrow go" x1="545" y1="392" x2="538" y2="156" marker-end="url(#ahAM)"/>
-<circle class="mk" cx="145" cy="360" r="11"/><text class="mkt" x="145" y="365">1</text>
-<circle class="mk" cx="550" cy="405" r="11"/><text class="mkt" x="550" y="410">2</text>
-<circle class="mk" cx="282" cy="338" r="11"/><text class="mkt" x="282" y="343">3</text>
-<circle class="mk" cx="360" cy="396" r="11"/><text class="mkt" x="360" y="401">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Right wing:</b> Assimilator + Emissary + Rupture Tyrannofex, at your expansion, then north to the enemy home <span class="oc">OC 21</span></li><li><b>3 Centre west:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, behind the central ruin <span class="oc">OC 20</span></li><li><b>4 Centre east:</b> 2 Exocrines + 1 Maleceptor, at the zone corner <span class="oc">OC 18</span></li></ol><ul><li>Only one non-home objective is needed for the flat 4 VP. Your expansion is 2" outside your zone, so the right wing holds it from round 2 and the centre groups are free to fight.</li><li>The 5 VP for out-killing the enemy rewards trading well. Keep the centre groups behind the ruin until they can shoot, so fewer of your units die than theirs.</li><li>The push on the enemy home goes up the right wing with the Norns. The page gives no timing for its 5 VP, so treat it as unconfirmed.</li><li>Try to destroy at least one unit every turn: it is 3 VP each time.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, the enemy the upper-right. The nearest corners are about 12.7" apart. The two central objectives sit north-west and south-east of the central ruin along the dashed diagonal.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
-<defs><marker id="ahBM" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,240 250,240 258,274 276,304 304,323 340,330 340,460 40,460"/>
-<polygon class="zone them" points="340,20 640,20 640,240 430,240 422,206 404,176 376,157 340,150"/>
-<line x1="40" y1="32.3" x2="623" y2="460" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="110" y="59" width="71" height="116" rx="2"/>
-<rect class="ruin" x="475" y="70" width="115" height="71" rx="2"/>
-<rect class="ruin" x="282" y="190" width="116" height="99" rx="2"/>
-<rect class="ruin" x="90" y="340" width="116" height="70" rx="2"/>
-<rect class="ruin" x="500" y="304" width="70" height="115" rx="2"/>
-<rect class="ruin" x="340" y="60" width="40" height="60" rx="2"/>
-<rect class="ruin" x="373" y="120" width="77" height="20" rx="2"/>
-<rect class="ruin" x="450" y="180" width="40" height="60" rx="2"/>
-<rect class="ruin" x="490" y="240" width="60" height="20" rx="2"/>
-<rect class="ruin" x="130" y="220" width="60" height="20" rx="2"/>
-<rect class="ruin" x="190" y="240" width="40" height="60" rx="2"/>
-<rect class="ruin" x="240" y="340" width="60" height="20" rx="2"/>
-<rect class="ruin" x="300" y="360" width="40" height="60" rx="2"/>
-<rect class="ruin" x="226" y="104" width="90" height="22" rx="2" transform="rotate(50 271.0 115.0)"/>
-<rect class="ruin" x="362" y="353" width="90" height="22" rx="2" transform="rotate(50 407.0 364.0)"/>
-<circle class="obj" cx="136" cy="338" r="7"/>
-<circle class="obj" cx="544" cy="142" r="7"/>
-<circle class="obj" cx="275" cy="204" r="7"/>
-<circle class="obj" cx="371" cy="276" r="7"/>
-<circle class="obj" cx="182" cy="104" r="7"/>
-<circle class="obj" cx="497" cy="373" r="7"/>
-<text class="lb" x="136" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="172" y="100" text-anchor="end">expansion</text>
-<text class="lb" x="544" y="128" text-anchor="middle">Enemy home</text>
-<text class="lb" x="535" y="366" text-anchor="middle">Enemy</text>
-<text class="lb" x="535" y="381" text-anchor="middle">expansion</text>
-<text class="lb" x="580" y="38" text-anchor="start">Enemy zone</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="278" y="194" text-anchor="end">centre NW</text>
-<text class="lb" x="383" y="280" text-anchor="start">centre SE</text>
-<text class="lb" x="452" y="196" text-anchor="start">Late push</text>
-<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahBM)"/>
-<line class="arrow go" x1="243" y1="251" x2="269" y2="213" marker-end="url(#ahBM)"/>
-<line class="arrow go" x1="302" y1="332" x2="362" y2="283" marker-end="url(#ahBM)"/>
-<line class="arrow go" x1="388" y1="268" x2="526" y2="152" marker-end="url(#ahBM)"/>
-<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahBM)"/>
-<circle class="mk" cx="136" cy="362" r="11"/><text class="mkt" x="136" y="367">1</text>
-<circle class="mk" cx="70" cy="265" r="11"/><text class="mkt" x="70" y="270">2</text>
-<circle class="mk" cx="236" cy="262" r="11"/><text class="mkt" x="236" y="267">3</text>
-<circle class="mk" cx="292" cy="340" r="11"/><text class="mkt" x="292" y="345">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Rupture Tyrannofex, anchoring your expansion <span class="oc">OC 7</span></li><li><b>3 Centre NW:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the zone edge <span class="oc">OC 20</span></li><li><b>4 Centre SE:</b> 2 Exocrines, 1 Maleceptor, both Norns, at the bottom of the zone edge <span class="oc">OC 32</span></li></ol><ul><li>Only one non-home objective is needed for the flat 4 VP. Your expansion is 14" away, so the Rupture Tyrannofex holds it and the Norns stay with the centre.</li><li>The 5 VP for out-killing the enemy rewards trading well. The north-west centre group gets the first shots, so it sets the kill count before the contested south-east point.</li><li>The south-east group (with the Norns) is also the start of the push on the enemy home, about 22" away. The 5 VP has no confirmed timing.</li><li>Try to destroy at least one unit every turn: it is 3 VP each time.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, the enemy the right 18", with 24" of open ground between. The two central objectives sit north and south of the centre along the vertical dashed line. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
-<defs><marker id="ahCM" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,20 220,20 220,460 40,460"/>
-<polygon class="zone them" points="460,20 640,20 640,460 460,460"/>
-<line x1="338" y1="20" x2="338" y2="460" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="229" y="41" width="70" height="116" rx="2"/>
-<rect class="ruin" x="291" y="183" width="99" height="115" rx="2"/>
-<rect class="ruin" x="381" y="324" width="70" height="116" rx="2"/>
-<rect class="ruin" x="500" y="70" width="70" height="116" rx="2"/>
-<rect class="ruin" x="109" y="295" width="71" height="115" rx="2"/>
-<rect class="ruin" x="200" y="190" width="32" height="100" rx="2"/>
-<rect class="ruin" x="454" y="190" width="32" height="100" rx="2"/>
-<rect class="ruin" x="370" y="61" width="20" height="60" rx="2"/>
-<rect class="ruin" x="391" y="102" width="61" height="43" rx="2"/>
-<rect class="ruin" x="229" y="342" width="60" height="40" rx="2"/>
-<rect class="ruin" x="290" y="360" width="20" height="60" rx="2"/>
-<rect class="ruin" x="101" y="87" width="90" height="22" rx="2" transform="rotate(45 146.0 98.0)"/>
-<rect class="ruin" x="119" y="144" width="70" height="40" rx="2" transform="rotate(-45 154.0 164.0)"/>
-<rect class="ruin" x="492" y="298" width="70" height="40" rx="2" transform="rotate(-45 527.0 318.0)"/>
-<rect class="ruin" x="486" y="371" width="90" height="22" rx="2" transform="rotate(45 531.0 382.0)"/>
-<circle class="obj" cx="181" cy="341" r="7"/>
-<circle class="obj" cx="497" cy="141" r="7"/>
-<circle class="obj" cx="338" cy="163" r="7"/>
-<circle class="obj" cx="338" cy="283" r="7"/>
-<circle class="obj" cx="227" cy="111" r="7"/>
-<circle class="obj" cx="452" cy="370" r="7"/>
-<text class="lb" x="181" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="237" y="128" text-anchor="start">your</text>
-<text class="lb" x="237" y="142" text-anchor="start">expansion</text>
-<text class="lb" x="497" y="127" text-anchor="middle">Enemy home</text>
-<text class="lb" x="441" y="361" text-anchor="end">Enemy</text>
-<text class="lb" x="441" y="376" text-anchor="end">expansion</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="632" y="452" text-anchor="end">Enemy zone</text>
-<text class="lb" x="338" y="151" text-anchor="middle">centre N</text>
-<text class="lb" x="338" y="311" text-anchor="middle">centre S</text>
-<text class="lb" x="310" y="86" text-anchor="start">Late push</text>
-<line class="arrow go" x1="191" y1="192" x2="327" y2="165" marker-end="url(#ahCM)"/>
-<line class="arrow go" x1="191" y1="285" x2="327" y2="283" marker-end="url(#ahCM)"/>
-<line class="arrow go" x1="305" y1="98" x2="484" y2="148" marker-end="url(#ahCM)"/>
-<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahCM)"/>
-<circle class="mk" cx="150" cy="360" r="11"/><text class="mkt" x="150" y="365">1</text>
-<circle class="mk" cx="205" cy="105" r="11"/><text class="mkt" x="205" y="110">2</text>
-<circle class="mk" cx="178" cy="195" r="11"/><text class="mkt" x="178" y="200">3</text>
-<circle class="mk" cx="178" cy="285" r="11"/><text class="mkt" x="178" y="290">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary, at your expansion, then east to the enemy home <span class="oc">OC 14</span></li><li><b>3 Centre N:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the north end of the wall <span class="oc">OC 20</span></li><li><b>4 Centre S:</b> 2 Exocrines, 1 Maleceptor, Acid spray Tyrannofex, at the south end of the wall <span class="oc">OC 25</span></li></ol><ul><li>Only one non-home objective is needed for the flat 4 VP. Your expansion is 0.7" outside your zone, so the Norns hold it from the start.</li><li>The 5 VP for out-killing the enemy rewards trading well. With about 12" of open ground, the first shooting rounds decide the kill count, so keep the units behind the wall until they can fire.</li><li>The Norns are the route to the enemy home, about 27" along the top edge, a round 4 to 5 push. The 5 VP has no confirmed timing.</li><li>Try to destroy at least one unit every turn: it is 3 VP each time.</li></ul></div></div>
+  <div id="disp_p" hidden>
+    <p class="note">As Purge the Foe you get Unstoppable Force against Take and Hold, Meatgrinder in the mirror, Punishment against Disruption, Consecrate against Reconnaissance and Destroyer's Wrath against Priority Assets.</p>
+    <div class="seg mseg" data-p="p" role="group" aria-label="Mission"><button type="button" data-m="uf" aria-pressed="true">Unstoppable Force</button><button type="button" data-m="p" aria-pressed="false">Punishment</button><button type="button" data-m="m" aria-pressed="false">Meatgrinder</button><button type="button" data-m="c" aria-pressed="false">Consecrate</button><button type="button" data-m="d" aria-pressed="false">Destroyer's Wrath</button></div><div id="p_uf" class="mispanel p">
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Unstoppable Force <span class="tag">Purge the Foe vs Take and Hold</span></h3><ul><li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP for each objective you control, excluding your home.</li><li><b>Same timing:</b> 3 VP at the end of your turn if you control an objective you did not control at the start of the turn (not your home).</li><li><b>End of the battle:</b> 5 VP if you control one or more central objectives. End-of-battle VP are not subject to the 15 VP round cap.</li><li>Three held non-home objectives (12 VP) plus one kill (3 VP) reach the 15 VP cap every round.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>Both Norns anchor objectives through round 3. The Emissary may re-pick in round 4 only if her point is held by others with room to spare. The Assimilator never re-picks: she is your 5 VP centre at the end of the battle.</p></div>
+</div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Hide the guns from his long-range weapons. Kill one exposed unit for 3 VP. Norns move toward their objectives.</td></tr><tr><td>2</td><td class="txt">Be on three non-home objectives by the end of your movement, then shoot. Kill one unit for 3 VP. Expected 15 VP from round 3 onward.</td></tr><tr><td>3</td><td class="txt">Hold and trade. If you lost a point last turn, retaking it is 3 VP on its own, so retake rather than chasing a fourth.</td></tr><tr><td>4</td><td class="txt">Emissary re-pick only if the Tyrant group already holds her point. Spend her on whatever is contesting your objectives.</td></tr><tr><td>5</td><td class="txt">You score primaries at the end of your turn this round. Keep a Norn or the Tyrant on a centre point for the 5 VP end bonus.</td></tr></tbody></table></div>
+</div><div id="p_p" class="mispanel p" hidden>
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Punishment <span class="tag">Purge the Foe vs Disruption</span></h3><ul><li><b>Start of your turn:</b> condemn 1 to 3 enemy units that are within range of objectives or destroyed one of yours last turn (one unit if none qualify).</li><li><b>Any round, end of a turn:</b> 5 VP if one or more condemned units left the battlefield this turn.</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP if you control one or more non-home objectives, and 5 VP if you control more objectives than your opponent.</li><li><b>End of the battle:</b> 8 VP for controlling your opponent's home objective.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>Holding three objectives scores the same flat 4 VP as one, so what matters is out-numbering him. Both Norns anchor the two centre points so the comparison goes your way. The Emissary is the late-game hunter: re-pick her in round 4 onto the unit holding his home objective, kill it, and stand there in round 5 for the 8 VP.</p></div>
+</div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Condemn units you can actually kill this turn. One dead condemned unit is 5 VP, the most valuable single kill in this mission.</td></tr><tr><td>2</td><td class="txt">Hold both centre points plus your expansion. Condemn up to three; aim at least one shooting group at one of them.</td></tr><tr><td>3</td><td class="txt">Keep condemning the cheapest unit sitting on an objective. Cultists or a small biker squad are easy 5 VP.</td></tr><tr><td>4</td><td class="txt">Emissary re-picks onto the unit on or nearest his home and moves toward it. The Tyrant group takes over her centre point.</td></tr><tr><td>5</td><td class="txt">Emissary ends the game on his home objective for 8 VP. Everyone else just keeps the objective count ahead.</td></tr></tbody></table></div>
+</div><div id="p_m" class="mispanel p" hidden>
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Meatgrinder <span class="tag">Purge the Foe vs Purge the Foe</span></h3><ul><li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP if you control one or more non-home objectives.</li><li><b>Round 2 onward, end of your turn:</b> 5 VP if more enemy units were destroyed this turn than friendly units were destroyed in his previous turn.</li><li><b>Same timing:</b> 5 VP if you control your opponent's home objective.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>Only one non-home objective is needed, so the Assimilator holding it with OC 15 covers the 4 VP alone. That frees the Emissary to re-pick early, as soon as round 2 or 3, onto the unit that threatens your kill count, then push for his home objective, which pays 5 VP every turn you hold it.</p></div>
+</div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Kill one unit for 3 VP and lose as little as possible: the out-kill check compares against what he kills next turn.</td></tr><tr><td>2</td><td class="txt">Assimilator on one objective. Pick cheap units to kill (screens, small squads) to win the unit count, not the points.</td></tr><tr><td>3</td><td class="txt">Emissary re-picks onto the biggest threat near his home and starts walking. Every unit you keep alive makes the next out-kill check easier.</td></tr><tr><td>4</td><td class="txt">Emissary on or near his home: 5 VP per turn there. Keep the gun groups behind cover until they can shoot.</td></tr><tr><td>5</td><td class="txt">Same pattern. Hide anything wounded so it cannot be killed in his last turn.</td></tr></tbody></table></div>
+</div><div id="p_c" class="mispanel p" hidden>
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Consecrate <span class="tag">Purge the Foe vs Reconnaissance</span></h3><ul><li><b>Rule:</b> a friendly unit that destroys a unit becomes a consecration unit. At the end of your turn it can consecrate one non-home objective it is in range of, placing your operation marker there.</li><li><b>Any round, end of your turn:</b> 3 VP if one or two objectives are consecrated, or 6 VP if three or more are.</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP for one or more non-home objectives, and 4 VP for controlling more objectives than your opponent.</li><li><b>End of the battle:</b> 5 VP if your opponent's home objective is consecrated.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>The Norns are your best consecrators: they stand on objectives with OC 15 and kill things in melee, so a kill and the consecration happen on the same point. Gun groups only consecrate if the shooting unit itself ends the turn in range, so park at least one Exocrine on each objective you want consecrated.</p></div>
+</div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Kill something with a unit that will be in range of an objective at the end of your turn.</td></tr><tr><td>2</td><td class="txt">Aim for two consecrated objectives (3 VP) plus the two objective-control scores (8 VP).</td></tr><tr><td>3</td><td class="txt">Get to three consecrated (6 VP every turn from here on). Prioritise kills by units already on unconsecrated points.</td></tr><tr><td>4</td><td class="txt">Emissary re-picks and hunts toward his home: a kill there in round 5 consecrates it for 5 VP at the end.</td></tr><tr><td>5</td><td class="txt">Emissary kills a unit and ends in range of his home objective. Everyone else keeps the objective count ahead.</td></tr></tbody></table></div>
+</div><div id="p_d" class="mispanel p" hidden>
+<div class="grid g2" style="margin-top:12px">
+<div class="card"><h3>Destroyer's Wrath <span class="tag">Purge the Foe vs Priority Assets</span></h3><ul><li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li><li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP for one or more non-home objectives, and 6 VP for controlling more objectives than your opponent.</li><li><b>Round 2 onward, end of your turn:</b> 4 VP if you destroyed more enemy units this turn than he destroyed of yours in his previous turn.</li><li>No end-of-battle scoring. A full turn is 17 VP, so the 15 VP cap lets you miss one trigger.</li></ul></div>
+<div class="card"><h3>How the Norns play it</h3><p>Objective count is worth 6 VP a turn, so both Norns stay on objectives all game. Re-pick only to kill a specific unit that is contesting one of your points, and only if another unit can keep that point while she fights.</p></div>
+</div>
+<h3>Round by round</h3><div class="tw"><table class="rt"><thead><tr><th>Round</th><th class="txt">Plan</th></tr></thead><tbody><tr><td>1</td><td class="txt">Kill one unit for 3 VP. Keep expensive monsters out of his sightlines.</td></tr><tr><td>2</td><td class="txt">Hold more objectives than him: both centres plus your expansion. Kill a cheap unit to win the out-kill check.</td></tr><tr><td>3</td><td class="txt">Hold and trade. Pull wounded monsters back so he cannot kill units for free.</td></tr><tr><td>4</td><td class="txt">If one objective is being swarmed, that Norn may re-pick onto the swarming unit, as long as another unit keeps her point.</td></tr><tr><td>5</td><td class="txt">Primaries score at the end of your turn. Make sure you out-number his objectives after your last moves.</td></tr></tbody></table></div>
+</div>
   </div>
-  <div id="depC" hidden>
-    <div class="card" style="margin:12px 0">
-      <h3>Consecrate (Purge the Foe)</h3>
-      <ul>
-        <li><b>Special rule:</b> when a friendly unit destroys a unit, it becomes a consecration unit. At the end of your turn each consecration unit can consecrate one objective within its range (not your home, and not one already consecrated). That places one of your operation markers there and removes the unit's consecration status.</li>
-        <li><b>Any round, end of your turn:</b> 3 VP if one or two objectives are consecrated, or 6 VP if three or more are.</li>
-        <li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP if you control one or more objectives other than your home, and 4 VP if you control more objectives than your opponent.</li>
-        <li><b>End of the battle:</b> 5 VP if your opponent's home objective is consecrated.</li>
-        <li>No mission-specific cap. The usual 15 VP per round and 45 VP per game apply.</li>
-      </ul>
-      <p class="note">I read the 3 or 6 VP as scored every turn while the markers stay on the board. The page does not say whether the markers can be removed. I could not confirm which Force Disposition pairing gives this mission.</p>
-    </div>
-    <p class="note">Same key as above. Moves are the same as in Unstoppable Force, because every group needs to be near an objective.</p>
-    <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The enemy zone is the mirror image along the top. The two central objectives sit either side of the central ruin along the dashed line.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
-<defs><marker id="ahAC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,320 340,320 340,380 640,380 640,460 40,460"/>
-<polygon class="zone them" points="40,20 640,20 640,160 340,160 340,100 40,100"/>
-<line x1="40" y1="211.6" x2="640" y2="271.8" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="89" y="119" width="116" height="71" rx="2"/>
-<rect class="ruin" x="464" y="70" width="117" height="71" rx="2"/>
-<rect class="ruin" x="281" y="190" width="116" height="100" rx="2"/>
-<rect class="ruin" x="100" y="339" width="116" height="70" rx="2"/>
-<rect class="ruin" x="474" y="291" width="116" height="70" rx="2"/>
-<rect class="ruin" x="286" y="94" width="60" height="12" rx="2" transform="rotate(40 316.0 100.0)"/>
-<rect class="ruin" x="377" y="112" width="40" height="10" rx="2" transform="rotate(-40 397.0 117.0)"/>
-<rect class="ruin" x="210" y="54" width="8" height="60" rx="2"/>
-<rect class="ruin" x="455" y="209" width="40" height="12" rx="2" transform="rotate(55 475.0 215.0)"/>
-<rect class="ruin" x="504" y="219" width="40" height="10" rx="2" transform="rotate(-40 524.0 224.0)"/>
-<rect class="ruin" x="135" y="250" width="40" height="10" rx="2" transform="rotate(-40 155.0 255.0)"/>
-<rect class="ruin" x="183" y="259" width="40" height="12" rx="2" transform="rotate(50 203.0 265.0)"/>
-<rect class="ruin" x="264" y="359" width="40" height="12" rx="2" transform="rotate(-45 284.0 365.0)"/>
-<rect class="ruin" x="331" y="378" width="70" height="12" rx="2" transform="rotate(45 366.0 384.0)"/>
-<rect class="ruin" x="460" y="360" width="8" height="60" rx="2"/>
-<circle class="obj" cx="145" cy="337" r="7"/>
-<circle class="obj" cx="534" cy="142" r="7"/>
-<circle class="obj" cx="263" cy="234" r="7"/>
-<circle class="obj" cx="383" cy="246" r="7"/>
-<circle class="obj" cx="543" cy="362" r="7"/>
-<circle class="obj" cx="135" cy="117" r="7"/>
-<text class="lb" x="145" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="543" y="348" text-anchor="middle">expansion</text>
-<text class="lb" x="534" y="128" text-anchor="middle">Enemy home</text>
-<text class="lb" x="135" y="140" text-anchor="middle">Enemy expansion</text>
-<text class="lb" x="48" y="38" text-anchor="start">Enemy zone</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="272" y="222" text-anchor="end">centre W</text>
-<text class="lb" x="383" y="232" text-anchor="middle">centre E</text>
-<line class="arrow go" x1="195" y1="419" x2="142" y2="152" marker-end="url(#ahAC)"/>
-<line class="arrow go" x1="280" y1="325" x2="265" y2="245" marker-end="url(#ahAC)"/>
-<line class="arrow go" x1="362" y1="383" x2="381" y2="257" marker-end="url(#ahAC)"/>
-<circle class="mk" cx="145" cy="360" r="11"/><text class="mkt" x="145" y="365">1</text>
-<circle class="mk" cx="200" cy="430" r="11"/><text class="mkt" x="200" y="435">2</text>
-<circle class="mk" cx="282" cy="338" r="11"/><text class="mkt" x="282" y="343">3</text>
-<circle class="mk" cx="360" cy="396" r="11"/><text class="mkt" x="360" y="401">4</text>
-<circle class="mk" cx="550" cy="400" r="11"/><text class="mkt" x="550" y="405">5</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Hammer:</b> Assimilator + Emissary, up the left lane to the enemy expansion <span class="oc">OC 14</span></li><li><b>3 Centre west:</b> Hive Tyrant + Guard, 1 Exocrine, behind the central ruin <span class="oc">OC 14</span></li><li><b>4 Centre east:</b> 2 Exocrines + 1 Maleceptor, at the zone corner <span class="oc">OC 18</span></li><li><b>5 Expansion:</b> Rupture Tyrannofex + 1 Maleceptor, on the right <span class="oc">OC 13</span></li></ol><ul><li>Four objectives can be consecrated: both centre points, your expansion and the enemy expansion (the Hammer group's target). Three or more consecrated is worth 6 VP a turn instead of 3.</li><li>Each consecration needs a kill first, then a unit in range of the objective at the end of your turn. Keep a gun in every group, so a kill lands near its own objective.</li><li>The 5 VP at the end for consecrating the enemy home needs a unit that destroyed something and can reach it. The Hammer group is the one to prepare for that.</li><li>Your own home cannot be consecrated, so the home guard stays put.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, the enemy the upper-right. The nearest corners are about 12.7" apart. The two central objectives sit north-west and south-east of the central ruin along the dashed diagonal.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
-<defs><marker id="ahBC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,240 250,240 258,274 276,304 304,323 340,330 340,460 40,460"/>
-<polygon class="zone them" points="340,20 640,20 640,240 430,240 422,206 404,176 376,157 340,150"/>
-<line x1="40" y1="32.3" x2="623" y2="460" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="110" y="59" width="71" height="116" rx="2"/>
-<rect class="ruin" x="475" y="70" width="115" height="71" rx="2"/>
-<rect class="ruin" x="282" y="190" width="116" height="99" rx="2"/>
-<rect class="ruin" x="90" y="340" width="116" height="70" rx="2"/>
-<rect class="ruin" x="500" y="304" width="70" height="115" rx="2"/>
-<rect class="ruin" x="340" y="60" width="40" height="60" rx="2"/>
-<rect class="ruin" x="373" y="120" width="77" height="20" rx="2"/>
-<rect class="ruin" x="450" y="180" width="40" height="60" rx="2"/>
-<rect class="ruin" x="490" y="240" width="60" height="20" rx="2"/>
-<rect class="ruin" x="130" y="220" width="60" height="20" rx="2"/>
-<rect class="ruin" x="190" y="240" width="40" height="60" rx="2"/>
-<rect class="ruin" x="240" y="340" width="60" height="20" rx="2"/>
-<rect class="ruin" x="300" y="360" width="40" height="60" rx="2"/>
-<rect class="ruin" x="226" y="104" width="90" height="22" rx="2" transform="rotate(50 271.0 115.0)"/>
-<rect class="ruin" x="362" y="353" width="90" height="22" rx="2" transform="rotate(50 407.0 364.0)"/>
-<circle class="obj" cx="136" cy="338" r="7"/>
-<circle class="obj" cx="544" cy="142" r="7"/>
-<circle class="obj" cx="275" cy="204" r="7"/>
-<circle class="obj" cx="371" cy="276" r="7"/>
-<circle class="obj" cx="182" cy="104" r="7"/>
-<circle class="obj" cx="497" cy="373" r="7"/>
-<text class="lb" x="136" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="172" y="100" text-anchor="end">expansion</text>
-<text class="lb" x="544" y="128" text-anchor="middle">Enemy home</text>
-<text class="lb" x="535" y="366" text-anchor="middle">Enemy</text>
-<text class="lb" x="535" y="381" text-anchor="middle">expansion</text>
-<text class="lb" x="580" y="38" text-anchor="start">Enemy zone</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="278" y="194" text-anchor="end">centre NW</text>
-<text class="lb" x="383" y="280" text-anchor="start">centre SE</text>
-<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahBC)"/>
-<line class="arrow go" x1="243" y1="251" x2="269" y2="213" marker-end="url(#ahBC)"/>
-<line class="arrow go" x1="302" y1="332" x2="362" y2="283" marker-end="url(#ahBC)"/>
-<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahBC)"/>
-<circle class="mk" cx="136" cy="362" r="11"/><text class="mkt" x="136" y="367">1</text>
-<circle class="mk" cx="70" cy="265" r="11"/><text class="mkt" x="70" y="270">2</text>
-<circle class="mk" cx="236" cy="262" r="11"/><text class="mkt" x="236" y="267">3</text>
-<circle class="mk" cx="292" cy="340" r="11"/><text class="mkt" x="292" y="345">4</text>
-<circle class="mk" cx="150" cy="272" r="11"/><text class="mkt" x="150" y="277">5</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Assimilator + Emissary, to your expansion <span class="oc">OC 14</span></li><li><b>3 Centre NW:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the zone edge <span class="oc">OC 20</span></li><li><b>4 Centre SE:</b> 2 Exocrines + 1 Maleceptor, at the bottom of the zone edge <span class="oc">OC 18</span></li><li><b>5 Support:</b> Rupture Tyrannofex, in the north-west <span class="oc">OC 7</span></li></ol><ul><li>Three objectives are in reach: both centre points and your expansion. That is exactly the 6 VP tier, so every one of them has to be consecrated.</li><li>Each consecration needs a kill first, then a unit in range of the objective at the end of your turn. The north-west group gets there first; the south-east group has to win its fight before it can consecrate.</li><li>The enemy expansion and home are far away (28" to the home), so the 5 VP at the end is a long push for the Norns.</li><li>Your own home cannot be consecrated, so the home guard stays put.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, the enemy the right 18", with 24" of open ground between. The two central objectives sit north and south of the centre along the vertical dashed line. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
-<defs><marker id="ahCC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,20 220,20 220,460 40,460"/>
-<polygon class="zone them" points="460,20 640,20 640,460 460,460"/>
-<line x1="338" y1="20" x2="338" y2="460" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="229" y="41" width="70" height="116" rx="2"/>
-<rect class="ruin" x="291" y="183" width="99" height="115" rx="2"/>
-<rect class="ruin" x="381" y="324" width="70" height="116" rx="2"/>
-<rect class="ruin" x="500" y="70" width="70" height="116" rx="2"/>
-<rect class="ruin" x="109" y="295" width="71" height="115" rx="2"/>
-<rect class="ruin" x="200" y="190" width="32" height="100" rx="2"/>
-<rect class="ruin" x="454" y="190" width="32" height="100" rx="2"/>
-<rect class="ruin" x="370" y="61" width="20" height="60" rx="2"/>
-<rect class="ruin" x="391" y="102" width="61" height="43" rx="2"/>
-<rect class="ruin" x="229" y="342" width="60" height="40" rx="2"/>
-<rect class="ruin" x="290" y="360" width="20" height="60" rx="2"/>
-<rect class="ruin" x="101" y="87" width="90" height="22" rx="2" transform="rotate(45 146.0 98.0)"/>
-<rect class="ruin" x="119" y="144" width="70" height="40" rx="2" transform="rotate(-45 154.0 164.0)"/>
-<rect class="ruin" x="492" y="298" width="70" height="40" rx="2" transform="rotate(-45 527.0 318.0)"/>
-<rect class="ruin" x="486" y="371" width="90" height="22" rx="2" transform="rotate(45 531.0 382.0)"/>
-<circle class="obj" cx="181" cy="341" r="7"/>
-<circle class="obj" cx="497" cy="141" r="7"/>
-<circle class="obj" cx="338" cy="163" r="7"/>
-<circle class="obj" cx="338" cy="283" r="7"/>
-<circle class="obj" cx="227" cy="111" r="7"/>
-<circle class="obj" cx="452" cy="370" r="7"/>
-<text class="lb" x="181" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="237" y="128" text-anchor="start">your</text>
-<text class="lb" x="237" y="142" text-anchor="start">expansion</text>
-<text class="lb" x="497" y="127" text-anchor="middle">Enemy home</text>
-<text class="lb" x="441" y="361" text-anchor="end">Enemy</text>
-<text class="lb" x="441" y="376" text-anchor="end">expansion</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="632" y="452" text-anchor="end">Enemy zone</text>
-<text class="lb" x="338" y="151" text-anchor="middle">centre N</text>
-<text class="lb" x="338" y="311" text-anchor="middle">centre S</text>
-<line class="arrow go" x1="191" y1="192" x2="327" y2="165" marker-end="url(#ahCC)"/>
-<line class="arrow go" x1="191" y1="285" x2="327" y2="283" marker-end="url(#ahCC)"/>
-<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahCC)"/>
-<circle class="mk" cx="150" cy="360" r="11"/><text class="mkt" x="150" y="365">1</text>
-<circle class="mk" cx="205" cy="105" r="11"/><text class="mkt" x="205" y="110">2</text>
-<circle class="mk" cx="178" cy="195" r="11"/><text class="mkt" x="178" y="200">3</text>
-<circle class="mk" cx="178" cy="285" r="11"/><text class="mkt" x="178" y="290">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary + Acid spray Tyrannofex, at your expansion <span class="oc">OC 21</span></li><li><b>3 Centre N:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the north end of the wall <span class="oc">OC 20</span></li><li><b>4 Centre S:</b> 2 Exocrines + 1 Maleceptor, at the south end of the wall <span class="oc">OC 18</span></li></ol><ul><li>Three objectives are in reach: both centre points and your expansion. That is exactly the 6 VP tier, so every one of them has to be consecrated.</li><li>Each consecration needs a kill first, then a unit in range of the objective at the end of your turn. Both centre groups sit at the ends of the wall and can step out to the points once they have a kill.</li><li>Your expansion is 0.7" outside your zone, so the North group can consecrate it as soon as it destroys something.</li><li>Your own home cannot be consecrated, so the home guard stays put.</li></ul></div></div>
-  </div>
-  <div id="depD" hidden>
-    <div class="card" style="margin:12px 0">
-      <h3>Destroyer's Wrath (Purge the Foe)</h3>
-      <ul>
-        <li><b>Any round, end of your turn:</b> 3 VP if you destroyed one or more enemy units.</li>
-        <li><b>Round 2 onward, end of your Command phase</b> (end of your turn in round 5): 4 VP if you control one or more objectives other than your home, and 6 VP if you control more objectives than your opponent.</li>
-        <li><b>Round 2 onward, end of your turn:</b> 4 VP if you destroyed more enemy units this turn than the enemy destroyed of yours in their previous turn.</li>
-        <li>There is no end-of-battle scoring. No mission-specific cap; the usual 15 VP per round and 45 VP per game apply.</li>
-      </ul>
-      <p class="note">The most you can score in a turn is 17 VP, so the 15 VP round cap means one trigger can be missed. I could not confirm which Force Disposition pairing gives this mission.</p>
-    </div>
-    <p class="note">Same key as above. There is no late push, because the enemy home is worth nothing in this mission.</p>
-    <div class="grid g1"><div class="card dep"><h3>Deployment A: staggered zones</h3><p class="note" style="margin-top:0">Your zone is the bottom edge, 14" deep on the left and 8" deep on the right. The enemy zone is the mirror image along the top. The two central objectives sit either side of the central ruin along the dashed line.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment A: staggered zones, your zone along the bottom">
-<defs><marker id="ahAD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,320 340,320 340,380 640,380 640,460 40,460"/>
-<polygon class="zone them" points="40,20 640,20 640,160 340,160 340,100 40,100"/>
-<line x1="40" y1="211.6" x2="640" y2="271.8" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="89" y="119" width="116" height="71" rx="2"/>
-<rect class="ruin" x="464" y="70" width="117" height="71" rx="2"/>
-<rect class="ruin" x="281" y="190" width="116" height="100" rx="2"/>
-<rect class="ruin" x="100" y="339" width="116" height="70" rx="2"/>
-<rect class="ruin" x="474" y="291" width="116" height="70" rx="2"/>
-<rect class="ruin" x="286" y="94" width="60" height="12" rx="2" transform="rotate(40 316.0 100.0)"/>
-<rect class="ruin" x="377" y="112" width="40" height="10" rx="2" transform="rotate(-40 397.0 117.0)"/>
-<rect class="ruin" x="210" y="54" width="8" height="60" rx="2"/>
-<rect class="ruin" x="455" y="209" width="40" height="12" rx="2" transform="rotate(55 475.0 215.0)"/>
-<rect class="ruin" x="504" y="219" width="40" height="10" rx="2" transform="rotate(-40 524.0 224.0)"/>
-<rect class="ruin" x="135" y="250" width="40" height="10" rx="2" transform="rotate(-40 155.0 255.0)"/>
-<rect class="ruin" x="183" y="259" width="40" height="12" rx="2" transform="rotate(50 203.0 265.0)"/>
-<rect class="ruin" x="264" y="359" width="40" height="12" rx="2" transform="rotate(-45 284.0 365.0)"/>
-<rect class="ruin" x="331" y="378" width="70" height="12" rx="2" transform="rotate(45 366.0 384.0)"/>
-<rect class="ruin" x="460" y="360" width="8" height="60" rx="2"/>
-<circle class="obj" cx="145" cy="337" r="7"/>
-<circle class="obj" cx="534" cy="142" r="7"/>
-<circle class="obj" cx="263" cy="234" r="7"/>
-<circle class="obj" cx="383" cy="246" r="7"/>
-<circle class="obj" cx="543" cy="362" r="7"/>
-<circle class="obj" cx="135" cy="117" r="7"/>
-<text class="lb" x="145" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="543" y="348" text-anchor="middle">expansion</text>
-<text class="lb" x="534" y="128" text-anchor="middle">Enemy home</text>
-<text class="lb" x="135" y="140" text-anchor="middle">Enemy expansion</text>
-<text class="lb" x="48" y="38" text-anchor="start">Enemy zone</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="272" y="222" text-anchor="end">centre W</text>
-<text class="lb" x="383" y="232" text-anchor="middle">centre E</text>
-<line class="arrow go" x1="280" y1="325" x2="265" y2="245" marker-end="url(#ahAD)"/>
-<line class="arrow go" x1="362" y1="383" x2="381" y2="257" marker-end="url(#ahAD)"/>
-<circle class="mk" cx="145" cy="360" r="11"/><text class="mkt" x="145" y="365">1</text>
-<circle class="mk" cx="550" cy="405" r="11"/><text class="mkt" x="550" y="410">2</text>
-<circle class="mk" cx="282" cy="338" r="11"/><text class="mkt" x="282" y="343">3</text>
-<circle class="mk" cx="360" cy="396" r="11"/><text class="mkt" x="360" y="401">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 Right wing:</b> Assimilator + Emissary + Rupture Tyrannofex, at your expansion <span class="oc">OC 21</span></li><li><b>3 Centre west:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, behind the central ruin <span class="oc">OC 20</span></li><li><b>4 Centre east:</b> 2 Exocrines + 1 Maleceptor, at the zone corner <span class="oc">OC 18</span></li></ol><ul><li>The 6 VP is for having more objectives than the enemy. Each centre point counts on its own, so holding both centre points plus your expansion beats any split.</li><li>There is no end-of-battle score, so the enemy home and a late push are worth nothing here. Everything stays on the objectives and the kill trade.</li><li>The 4 VP for out-killing the enemy rewards durability: your units are expensive, so keep them behind cover until they can fire.</li><li>A full turn is 3 + 4 + 6 + 4 = 17 VP, but the 15 VP round cap means you can miss one trigger.</li></ul></div><div class="card dep"><h3>Deployment B: diagonal zones</h3><p class="note" style="margin-top:0">Your zone is the lower-left half, the enemy the upper-right. The nearest corners are about 12.7" apart. The two central objectives sit north-west and south-east of the central ruin along the dashed diagonal.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment B: diagonal zones, your zone lower left">
-<defs><marker id="ahBD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,240 250,240 258,274 276,304 304,323 340,330 340,460 40,460"/>
-<polygon class="zone them" points="340,20 640,20 640,240 430,240 422,206 404,176 376,157 340,150"/>
-<line x1="40" y1="32.3" x2="623" y2="460" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="110" y="59" width="71" height="116" rx="2"/>
-<rect class="ruin" x="475" y="70" width="115" height="71" rx="2"/>
-<rect class="ruin" x="282" y="190" width="116" height="99" rx="2"/>
-<rect class="ruin" x="90" y="340" width="116" height="70" rx="2"/>
-<rect class="ruin" x="500" y="304" width="70" height="115" rx="2"/>
-<rect class="ruin" x="340" y="60" width="40" height="60" rx="2"/>
-<rect class="ruin" x="373" y="120" width="77" height="20" rx="2"/>
-<rect class="ruin" x="450" y="180" width="40" height="60" rx="2"/>
-<rect class="ruin" x="490" y="240" width="60" height="20" rx="2"/>
-<rect class="ruin" x="130" y="220" width="60" height="20" rx="2"/>
-<rect class="ruin" x="190" y="240" width="40" height="60" rx="2"/>
-<rect class="ruin" x="240" y="340" width="60" height="20" rx="2"/>
-<rect class="ruin" x="300" y="360" width="40" height="60" rx="2"/>
-<rect class="ruin" x="226" y="104" width="90" height="22" rx="2" transform="rotate(50 271.0 115.0)"/>
-<rect class="ruin" x="362" y="353" width="90" height="22" rx="2" transform="rotate(50 407.0 364.0)"/>
-<circle class="obj" cx="136" cy="338" r="7"/>
-<circle class="obj" cx="544" cy="142" r="7"/>
-<circle class="obj" cx="275" cy="204" r="7"/>
-<circle class="obj" cx="371" cy="276" r="7"/>
-<circle class="obj" cx="182" cy="104" r="7"/>
-<circle class="obj" cx="497" cy="373" r="7"/>
-<text class="lb" x="136" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="172" y="100" text-anchor="end">expansion</text>
-<text class="lb" x="544" y="128" text-anchor="middle">Enemy home</text>
-<text class="lb" x="535" y="366" text-anchor="middle">Enemy</text>
-<text class="lb" x="535" y="381" text-anchor="middle">expansion</text>
-<text class="lb" x="580" y="38" text-anchor="start">Enemy zone</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="278" y="194" text-anchor="end">centre NW</text>
-<text class="lb" x="383" y="280" text-anchor="start">centre SE</text>
-<line class="arrow go" x1="80" y1="252" x2="172" y2="114" marker-end="url(#ahBD)"/>
-<line class="arrow go" x1="243" y1="251" x2="269" y2="213" marker-end="url(#ahBD)"/>
-<line class="arrow go" x1="302" y1="332" x2="362" y2="283" marker-end="url(#ahBD)"/>
-<line class="arrow thr" x1="338" y1="98" x2="193" y2="103" marker-end="url(#ahBD)"/>
-<circle class="mk" cx="136" cy="362" r="11"/><text class="mkt" x="136" y="367">1</text>
-<circle class="mk" cx="70" cy="265" r="11"/><text class="mkt" x="70" y="270">2</text>
-<circle class="mk" cx="236" cy="262" r="11"/><text class="mkt" x="236" y="267">3</text>
-<circle class="mk" cx="292" cy="340" r="11"/><text class="mkt" x="292" y="345">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Acid spray Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North-west:</b> Rupture Tyrannofex, anchoring your expansion <span class="oc">OC 7</span></li><li><b>3 Centre NW:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the zone edge <span class="oc">OC 20</span></li><li><b>4 Centre SE:</b> 2 Exocrines, 1 Maleceptor, both Norns, at the bottom of the zone edge <span class="oc">OC 32</span></li></ol><ul><li>The 6 VP is for having more objectives than the enemy. Both centre points plus your expansion beat any split. The north-west point is yours early; the south-east point decides it.</li><li>There is no end-of-battle score, so the Norns stay with the south-east group instead of pushing on the enemy home.</li><li>The 4 VP for out-killing the enemy rewards durability: your units are expensive, so keep them behind cover until they can fire.</li><li>A full turn is 3 + 4 + 6 + 4 = 17 VP, but the 15 VP round cap means you can miss one trigger.</li></ul></div><div class="card dep"><h3>Deployment C: long zones</h3><p class="note" style="margin-top:0">Your zone is the left 18" of the board, the enemy the right 18", with 24" of open ground between. The two central objectives sit north and south of the centre along the vertical dashed line. This map is mostly about shooting.</p><svg class="map" viewBox="0 0 680 480" role="img" aria-label="Deployment C: long zones, your zone on the left edge">
-<defs><marker id="ahCD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect class="board" x="40" y="20" width="600" height="440"/>
-<polygon class="zone you" points="40,20 220,20 220,460 40,460"/>
-<polygon class="zone them" points="460,20 640,20 640,460 460,460"/>
-<line x1="338" y1="20" x2="338" y2="460" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:2 5;opacity:.7"/>
-<rect class="ruin" x="229" y="41" width="70" height="116" rx="2"/>
-<rect class="ruin" x="291" y="183" width="99" height="115" rx="2"/>
-<rect class="ruin" x="381" y="324" width="70" height="116" rx="2"/>
-<rect class="ruin" x="500" y="70" width="70" height="116" rx="2"/>
-<rect class="ruin" x="109" y="295" width="71" height="115" rx="2"/>
-<rect class="ruin" x="200" y="190" width="32" height="100" rx="2"/>
-<rect class="ruin" x="454" y="190" width="32" height="100" rx="2"/>
-<rect class="ruin" x="370" y="61" width="20" height="60" rx="2"/>
-<rect class="ruin" x="391" y="102" width="61" height="43" rx="2"/>
-<rect class="ruin" x="229" y="342" width="60" height="40" rx="2"/>
-<rect class="ruin" x="290" y="360" width="20" height="60" rx="2"/>
-<rect class="ruin" x="101" y="87" width="90" height="22" rx="2" transform="rotate(45 146.0 98.0)"/>
-<rect class="ruin" x="119" y="144" width="70" height="40" rx="2" transform="rotate(-45 154.0 164.0)"/>
-<rect class="ruin" x="492" y="298" width="70" height="40" rx="2" transform="rotate(-45 527.0 318.0)"/>
-<rect class="ruin" x="486" y="371" width="90" height="22" rx="2" transform="rotate(45 531.0 382.0)"/>
-<circle class="obj" cx="181" cy="341" r="7"/>
-<circle class="obj" cx="497" cy="141" r="7"/>
-<circle class="obj" cx="338" cy="163" r="7"/>
-<circle class="obj" cx="338" cy="283" r="7"/>
-<circle class="obj" cx="227" cy="111" r="7"/>
-<circle class="obj" cx="452" cy="370" r="7"/>
-<text class="lb" x="181" y="327" text-anchor="middle">your home</text>
-<text class="lb" x="237" y="128" text-anchor="start">your</text>
-<text class="lb" x="237" y="142" text-anchor="start">expansion</text>
-<text class="lb" x="497" y="127" text-anchor="middle">Enemy home</text>
-<text class="lb" x="441" y="361" text-anchor="end">Enemy</text>
-<text class="lb" x="441" y="376" text-anchor="end">expansion</text>
-<text class="lb" x="48" y="452" text-anchor="start">Your zone</text>
-<text class="lb" x="632" y="452" text-anchor="end">Enemy zone</text>
-<text class="lb" x="338" y="151" text-anchor="middle">centre N</text>
-<text class="lb" x="338" y="311" text-anchor="middle">centre S</text>
-<line class="arrow go" x1="191" y1="192" x2="327" y2="165" marker-end="url(#ahCD)"/>
-<line class="arrow go" x1="191" y1="285" x2="327" y2="283" marker-end="url(#ahCD)"/>
-<line class="arrow thr" x1="458" y1="108" x2="244" y2="110" marker-end="url(#ahCD)"/>
-<circle class="mk" cx="150" cy="360" r="11"/><text class="mkt" x="150" y="365">1</text>
-<circle class="mk" cx="205" cy="105" r="11"/><text class="mkt" x="205" y="110">2</text>
-<circle class="mk" cx="178" cy="195" r="11"/><text class="mkt" x="178" y="200">3</text>
-<circle class="mk" cx="178" cy="285" r="11"/><text class="mkt" x="178" y="290">4</text>
-</svg><ol class="keyl"><li><b>1 Home:</b> Rupture Tyrannofex + Barbgaunts <span class="oc">OC 12</span></li><li><b>2 North:</b> Assimilator + Emissary, at your expansion <span class="oc">OC 14</span></li><li><b>3 Centre N:</b> Hive Tyrant + Guard, 1 Exocrine, 1 Maleceptor, at the north end of the wall <span class="oc">OC 20</span></li><li><b>4 Centre S:</b> 2 Exocrines, 1 Maleceptor, Acid spray Tyrannofex, at the south end of the wall <span class="oc">OC 25</span></li></ol><ul><li>The 6 VP is for having more objectives than the enemy. Both centre points plus your expansion beat any split.</li><li>There is no end-of-battle score, so the Norns stay at your expansion and do not need the 27" trip to the enemy home.</li><li>The 4 VP for out-killing the enemy rewards durability: your units are expensive, so keep them behind the wall until they can fire.</li><li>A full turn is 3 + 4 + 6 + 4 = 17 VP, but the 15 VP round cap means you can miss one trigger.</li></ul></div></div>
-  </div>
-  <p class="note">Objective control ranges and Advance moves were not available to me, so turn-by-turn reach is approximate. Enemy infantry units often carry an OC of 10 or more, so killing models matters more than standing on the objective.</p>
-  <script>(function(){var s=document.getElementById('depSeg');if(!s)return;var ids={uf:'depUF',p:'depP',m:'depM',c:'depC',d:'depD'};s.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(s.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});Object.keys(ids).forEach(function(k){document.getElementById(ids[k]).hidden=(k!==b.dataset.m);});});})();</script>
+  <script>(function(){
+    function press(seg,b){[].forEach.call(seg.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});}
+    var d=document.getElementById('dispSeg');
+    d.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;press(d,b);document.getElementById('disp_t').hidden=b.dataset.d!=='t';document.getElementById('disp_p').hidden=b.dataset.d!=='p';});
+    [].forEach.call(document.querySelectorAll('.mseg'),function(s){s.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;press(s,b);var p=s.dataset.p;[].forEach.call(document.querySelectorAll('.mispanel.'+p),function(x){x.hidden=(x.id!==p+'_'+b.dataset.m);});});});
+  })();</script>
+
 </section>
 
 <footer>Prepared for the Crusher Talons list, 2,000 pts. Numbers are expected values, not guarantees.</footer>
@@ -1000,6 +596,7 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
   plain("tblStrat",["Rule","Cost","What it does"],[
    ["Enraged Behemoths","Always","Monsters: +1 Hit below Starting Strength, +1 Wound below half. At Starting Strength and not Battle-shocked, +2 OC."],
    ["Higher Imperatives","Always (declared in your Command phase)","The Norn Assimilator and Norn Emissary gain Protean Purpose: once per battle, per unit, in your Command phase, that Norn can make a new Singular Purpose selection, which replaces the previous one. The first selection is made at the start of the first battle round."],
+   ["Singular Purpose","Start of battle round 1","Each Norn picks one: an enemy unit (re-roll Hit and Wound rolls against it) or an objective marker (OC 15 and Feel No Pain 5+ while in range of it)."],
    ["Savage Roar","1 CP","Enemy unit takes a Battle-shock test and gets -1 to Hit and Wound."],
    ["Rampaging Monstrosities","1 CP","Re-roll Hit rolls in melee."],
    ["Massive Impact","1 CP","After a charge, roll 6D6; each 4+ is a mortal wound."],
@@ -1020,5 +617,5 @@ footer{margin-top:44px;color:var(--muted);font-size:12.5px;max-width:80ch}
 })();
 </script>
 
-</body>
-</html>
+
+</body></html>
