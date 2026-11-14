@@ -160,6 +160,9 @@ table.wp td:first-child small{display:block;color:var(--ty);font:500 .66rem/1.3 
 table.wp tr:last-child td{border-bottom:0}
 .kw{font:500 .66rem/1.6 var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
 
+.dd{font:500 .78rem/1.4 var(--f-mono);background:var(--ch-soft);color:var(--ch);border-radius:8px;padding:6px 10px}
+.dd b{font-weight:700}
+.dd.no{background:var(--bg);color:var(--muted)}
 /* bottom tabs */
 .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--panel);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding-bottom:var(--sab)}
 .tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0 9px;color:var(--muted);text-decoration:none;font:600 .7rem/1 var(--f-head);letter-spacing:.05em;text-transform:uppercase;min-height:56px;justify-content:center}
@@ -505,58 +508,58 @@ document.getElementById('cpList').innerHTML=CP.map(([n,c,src,cp,what,when])=>`<d
 /* ---------- datasheets ---------- */
 const UNITS=[
  {n:'Neurotyrant (Warlord) + 11 Neurogaunts',r:'Synapse anchor, screen, action unit, Shadow in the Warp amplifier',c:{M:6,W:20,OC:17,Pts:180},
-  prof:[{h:'Neurotyrant · Ominous Presence',s:['6"',8,'4+','4++',9,'7+','3→6']},{h:'Neurogaunt ×10 + Nodebeast',s:['6"',3,'6+','–',1,'8+',1]}],
+  prof:[{h:'Neurotyrant · Ominous Presence',dd:'None',s:['6"',8,'4+','4++',9,'7+','3→6']},{h:'Neurogaunt ×10 + Nodebeast',dd:'None',s:['6"',3,'6+','–',1,'8+',1]}],
   wr:[['Psychic scream','18"','2D6','–',5,-1,2,'Ignores Cover, Psychic, Torrent']],
   wm:[['Neurotyrant claws and lashes','M',6,'3+',5,0,1,''],['Chitinous claws and teeth (each gaunt)','M',1,'4+',3,0,1,'']],
   ab:['<b>Leader:</b> can lead Neurogaunts, Tyrant Guard or Zoanthropes.','<b>Node Lash:</b> led unit +1 to hit; +1 to wound vs Battle-shocked targets.','<b>Psychic Terror:</b> −1 to enemy Shadow in the Warp tests.','<b>Neuroloids:</b> two units within 18" count as in Synapse until your next Command phase.','<b>Neurocytes</b> (gaunts): SYNAPSE while in Synapse Range of a non-Neurogaunt unit.','<b>Ominous Presence:</b> Neurotyrant OC +3.'],
   kw:'Neurotyrant: MONSTER, CHARACTER, FLY, PSYKER, SYNAPSE · Gaunts: INFANTRY, ENDLESS MULTITUDE'},
  {n:'Norn Assimilator · Synaptoprescience',r:'Centre holder, anti-tank, melee',c:{M:10,W:16,OC:'7 / 15',Pts:280},
-  prof:[{h:'Norn Assimilator',s:['10"',11,'2+','4++',16,'7+',5]}],
+  prof:[{h:'Norn Assimilator',dd:'D6',s:['10"',11,'2+','4++',16,'7+',5]}],
   wr:[['Toxinjecter harpoon','12"',2,'2+',12,-3,'D6+1','Harpooned']],
   wm:[['Monstrous scything talons','M',6,'2+',9,-2,3,''],['Toxinjecter harpoon','M',4,'2+',12,-3,'D6+1','Extra Attacks']],
-  ab:['<b>Synaptoprescience:</b> 4+ invulnerable save (not on the base datasheet).','<b>Singular Purpose:</b> round 1, pick an enemy unit (re-roll hits and wounds) or an objective (FNP 5+, OC 15 in range).','<b>Harpooned:</b> +2 to charge a MONSTER/VEHICLE it hit this turn; must end engaged with it.','<b>Harpoon Barbs:</b> once per turn, an enemy falling back from it takes D6 mortal wounds on a 2+.','<b>Deadly Demise D6.</b> <b>Damaged</b> (1–5 W): −1 to hit.'],
+  ab:['<b>Synaptoprescience:</b> 4+ invulnerable save (not on the base datasheet).','<b>Singular Purpose:</b> round 1, pick an enemy unit (re-roll hits and wounds) or an objective (FNP 5+, OC 15 in range).','<b>Harpooned:</b> +2 to charge a MONSTER/VEHICLE it hit this turn; must end engaged with it.','<b>Harpoon Barbs:</b> once per turn, an enemy falling back from it takes D6 mortal wounds on a 2+.','<b>Damaged</b> (1–5 W): −1 to hit.'],
   kw:'MONSTER, SYNAPSE, HARVESTER'},
  {n:'Norn Emissary',r:'Anti-elite, character sniper, expansion holder',c:{M:10,W:16,OC:7,Pts:250},
-  prof:[{h:'Norn Emissary',s:['10"',11,'2+','4++',16,'7+',5]}],
+  prof:[{h:'Norn Emissary',dd:'D6',s:['10"',11,'2+','4++',16,'7+',5]}],
   wr:[['Psychic tendril · neuroparasite','18"',2,'2+',8,-2,'D3','Precision, Psychic'],['Psychic tendril · neuroblast','18"','2D6','2+',6,-2,1,'Blast, Psychic'],['Psychic tendril · neurolance','18"',2,'2+',12,-3,'D6','Melta 2, Psychic']],
   wm:[['Monstrous scything talons','M',6,'2+',9,-2,3,''],['Monstrous rending claws','M',4,'2+',7,-2,2,'Extra Attacks']],
-  ab:['<b>Singular Purpose:</b> round 1, pick an enemy unit (re-roll hits and wounds) or an objective (FNP 5+, OC 15 in range).','<b>Unnatural Resilience:</b> FNP 4+ against mortal wounds.','<b>Deadly Demise D6.</b> <b>Damaged</b> (1–5 W): −1 to hit.'],
+  ab:['<b>Singular Purpose:</b> round 1, pick an enemy unit (re-roll hits and wounds) or an objective (FNP 5+, OC 15 in range).','<b>Unnatural Resilience:</b> FNP 4+ against mortal wounds.','<b>Damaged</b> (1–5 W): −1 to hit.'],
   kw:'MONSTER, PSYKER, SYNAPSE'},
  {n:'Tervigon ×2',r:'Synapse holders, mid-board OC, light anti-horde. One has Null Nodules.',c:{M:8,W:'16 each',OC:'7 each',Pts:310},
-  prof:[{h:'Tervigon',s:['8"',11,'2+','–',16,'7+',5]}],
+  prof:[{h:'Tervigon',dd:'D6',s:['8"',11,'2+','–',16,'7+',5]}],
   wr:[['Stinger salvoes','24"',8,'3+',5,0,1,'']],
   wm:[['Massive scything talons · strike','M',4,'3+',9,-2,'D6',''],['Massive scything talons · sweep','M',8,'3+',7,-1,2,'']],
-  ab:['<b>Spawn Termagants / Brood Progenitor:</b> only work on TERMAGANTS, which you don\'t have.','<b>Null Nodules</b> (one Tervigon): once per battle, FNP 5+ vs Psychic Attacks for a phase.','<b>Deadly Demise D6.</b> <b>Damaged</b> (1–5 W): −1 to hit.'],
+  ab:['<b>Spawn Termagants / Brood Progenitor:</b> only work on TERMAGANTS, which you don\'t have.','<b>Null Nodules</b> (one Tervigon): once per battle, FNP 5+ vs Psychic Attacks for a phase.','<b>Damaged</b> (1–5 W): −1 to hit.'],
   kw:'MONSTER, CHARACTER, PSYKER, SYNAPSE'},
  {n:'Haruspex ×2',r:'Melee brawlers, anti-horde and anti-tank in combat',c:{M:8,W:'14 each',OC:'6 each',Pts:250},
-  prof:[{h:'Haruspex',s:['8"',11,'3+','–',14,'8+',4]}],
+  prof:[{h:'Haruspex',dd:'D3',s:['8"',11,'3+','–',14,'8+',4]}],
   wr:[['Grasping tongue','12"',1,'3+',6,-2,'D6+1','Precision']],
   wm:[['Ravenous maw','M',14,'3+',7,-1,2,''],['Shovelling claws','M',4,'3+',14,-2,'D6+1','Extra Attacks']],
-  ab:['<b>Grisly Spectacle:</b> after it fights, if it destroyed a unit, enemy units within 6" test Battle-shock.','<b>Deadly Demise D3.</b> <b>Damaged</b> (1–5 W): −1 to hit.'],
+  ab:['<b>Grisly Spectacle:</b> after it fights, if it destroyed a unit, enemy units within 6" test Battle-shock.','<b>Damaged</b> (1–5 W): −1 to hit.'],
   kw:'MONSTER, HARVESTER (not SYNAPSE)'},
  {n:'Maleceptor ×2',r:'Synapse, −1 to hit aura, anti-elite shooting',c:{M:8,W:'14 each',OC:'6 each',Pts:360},
-  prof:[{h:'Maleceptor',s:['8"',11,'3+','4++',14,'7+',4]}],
+  prof:[{h:'Maleceptor',dd:'D3',s:['8"',11,'3+','4++',14,'7+',4]}],
   wr:[['Psychic overload','18"','D6+3','3+',10,-2,3,'Blast, Psychic']],
   wm:[['Massive scything talons · strike','M',3,'3+',9,-2,'D6+1',''],['Massive scything talons · sweep','M',6,'3+',7,-1,2,'']],
-  ab:['<b>Encephalic Diffusion:</b> enemies within 6" −1 to hit; −1 to wound too if Below Half.','<b>Deadly Demise D3.</b> <b>Damaged</b> (1–5 W): −1 to hit.'],
+  ab:['<b>Encephalic Diffusion:</b> enemies within 6" −1 to hit; −1 to wound too if Below Half.','<b>Damaged</b> (1–5 W): −1 to hit.'],
   kw:'MONSTER, PSYKER, SYNAPSE'},
  {n:'Tyrannofex · rupture cannon',r:'Home holder, anti-tank',c:{M:9,W:16,OC:7,Pts:190},
-  prof:[{h:'Tyrannofex',s:['9"',12,'2+','–',16,'8+',5]}],
+  prof:[{h:'Tyrannofex',dd:'D6',s:['9"',12,'2+','–',16,'8+',5]}],
   wr:[['Rupture cannon','48"',2,'3+',18,-4,'D6+6','Heavy'],['Stinger salvoes','24"',8,'3+',5,0,1,'']],
   wm:[['Powerful limbs','M',4,'3+',8,0,2,'']],
-  ab:['<b>Resilient Organism:</b> once per battle, set one attack\'s Damage to 0.','<b>Deadly Demise D6.</b> <b>Damaged</b> (1–5 W): −1 to hit.'],
+  ab:['<b>Resilient Organism:</b> once per battle, set one attack\'s Damage to 0.','<b>Damaged</b> (1–5 W): −1 to hit.'],
   kw:'MONSTER, FRAME'},
  {n:'Tyrannofex · acid spray',r:'Anti-horde, mid holder',c:{M:9,W:16,OC:7,Pts:180},
-  prof:[{h:'Tyrannofex',s:['9"',12,'2+','–',16,'8+',5]}],
+  prof:[{h:'Tyrannofex',dd:'D6',s:['9"',12,'2+','–',16,'8+',5]}],
   wr:[['Acid spray','18"','D6+6','–',6,-2,2,'Torrent'],['Stinger salvoes','24"',8,'3+',5,0,1,'']],
   wm:[['Powerful limbs','M',4,'3+',8,0,2,'']],
-  ab:['<b>Resilient Organism:</b> once per battle, set one attack\'s Damage to 0.','<b>Deadly Demise D6.</b> <b>Damaged</b> (1–5 W): −1 to hit.'],
+  ab:['<b>Resilient Organism:</b> once per battle, set one attack\'s Damage to 0.','<b>Damaged</b> (1–5 W): −1 to hit.'],
   kw:'MONSTER, FRAME'}];
 const SLH=['M','T','Sv','Inv','W','Ld','OC'];
 const ap=v=>v===0?'0':v;
 function wtab(rows,ranged){if(!rows.length)return '';return `<table class="wp"><thead><tr><th>${ranged?'Ranged':'Melee'}</th>${ranged?'<th>Rng</th>':''}<th>A</th><th>${ranged?'BS':'WS'}</th><th>S</th><th>AP</th><th>D</th></tr></thead><tbody>`+rows.map(w=>`<tr><td>${w[0]}${w[7]?'<small>'+w[7]+'</small>':''}</td>${ranged?'<td>'+w[1]+'</td>':''}<td>${w[2]}</td><td>${w[3]}</td><td>${w[4]}</td><td>${ap(w[5])}</td><td>${w[6]}</td></tr>`).join('')+'</tbody></table>'}
 document.getElementById('unitList').innerHTML=UNITS.map(u=>`<details class="acc unit"><summary><span class="t">${u.n}<small>${u.r}</small></span><span class="chips">${Object.entries(u.c).map(([k,v])=>`<span><i>${k}</i> ${v}</span>`).join('')}</span></summary><div class="body">`+
- u.prof.map(p=>`<div class="prof">${p.h}</div><div class="sl">${p.s.map((v,i)=>`<div><b>${v}</b><span>${SLH[i]}</span></div>`).join('')}</div>`).join('')+
+ u.prof.map(p=>`<div class="prof">${p.h}</div><div class="sl">${p.s.map((v,i)=>`<div><b>${v}</b><span>${SLH[i]}</span></div>`).join('')}</div><div class="dd${p.dd==='None'?' no':''}">Deadly Demise <b>${p.dd}</b>${p.dd==='None'?'':' · on a 6 when destroyed, each unit within 6" takes '+p.dd+' mortal wounds'}</div>`).join('')+
  wtab(u.wr,true)+wtab(u.wm,false)+`<ul class="plain">${u.ab.map(a=>'<li>'+a+'</li>').join('')}</ul><div class="kw">${u.kw}</div></div></details>`).join('');
 
 /* ---------- deployment ---------- */
